@@ -1,0 +1,197 @@
+% !TeX root = main.tex
+\documentclass[pdftex,
+a4paper,
+11pt,
+parskip=half % Removes the horizontal indet when starting a new paragraph.
+]{scrartcl}   
+%
+%---------------------------------------------------
+%----- Packages
+%---------------------------------------------------
+%
+\usepackage[T1]{fontenc} 
+\usepackage[utf8]{inputenc}
+% This template is for english text only. You need to change it to German and adapt to your needs. We only provide English templates.
+\usepackage[english]{babel}  
+\usepackage{ae} 
+\usepackage{fancyref} 
+\usepackage{fancyhdr} % Define simple headings 
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage[pdftex]{graphicx}  
+\usepackage{hyperref} % turn all your internal references into hyperlinks
+\renewcommand{\sectionautorefname}{Section} %rename subsection to Section for better referencing
+\renewcommand{\subsectionautorefname}{Section}
+\renewcommand{\subsubsectionautorefname}{Section}
+
+% ToDo List
+\usepackage{enumitem,amssymb}
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label=$\square$}
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\done}{\rlap{$\square$}{\raisebox{2pt}{\large\hspace{1pt}\cmark}}%
+\hspace{-2.5pt}}
+\newcommand{\wontfix}{\rlap{$\square$}{\large\hspace{1pt}\xmark}}
+
+\definecolor{fu-orange}{RGB}{255,153,0}
+
+% Fancy Tabellen
+\usepackage{tabularx}
+\definecolor{usethiscolorhere}{rgb}{0.92,0.92,0.92}
+\definecolor{bamacolor}{RGB}{197, 210, 228}
+\usepackage{booktabs}  
+% own column Type Y!!!
+\usepackage{ragged2e}  % for '\RaggedRight' macro (allows hyphenation)
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+
+% For the ganntchart
+\usepackage{pgfgantt}
+% a new command is defined that allows to include an empty page when needed
+
+\usepackage{afterpage}
+
+\newcommand{\blankpage}{
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+}
+%
+%---------------------------------------------------
+%----- PDF and document setup
+%---------------------------------------------------
+%
+\hypersetup{
+	pdftitle={<My title>},  % please, add the title of your thesis
+    pdfauthor={<Author>},   % please, add your name
+    pdfsubject={<<Bachelor thesis>, Institute of Computer Science, Freie Universität Berlin>}, % please, select the type of this document
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdfnewwindow=true, 		% links in new window
+    colorlinks=false,  		% false: boxed links; true: colored links
+    linkcolor=red,          % color of internal links
+    citecolor=green,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=cyan           % color of external links
+}
+%
+%---------------------------------------------------      
+%----- Settings for word separation  
+%---------------------------------------------------      
+% Help for separation (from package babel, section 22)):
+% In german package the following hints are additionally available:
+% "- = an explicit hyphen sign, allowing hyphenation in the rest of the word
+% "| = disable ligature at this position. (e.g., Schaf"|fell)
+% "~ = for a compound word mark without a breakpoint (e.g., bergauf und "~ab)
+% "= = for a compound word mark with a breakpoint, allowing hyphenation in the composing words
+% "" = like "-, but producing no hyphen sign (e.g., und/""oder)
+%
+% Describe separation hints here:
+\hyphenation{
+% Pro-to-koll-in-stan-zen
+}
+
+%---------------------------------------------------      
+%----- Settings for title page 
+%---------------------------------------------------
+
+\begin{titlepage}
+
+ 
+\title{
+% TODO: Select the type of the thesis proposal you are writing.
+% Source: https://degree.studentnews.eu/
+{\normalsize --B. Sc. Thesis Proposal\footnote{Template Version 2.0 --- 2021-07-14}--\\
+% TODO: The title should be capitalized. If unsure use the following website: https://capitalizemytitle.com/
+[4ex]
+{\LARGE Evaluation of requirements and implementation of a modern UI Editor}\\ 
+[4ex]
+\small Freie Universität Berlin\\Institute of Computer Science}\\
+{\small Human-Centered Computing (HCC) Research Group}\\
+[2ex]
+}
+
+\author{
+% TODO: Add your full name here.
+{\normalsize Matthias Kind}\\
+% TODO: Add your matriculation number!
+{\normalsize Student Number: <Your matriculation number>}\\
+% TODO Please use the email address provided by FU Berlin.
+{\normalsize matthias.kind@fu-berlin.de>}\\
+% TODO: Add the date. This is important, since there will be different versions of you proposal.
+{\normalsize Date of Proposal Submission: <Month, DD, YYYY>}\\
+% TODO: Please add the version, so we can keep track of the number of iterations.
+{\normalsize Version: <\#>}\\
+\rule{\textwidth}{0.4pt}\\
+\\
+{\normalsize Supervisor:}\\
+% TODO: Add the name of your supervisor.
+{\normalsize<First name Last name>\footnote{Department of Mathematics and Computer Science, Human-Centered Computing Research Group}, Freie Universität Berlin, Germany}\\\\
+{\normalsize Examiner:}\\
+{\normalsize Prof. Dr. Claudia Müller-Birn\footnote{Department of Mathematics and Computer Science, Human-Centered Computing Research Group}, Freie Universität Berlin, Germany}\\
+% TODO: Add the name of your second reviewer.
+{\normalsize <Prof. Dr. Second Examiner\footnote{Department of Mathematics and Computer Science, <Name of Research Group>}>, Freie Universität Berlin, Germany}\\\\
+} % end of \author
+
+\date{} % This omits the date on the title page.
+
+\end{titlepage}
+
+%---------------------------------------------------      
+%----- Setting up your document 
+%---------------------------------------------------
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty} % remove page number on the title page
+
+%---------------------------------------------------
+%----- GUIDELINES - Please remove this part before handing in your expose.
+%---------------------------------------------------
+% \include{00-guidelines}
+
+%---------------------------------------------------
+%----- Summary
+%---------------------------------------------------
+\include{00-summary}
+
+%---------------------------------------------------
+%----- Contents
+%---------------------------------------------------
+\tableofcontents
+
+ % page number is set to "1" otherwise it would be "3"
+\setcounter{page}{1}
+
+%---------------------------------------------------      
+%----- CONTENT PART 
+%---------------------------------------------------
+%---------------------------------------------------
+%----- Introduction
+%---------------------------------------------------
+\include{01-introduction}
+%---------------------------------------------------
+%----- Background
+%---------------------------------------------------
+\include{02-background}
+%---------------------------------------------------
+%----- Your methodology approach
+%---------------------------------------------------
+\include{03-methodology}
+%---------------------------------------------------
+%----- Preliminary schedule and planned milestones
+%---------------------------------------------------
+\include{04-schedule}
+%---------------------------------------------------
+%----- Outline of your planned thesis
+%---------------------------------------------------
+\include{05-outline}
+%---------------------------------------------------
+%----- Bibliography
+%---------------------------------------------------
+\addcontentsline{toc}{section}{Bibliography}
+\bibliographystyle{abbrv}  % citation style
+\bibliography{references} % bib file
+\end{document}
