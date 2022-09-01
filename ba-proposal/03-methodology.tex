@@ -11,9 +11,13 @@ This chapter explains what method was chosen in the HCD process and why it helps
 
 Ref: ''Learn Human computer interaction'', 104 diagram
 
+\subsection{Analyze}
+\label{subsec:analyze}
+
 \textbf{1st phase ''discovery'':} assess currecnt situation through various User Research methods (taken from ''Learn Human computer interaction'', 132: Human Centered Methods for User Research)
 
 \begin{itemize}
+  \setlength\itemsep{-0.2em}
   \item fly-on-the-wall method: observe without users knowing they are observed
   \item moderated observation: Create scenario for user and note the way(s) the users do the task
   \item user interviews: prepare questions on workflows, what they are missing, what takes most time
@@ -21,9 +25,13 @@ Ref: ''Learn Human computer interaction'', 104 diagram
 \end{itemize}
 
 
-\textbf{2nd phase ''development'':} build deployable prototype using agile development methods
+\subsection{Design for Usability and early prototyping}
+\label{subsec:design}
+
+Build deployable prototype using agile development methods
 
 \begin{itemize}
+  \setlength\itemsep{-0.2em}
   \item Evaluate methods from 1st phase on effectiveness and continue using them with test circle of persons
   \item Use SCRUM to plan work
   \item use CI/CD to allow fast iterations after changed requirements
@@ -31,40 +39,31 @@ Ref: ''Learn Human computer interaction'', 104 diagram
   \item A/B testing?
 \end{itemize}
 
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=\linewidth]{pics/hcd.png}
-  \caption{User-centered System Design process by~\cite{gulliksenKeyPrinciplesUsercentred2003}}
-\end{figure}
-
-\begin{table}[htb]
-\small
-\colorbox{bamacolor}{
-\centering
-\begin{tabularx}{\textwidth}{@{} r Y @{}}
-	&
-	\textbf{Distinction between Bachelor and Master Thesis}\vspace{2mm}\\
-    \textbf{B. Sc. Thesis} &
-    The implementation phase is mandatory. \vspace{2mm}\\
-	\textbf{M. Sc. Thesis} &
-	The evaluation phase is mandatory. \vspace{2mm}\\
-
-\end{tabularx}
-}
-\end{table}
-
-Briefly describe the relevant planned steps of your HCD process in the following sections.
-
-\subsection{Analyze}
-\label{subsec:analyze}
-
-\subsection{Design for Usability}
-\label{subsec:design}
 
 \subsection{Construct (Implementation)}
 \label{subsec:implementation}
 
-Especially in a B. Sc. thesis, an important part is the description of the technical concept. Even though in the proposal, this cannot be done in detail, the main libraries and the general architecture of the application should be outlined. Please use diagram types from the Unified Modeling Language (UML)\footnote{For further information, please check \url{https://en.wikipedia.org/wiki/Unified_Modeling_Language}.} for these details.
+This section is closely coupled to \ref{subsec:design}, this construction of the software results from the prototypes and is done in the same SCRUM sprints as the design.
+
+The tech stack is one of the constraints imposed by the environment,
+the backend will be written in Javascript for NodeJS \and express as the web framework.
+
+The frontend, including the JSON editor should be written in react to utilize exisitng knowledge from other developers at the company and to guarantee long support.
+The backend will be hosted as a docker container on a kubernetes cluster and easily deployable via gitlab Continous integration systems.
+
+Depending on the collected requirements during the first phase, we might also integrate REDIS as a light messanging bus to support multiple instances.\\
+
+\begin{figure}[h]
+  \includegraphics[width=0.7\textwidth]{pics/editor_uml_component.png}
+  \caption[]{UML component diagram of the integration into the exisitng environment}
+\end{figure}
+
+
 
 \subsection{Evaluation}
 \label{subsec:evaluation}
+
+The evaluation towards the end of the thesis consists of using some of the methods mentioned above a last time. There the focus will probably be on a survey and evaluating analytics data, as well as getting verbal feedback from test users.
+The results then get compared to the results raised earlier to identify improvements in the productivity of the users.
+
+From that results, more abstract realizations about developing new software with HCI methods in constrained exisitng environments can be elaborated.

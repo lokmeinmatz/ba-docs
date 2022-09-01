@@ -8,12 +8,70 @@
 % Include relevant photographs, figures or tables to illustrate the text.
 % This section should frame the research questions that your subsequent research will address. 
 %************************************************************************
-Please add a sentence that summarizes what this section is about and what the reader can expect.
+This section gives some deeper background on the Web/App Framework, the editor I intend to build and what some common actions of users within the editor might be.
 %************************************************************************
 \subsection{Context of the Project and Problem Description} 
 \label{sec:context}
 %************************************************************************
-Explain all the surroundings that are necessary to understand the broader context of your work. If necessary, give a brief introduction to non-HCI research literature as background knowledge. It is best to include a specific scenario\footnote{Scenarios are defined as an \emph{''informal narrative description''}. \emph{''It describes human activities or tasks in a story that allows exploration and discussion of contexts, needs, and requirements. It does not necessarily describe the use of software or other technological support used to achieve a goal. Using the vocabulary and phrasing of users means that scenarios can be understood by stakeholders, and they are able to participate fully in development.''}~\cite{preeceInteractionDesignHumancomputer2015}.}. If you are designing a piece of software or graphical user interface, please specify your users and the tasks the users want to perform with your software.
+In the following, I will only use the name ''app framework'' when referring to the meta-framework based on angular that can be deployed in Apps and as a Web-App.\\
+
+To understand the usecases of the editor, I will first introduce you shortly to the app framework the editor should configure.
+As described in the summary, the framework's build output is loaded from so called ''dynamic resources'', together with the configuration files, styling in form of css files, static images and other web contents.
+At runtime, the framework reads the config files and renders the UI with a set of components. These components can be populated with data from datasources, change behaviour based on the ''context'', like device type,
+query parameters in the URL or other external factors.
+
+An simple example of an JSON configuration for a login view:
+
+\begin{minted}{json}
+{
+  "path": "login",
+  "name": "login",
+  "content": [
+    {
+      "type": "section",
+      "class": "login-section",
+      "content": [
+        {
+          "type": "html",
+          "tag": "h1",
+          "content": "LOGIN_TITLE"
+        },
+        {
+          "type": "html",
+          "tag": "p",
+          "content": "LOGIN_IOS_TEXT",
+          "condition": {
+            "value": "$context.platform",
+            "compareValue": "ios"
+          }
+        },
+        {
+          "type": "button",
+          "message": "Login",
+          "buttonClass": "button",
+          "tap": {
+            "type": "login"
+          }
+        }
+      ]
+    }
+  ]
+}
+\end{minted}
+
+Even with this basic example without any data sources or other complex dependencies, it is quite hard to undestand the mapping between configuration and generated UI, which leads to easily introduced errors.
+
+Here are two screenshots of more complex UIs that can get configured with this framework:
+
+\includegraphics[height=15em]{pics/experience_screenshot_01.jpg}
+\includegraphics[height=15em]{pics/expeirence_screenshot_02.jpg}
+
+The tasks performed depend a lot on the user; a admin from a publisher's company may just want to exchange an ad banner, rephrase some text or update a logo.
+The Customer Success team at sprylab does more complex configurations like adapting exisitng apps for new customers by exchanging messages, colors, sometimes even adding complete views or adapt sections inside.
+The framework developers use it for setting up new apps and features, confugirng complex filters for data sources and more.
+
+Obviously, the easier the editor gets to use, the more the Customer Success and external users get enabled to do more changes on their own.
+But it needs to be noted, that this system is constrained by the complexity of the schemas defining the UI configs. As this editor needs to work with the exisitng schematas, there is a limit on how easy it will be to configure apps, but the goal is to push this boundary further than current workflows allow.
 
 %************************************************************************
 \subsection{Related Work}
@@ -46,6 +104,8 @@ Example Implementations which should get evaluated or taken as reference
 	\item \href{https://www.diva-portal.org/smash/get/diva2:215020/FULLTEXT01.pdf }{Methods and Qualities of a Good User Interface Design}
 	\item \href{}{Book: Lern human computer interaction, Christopher Reid Becker}
 	\item \href{}{Book: Interaction Design: Beyond Human-Computer Interaction }
+	\item \href{https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.75.2615&rep=rep1&type=pdf}{INTEGRATING HUMAN-COMPUTER INTERACTION DEVELOPMENT INTO THE SYSTEMS DEVELOPMENT LIFE CYCLE: A METHODOLOGY}
+	\item \href{https://wso2.com/library/articles/2019/04/brownfield-integration-why-its-important-for-modernizing-your-enterprise/}{Brownfield Integration: Why It's Important For Modernizing Your Enterprise}
 \end{itemize}
 
 %************************************************************************
