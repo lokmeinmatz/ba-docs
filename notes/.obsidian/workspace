@@ -1,0 +1,140 @@
+{
+  "main": {
+    "id": "985cf803fe9b1c46",
+    "type": "split",
+    "children": [
+      {
+        "id": "d0cf5c3ea488f8d4",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "sources/List.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "18c6efdc3904c484",
+    "type": "split",
+    "children": [
+      {
+        "id": "907ab707cd8b8d32",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b90ef811e30af4d6",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "2e0d7ae5bb06d318",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "de32387f66c808c1",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "48dba4401301f3e9",
+    "type": "split",
+    "children": [
+      {
+        "id": "75526200e908f67f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5cf2ff1fd7bdd4c4",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "sources/List.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "34eae32da975e197",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "sources/List.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "8bf34d4720826acc",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "cb53268336c1d9e0",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "sources/List.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "d0cf5c3ea488f8d4",
+  "lastOpenFiles": [
+    "kanban.md",
+    "Plan.md",
+    "Untitled.md",
+    "2022-09-15.md",
+    "sources/List.md",
+    "hot takes.md"
+  ]
+}
