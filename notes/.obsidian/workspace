@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "d0cf5c3ea488f8d4",
+        "id": "5ca762a6fa1811d8",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "HCI/HCD principles.md",
-            "mode": "preview",
+            "file": "HCI/Plan - Qualtitative User Research starting point.md",
+            "mode": "source",
             "source": false
           }
         }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HCI/HCD principles.md",
+                "file": "HCI/Plan - Qualtitative User Research starting point.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HCI/HCD principles.md",
+                "file": "HCI/Plan - Qualtitative User Research starting point.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HCI/HCD principles.md"
+                "file": "HCI/Plan - Qualtitative User Research starting point.md"
               }
             }
           }
@@ -125,19 +125,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
-  "active": "d0cf5c3ea488f8d4",
+  "active": "5ca762a6fa1811d8",
   "lastOpenFiles": [
+    "HCI/HCD principles.md",
+    "JsonEditor/update flow.md",
+    "Untitled.md",
+    "HCI/Plan - Qualtitative User Research starting point.md",
+    "HCI/User Research.md",
+    "Open Questions.md",
+    "kanban.md",
     "sources/List.md",
     "sources/hci/1 Learn Human-Computer Interaction Becker.md",
-    "HCI/HCD principles.md",
-    "HCI/User Research.md",
-    "kanban.md",
-    "Plan.md",
-    "Untitled.md",
-    "2022-09-15.md",
-    "hot takes.md"
+    "Plan.md"
   ]
 }
