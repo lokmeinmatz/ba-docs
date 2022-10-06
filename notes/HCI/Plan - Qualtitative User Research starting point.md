@@ -1,7 +1,7 @@
 # Goal(s)
 
-### SMART criteria:
-**Specific**: improveworkflow of users to modify dynamic resources 
+### SMART criteria for goals ( VL2.1 5:10):
+**Specific**: improve workflow of users to modify dynamic resources 
 **Measurable**: survery results regarding editability, confidence in changing resources etc.
 **Assignable**: ? (for part 2 me & others, for part 1 not really applicable? [[Open Questions]])
 **Realistic**: until start of december with base work, keep software open for extension in future!!
@@ -19,40 +19,91 @@
 
 
 # Participants
+>ref hci.5 p261
+
+Users of exisitng storefront editor (acc. Google Analytics, 21.9.): ca 31 per week (difficult bc. modern browsers limit recognition of recurring sessions)
+
+-> near - saturation sampling, but too large user group and not realistic that everyone has time
+
+"Convenience sampling" method: whoever is available (and ofc. is motivated to give input)
+
 select through Non-probability sampling (too small user group for random prob. sampling)
+Larger group for survey, smaller subgroup for interview & moderated observation
 
-# Structure:
-For 1., moderated observation with subsequent eval (with user) seems fitting
-For 2., derive outcome from 1. + user interview
+target group sizes
+- interview: 6 people
+- survey: 15 people
+
+(spread as evenly as possible over identified user groups)
+
+identified user groups:
+- product developers
+- project developers
+- CS users / project managers
+- external Customers
+
+Test run with Felix (project dev)
 
 
+Potential user groups that don't use exisitng tools yet and thus are not applicable to first survey / interview round:
+- QA
+- Sales
+
+No informed conset form required , at least not for company people
+
+## Triangulation methods used
+methodological triangulation (observ, interview, survey)
+Triangulation of data: diffrent people (individuals as well as user groups)
+
+**no pilot study needed**
+
+# Structure
 total time: 30m
+
 ## Intro & explain goal an plan (< 5min)
+- friendly intro, ask how the interviewee feels
+- itroduce task / topic
+- Inform outcome is used in bachelor thesis and thus published by the university, but anonymized
+- Ask if recording is fine
 
-## Moderated observation 10-15min
-Task???
-(maybe one storefront related and one for app menu?)
-(idea: android top level folder to see if people notice second platform overwrite)
 
-## Interview about improvements / wishes: 10 - 15min
+## 1) Moderated observation 10-15min
+Task ideas:
+App: 
+- https://staging.purplemanager.com/#appDetail;id=1c2ee0de-57df-47b9-aa5b-9e15f42b1a51
 
-Phase 1: current state & problems
--> to "remind" user of current state
+1. change english app menu entry "Newsstand" to "Home" on all platforms
+2. Change the Banner target of the home page to https://google.com
+3. Change text "Latest Issues" on home to "Read new Issues"
+4. Change color of "Read new Issues" and "Latest Articles" to the app's primary color.
+5. Add an Dropdown on the home between "Read new Issues" and "Latest Articles" 
+	1. should show all possible publications (hint: add data source)
+	2. should set publication=... in the URL (param scope)
+6. text DROPDOWN_RESET should be "All Publications"
 
-- how often do you use editor
-- common tasks ("explain a common day where you use the editor / resources")
-- first experience? (onboarding)
-- what was the thing last week that took the most for you to do?
-- what was the biggest thing last week that was a probelm / anoyance to you?
-- + spntaneous problems that showed during task
+(note: android top level folder to see if people notice second platform overwrite for 1))
+
+## 2) Semistructured Interview about improvements / wishes: 10 - 15min
+
+Idea: after mod. obs
+
+- Wie oft nutzt du ca. den Editor?
+- Was sind so die häuftigsten Aufgaben, die du mit dem Editor ausführst?
+- Beschreibe letzte Session so detailiert wie möglich (Schritt für schritt ab URL öffnen)
+- Gibt es Aufgaben, für die du den "manuellen" Weg (Manager) gehst, und wenn ja warum?
+- Erinnerst du dich an deine ersten Eindrücke / Erfahrungen mit dem Editor / dyn. Resourcen? Wenn ja, wie würdest du diese beschreiben? (open q)
+- Wenn du dich an deine letzte Woche zurück erinnerst; gab es Probleme / Schwierigkeiten um Umgang mit dem Editor? Wenn ja welche und warum?
+- > if problems occured during mod. observation, discuss why?
 
 Phase 2: future & wishes
-
-open mind: no limits, how would "ideal" tool look like and what functionality should it include
-Ideas how to mitigate common problems
+Open interview: Ideen über feature set
 
 
-## give survey to fill out on their own
+## 3) give survey to fill out on their own
+
+
+eher 3/4 Fragen
+Berger vorher schicken
 
 Survey has same structure as interview:
 1. current state & problems

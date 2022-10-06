@@ -7,21 +7,24 @@ kanban-plugin: basic
 ## TODO
 
 - [ ] Anmeldung abgeben wenn Müller Birn ready ist
-- [ ] list of methods for first User Research round
+- [ ] Review partner
+- [ ] Rafa fragen wegen DPV und co<br>Jasmin und Annabell
 
 
 ## Selected
 
-- [ ] collect previous selected sources in obsidian
+- [ ] Curate list of candidates for User Research round
 
 
 ## In Progress
 
+- [ ] list of methods for first User Research round
 
 
 ## Done
 
 **Complete**
+- [x] collect previous selected sources in obsidian
 
 
 

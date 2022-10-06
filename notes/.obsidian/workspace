@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "5ca762a6fa1811d8",
+        "id": "9f29bac3996a3f54",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -61,7 +61,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 412.5
   },
   "right": {
     "id": "48dba4401301f3e9",
@@ -125,19 +125,20 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
-  "active": "5ca762a6fa1811d8",
+  "active": "9f29bac3996a3f54",
   "lastOpenFiles": [
+    "kanban.md",
+    "HCI/Plan - Qualtitative User Research starting point.md",
+    "sources/List.md",
+    "Open Questions.md",
+    "HCI/User Research.md",
+    "sources/hci/5 Interaction Design.md",
     "HCI/HCD principles.md",
     "JsonEditor/update flow.md",
     "Untitled.md",
-    "HCI/Plan - Qualtitative User Research starting point.md",
-    "HCI/User Research.md",
-    "Open Questions.md",
-    "kanban.md",
-    "sources/List.md",
-    "sources/hci/1 Learn Human-Computer Interaction Becker.md",
-    "Plan.md"
+    "sources/hci/1 Learn Human-Computer Interaction Becker.md"
   ]
 }

@@ -36,7 +36,7 @@ Note: in this context difficult, as I can't and shouldn't spectate other people'
 
 Maybe derived method from this: analyze the questions they ask -> they indicate common problems
 
-## moderated observation (hci.1 p135)
+## moderated observation (hci.1 p135) 
 [[Plan - Qualtitative User Research starting point]]
 Main scope: create a scenario or catalyst for observing to have references.
 Ask user to do a task, analyze and (optionally) also reflect work with user him/herself.
@@ -45,6 +45,10 @@ Ask user to do a task, analyze and (optionally) also reflect work with user him/
 - task should be common in their work and be done by as many people as possible in diffrent groups to have good comparability
 - take notes during observation
 - record if possible
+
+## Contextual inquiry (VL2.3)
+Base idea similar to moderated observation, but 
+is more "learn from the workers" / observing the typical work a user does while moderated observation is focused on 
 
 ## user interviews (hci.1 p137)
 Goal is to feel more like a natural conversation than strict Q->A flow.
