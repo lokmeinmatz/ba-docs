@@ -138,3 +138,10 @@ future questions:
 
 For UX improvements:
 16. Do you prefer mouse-focuses working or keyboard (shortcuts)
+
+
+# Results
+
+Felix: see google drive
+
+Ausschneiden und einfügen -> teilweise leere CSS Datei?

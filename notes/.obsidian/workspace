@@ -61,7 +61,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 412.5
+    "width": 415.5,
+    "collapsed": true
   },
   "right": {
     "id": "48dba4401301f3e9",
@@ -130,10 +131,10 @@
   },
   "active": "9f29bac3996a3f54",
   "lastOpenFiles": [
-    "kanban.md",
+    "Open Questions.md",
     "HCI/Plan - Qualtitative User Research starting point.md",
     "sources/List.md",
-    "Open Questions.md",
+    "kanban.md",
     "HCI/User Research.md",
     "sources/hci/5 Interaction Design.md",
     "HCI/HCD principles.md",
