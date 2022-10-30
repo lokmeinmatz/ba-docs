@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "HCI/Plan - Qualtitative User Research starting point.md",
+            "file": "HCI/HCD principles.md",
             "mode": "source",
             "source": false
           }
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HCI/Plan - Qualtitative User Research starting point.md",
+                "file": "HCI/HCD principles.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HCI/Plan - Qualtitative User Research starting point.md",
+                "file": "HCI/HCD principles.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,11 +118,20 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HCI/Plan - Qualtitative User Research starting point.md"
+                "file": "HCI/HCD principles.md"
               }
             }
+          },
+          {
+            "id": "e439f5ae61d914fd",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -131,13 +140,13 @@
   },
   "active": "9f29bac3996a3f54",
   "lastOpenFiles": [
-    "Open Questions.md",
+    "HCI/User Research.md",
     "HCI/Plan - Qualtitative User Research starting point.md",
+    "HCI/HCD principles.md",
+    "Open Questions.md",
     "sources/List.md",
     "kanban.md",
-    "HCI/User Research.md",
     "sources/hci/5 Interaction Design.md",
-    "HCI/HCD principles.md",
     "JsonEditor/update flow.md",
     "Untitled.md",
     "sources/hci/1 Learn Human-Computer Interaction Becker.md"

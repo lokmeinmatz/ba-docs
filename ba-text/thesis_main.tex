@@ -120,17 +120,18 @@
 % Only files listed here will be included in the PDF document!
 % In order to only partially translate the document, for example for bug-fixing, 
 % it might be useful to comment out some of the documents.
-\includeonly{
-title,
-declaration,
-abstract_en,
-abstract_de,
-preface,
-introduction,
-chapters,
-conclusion,
-appendix
-}
+% \includeonly{
+% title,
+% declaration,
+% abstract_en,
+% abstract_de,
+% preface,
+% introduction,
+% chapters,
+% chapters/02-background
+% conclusion,
+% appendix
+% }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % The content part of the documentent starts here! %%
@@ -216,6 +217,11 @@ appendix
 
 \include{introduction}
 \include{chapters}
+\include{chapters/02-background}
+\include{chapters/03-related_work}
+\include{chapters/04-analysis}
+\include{chapters/05-prototyping}
+\include{chapters/06-implementation}
 \include{conclusion}
 
 
