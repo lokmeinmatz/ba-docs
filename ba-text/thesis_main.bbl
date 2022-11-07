@@ -1,3 +1,20 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{AHTB21}
+
+\bibitem[AHTB21]{BrownfieldToGreenfield:2021ys}
+Johanna~Wallén Axehill, Erik Herzog, Johan Tingström, and Marie Bengtsson.
+\newblock From brownfield to greenfield development – understanding and
+  managing the transition.
+\newblock {\em INCOSE International Symposium}, 31(1):832--847, 2021.
+
+\bibitem[Bec20]{LearnHCI:2020ys}
+Christopher~Reid Becker.
+\newblock {\em Learn Human-Computer-Interaction}.
+\newblock 2020.
+
+\bibitem[HS19]{Interactiondesign:2019ys}
+Jennifer~Preece Helen~Sharp, Yvonne~Rogers.
+\newblock {\em Interaction design - beyond human-computer interaction, 5th
+  Edition}.
+\newblock Wiley, 2019.
 
 \end{thebibliography}

@@ -10,4 +10,21 @@
 \label{chap:chapters} 
 
 
-TEasfaflbaflhawlih a saf lahflahef awhj aef 
+For the implementation, I tried to focus on user experience as well as developer experience, which includes fast reloads,
+a good test infrastructure for unit- and end-to-end (in the folllowing e2e) tests and the continous integration and deployment pipeline.
+\\
+Again, there are restrictions imposed by the company's environment, from the programming languages used to the APIs and the build and deployment infrastructure.
+But within these bounds, it seems worth it to evaluate diffrent approaches, libraries and more, to improve developer efficiency,
+preventing errors and overall imrpoving the quality of the product.
+\\
+The restrictions made by the company where
+\begin{itemize}
+  \item Typescript as main language for frontend and backend
+  \item React as frontend framework
+  \item Nodejs as backend runtime
+  \item Development and deployment of internal gitlab instance, and should run in a docker container on the company's Kubernetes cluster.
+\end{itemize}
+
+Mainly, the thoughts behind these restrictions are to ensure maintainablilty by using common languages and tooling, and to prevent fragmentation
+across diffrent runtimes / software stacks etc.
+\\

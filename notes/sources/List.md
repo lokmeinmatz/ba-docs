@@ -27,3 +27,9 @@
 - hci.5 [[5 Interaction Design]]
 - hci.6 📄 Survey Research in HCI https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwiR7vjfo7z6AhX9QPEDHZmvDQgQFnoECA4QAQ&url=https%3A%2F%2Fwww.sunyoungkim.org%2Fclass%2Fold%2Fede_f18%2Freadings%2Fsurvey_Muller.pdf&usg=AOvVaw1jhK0ANzYNV7eZseQOS-8d 
 - hci.7 📄 Survey Design and Implementation in HCI http://blog.binadarma.ac.id/darius/wp-content/uploads/2016/06/HCI13-Survey-Design-and-Implementation-HCI.pdf
+
+## General
+- gen.1 📄 From Brownfield to Greenfield Development
+	- src: https://incose.onlinelibrary.wiley.com/doi/epdf/10.1002/j.2334-5837.2021.00873.x
+	- status: TODO
+	- comments: via primo
