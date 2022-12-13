@@ -8,9 +8,9 @@
 \chapter{Theoretical background}
 
 This thesis can be divided into two mayor areas of theoretical background.
-First are the \textbf{HCI based aspects} and the other the \textbf{project specific background}.
+Human-Computer-Interaction (HCI) and project specific background.
 
-\section{HCI aspects}
+\section{HCI}
 Let me start by explaining the HCI aspects and why this thesis approaches the area from an not so common standpoint.
 \\
 Many HCI books (e.g. \cite{Interactiondesign:2019ys} or \cite{LearnHCI:2020ys}) implicitly assume \label{def:Greenfield} Greenfield development,
@@ -48,3 +48,7 @@ Also, manually downloading ZIP files, unpacking them, chaning assets and config 
 At Sprylab, there exists an tool called ''Storefront Editor'', which is used as the foundation for this new editor.
 In the section about (TODO: LINK!!!) User Research, I will outline the positive aspects and approaches which I reused for the new editor,
 as well show the missing features and features the interview candidates noted as confusing, not working or slowing odwn their work.
+
+The following UML sequence diagram displays a typical interaction of a user with the editor; pulling the current version, editing a file and merging the changes.
+
+\includegraphics[width=\textwidth]{pics/user-flow.uml.drawio.png}

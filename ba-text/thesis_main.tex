@@ -26,7 +26,8 @@
 \usepackage[T1]{fontenc} 
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel} %\usepackage[english]{babel}  
-\usepackage{ae} 
+\usepackage{ae}
+\usepackage{biblatex}
 \usepackage{bibgerm}    
 
 \usepackage{fancyhdr} % Define simple headings 
@@ -39,6 +40,7 @@
 %
 \usepackage[pdftex]{graphicx}  
 \usepackage{hyperref} % turn all your internal references into hyperlinks
+\usepackage{svg}
 %\usepackage[pdfstartview=FitH,pdftitle={<<Titel der Arbeit>>}, pdfauthor={<<Autor>>}, pdfkeywords={<<Schlüsselwörter>>}, pdfsubject={<<Titel der Arbeit>>}, colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black, hypertexnames=false, bookmarksnumbered=true, bookmarksopen=true, pdfborder = {0 0 0}]{hyperref}
 %
 % table settings 
@@ -80,6 +82,8 @@
 %----- Customize header and footer\pagestyle{fancy} 
 %---------------------------------------------------
 \pagestyle{fancy}
+
+\bibliography{references.bib}
 
 \fancyhf{}  % delete all existing header formating
 
@@ -234,8 +238,9 @@
 %---------------------------------------------------
 \phantomsection
 \addcontentsline{toc}{chapter}{Literatur}
-\bibliographystyle{alpha}
-\bibliography{references.bib}
+% \bibliographystyle{alpha}
+\printbibliography
+
 
 
 %---------------------------------------------------

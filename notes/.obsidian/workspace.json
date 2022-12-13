@@ -42,9 +42,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "0defe033a52bd5ac",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "HCI/Plan - Qualtitative User Research starting point.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -110,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HCI/Brownfield vs Greenfield.md",
+                "file": "HCI/Plan - Qualtitative User Research starting point.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HCI/Brownfield vs Greenfield.md",
+                "file": "HCI/Plan - Qualtitative User Research starting point.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HCI/Brownfield vs Greenfield.md"
+                "file": "HCI/Plan - Qualtitative User Research starting point.md"
               }
             }
           },
@@ -170,17 +182,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "cd8fb767ca0bce7a",
+  "active": "0defe033a52bd5ac",
   "lastOpenFiles": [
-    "Writing Tipps.md",
     "HCI/HCD principles.md",
-    "Open Questions.md",
+    "sources/implementation/Clean Architecture - Robert C. Martin.md",
     "HCI/Brownfield vs Greenfield.md",
+    "Writing Tipps.md",
+    "Open Questions.md",
     "sources/gen.1 From Brownfield to Greenfield Development.md",
     "sources/List.md",
     "HCI/User Research.md",
     "HCI/Plan - Qualtitative User Research starting point.md",
-    "kanban.md",
-    "sources/hci/5 Interaction Design.md"
+    "kanban.md"
   ]
 }

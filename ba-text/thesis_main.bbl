@@ -1,20 +1,150 @@
-\begin{thebibliography}{AHTB21}
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
 
-\bibitem[AHTB21]{BrownfieldToGreenfield:2021ys}
-Johanna~Wallén Axehill, Erik Herzog, Johan Tingström, and Marie Bengtsson.
-\newblock From brownfield to greenfield development – understanding and
-  managing the transition.
-\newblock {\em INCOSE International Symposium}, 31(1):832--847, 2021.
 
-\bibitem[Bec20]{LearnHCI:2020ys}
-Christopher~Reid Becker.
-\newblock {\em Learn Human-Computer-Interaction}.
-\newblock 2020.
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{BrownfieldToGreenfield:2021ys}{article}{}
+      \name{author}{4}{}{%
+        {{hash=37544215ed5f50b3caa8fe97b450451b}{%
+           family={Axehill},
+           familyi={A\bibinitperiod},
+           given={Johanna\bibnamedelima Wallén},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=94068506b18ef70fb943b97366f85dd0}{%
+           family={Herzog},
+           familyi={H\bibinitperiod},
+           given={Erik},
+           giveni={E\bibinitperiod}}}%
+        {{hash=95f19e64a09754ef22b5157f9faf7841}{%
+           family={Tingström},
+           familyi={T\bibinitperiod},
+           given={Johan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=38a904530494093a0878c316c2673367}{%
+           family={Bengtsson},
+           familyi={B\bibinitperiod},
+           given={Marie},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \strng{namehash}{7d1a47dffcef9aacba8d9c3f61ce1f62}
+      \strng{fullhash}{53730e128fa36ae00ed9e64dac574660}
+      \strng{bibnamehash}{7d1a47dffcef9aacba8d9c3f61ce1f62}
+      \strng{authorbibnamehash}{7d1a47dffcef9aacba8d9c3f61ce1f62}
+      \strng{authornamehash}{7d1a47dffcef9aacba8d9c3f61ce1f62}
+      \strng{authorfullhash}{53730e128fa36ae00ed9e64dac574660}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper describes our experience of developing a new system (Greenfield development) after continuously extending an existing one (Brownfield development) for a long time. Our experience however does not seem to be unique to our context. Complex systems tend to live longer and be continuously updated to stay relevant over many years. With this longevity there is a risk that there are few, if any, leaders who have experienced a previous transition from Brownfield to Greenfield development. The paper characterises how development changes and illustrates the organisational challenges during the transition. The paper also presents some indicators of an approaching transition to Greenfield development, together with some management strategies for preparing the organisation for a successful transition. A key message in the paper is that an organisation optimised for Brownfield development is inherently unsuitable for the challenges in Greenfield development.}
+      \field{issn}{2334-5837}
+      \field{journaltitle}{INCOSE International Symposium}
+      \field{number}{1}
+      \field{title}{From Brownfield to Greenfield Development – Understanding and Managing the Transition}
+      \field{volume}{31}
+      \field{year}{2021}
+      \field{pages}{832\bibrangedash 847}
+      \range{pages}{16}
+    \endentry
+    \entry{LearnHCI:2020ys}{book}{}
+      \name{author}{1}{}{%
+        {{hash=d2446055548d47fbe244321fbc059b92}{%
+           family={Becker},
+           familyi={B\bibinitperiod},
+           given={Christopher\bibnamedelima Reid},
+           giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{d2446055548d47fbe244321fbc059b92}
+      \strng{fullhash}{d2446055548d47fbe244321fbc059b92}
+      \strng{bibnamehash}{d2446055548d47fbe244321fbc059b92}
+      \strng{authorbibnamehash}{d2446055548d47fbe244321fbc059b92}
+      \strng{authornamehash}{d2446055548d47fbe244321fbc059b92}
+      \strng{authorfullhash}{d2446055548d47fbe244321fbc059b92}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-1-83882-032-9}
+      \field{title}{Learn Human-Computer-Interaction}
+      \field{year}{2020}
+    \endentry
+    \entry{Github:VanoDevium/node-framework-stars}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=fb9a41f42c637c51b5461bc73bc14fcd}{%
+           family={Devium},
+           familyi={D\bibinitperiod},
+           given={Vano},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{fb9a41f42c637c51b5461bc73bc14fcd}
+      \strng{fullhash}{fb9a41f42c637c51b5461bc73bc14fcd}
+      \strng{bibnamehash}{fb9a41f42c637c51b5461bc73bc14fcd}
+      \strng{authorbibnamehash}{fb9a41f42c637c51b5461bc73bc14fcd}
+      \strng{authornamehash}{fb9a41f42c637c51b5461bc73bc14fcd}
+      \strng{authorfullhash}{fb9a41f42c637c51b5461bc73bc14fcd}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Top Node.js Web Frameworks}
+      \field{urlday}{13}
+      \field{urlmonth}{12}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/vanodevium/node-framework-stars
+      \endverb
+      \verb{url}
+      \verb https://github.com/vanodevium/node-framework-stars
+      \endverb
+    \endentry
+    \entry{Interactiondesign:2019ys}{book}{}
+      \name{author}{1}{}{%
+        {{hash=06fa2c3b9d5cbaa9094b8ad4f4c8a994}{%
+           family={Helen\bibnamedelima Sharp},
+           familyi={H\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Jennifer\bibnamedelima Preece},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
+           suffix={Yvonne\bibnamedelima Rogers},
+           suffixi={Y\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{06fa2c3b9d5cbaa9094b8ad4f4c8a994}
+      \strng{fullhash}{06fa2c3b9d5cbaa9094b8ad4f4c8a994}
+      \strng{bibnamehash}{06fa2c3b9d5cbaa9094b8ad4f4c8a994}
+      \strng{authorbibnamehash}{06fa2c3b9d5cbaa9094b8ad4f4c8a994}
+      \strng{authornamehash}{06fa2c3b9d5cbaa9094b8ad4f4c8a994}
+      \strng{authorfullhash}{06fa2c3b9d5cbaa9094b8ad4f4c8a994}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-1-119-54725-9}
+      \field{title}{Interaction design - beyond human-computer interaction, 5th Edition}
+      \field{year}{2019}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
 
-\bibitem[HS19]{Interactiondesign:2019ys}
-Jennifer~Preece Helen~Sharp, Yvonne~Rogers.
-\newblock {\em Interaction design - beyond human-computer interaction, 5th
-  Edition}.
-\newblock Wiley, 2019.
-
-\end{thebibliography}

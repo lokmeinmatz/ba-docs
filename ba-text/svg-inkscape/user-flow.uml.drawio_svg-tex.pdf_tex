@@ -1,0 +1,99 @@
+%% Creator: Inkscape 1.2.1 (9c6d41e4, 2022-07-14), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'user-flow.uml.drawio_svg-tex.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{436.00341797bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.6373196)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{user-flow.uml.drawio_svg-tex.pdf}}%
+    \put(0.22248316,0.55991195){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Builder Webclient\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{user-flow.uml.drawio_svg-tex.pdf}}%
+    \put(0.45642628,0.55991195){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Builder Backend\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{user-flow.uml.drawio_svg-tex.pdf}}%
+    \put(0.68004838,0.55991195){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Manager Backend\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{user-flow.uml.drawio_svg-tex.pdf}}%
+    \put(0.90367048,0.55991195){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Reader's App\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{user-flow.uml.drawio_svg-tex.pdf}}%
+    \put(0.0195031,0.55303127){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Us...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{user-flow.uml.drawio_svg-tex.pdf}}%
+    \put(0.0711082,0.47734379){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}click "pull"\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{user-flow.uml.drawio_svg-tex.pdf}}%
+    \put(0.32569336,0.46014209){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}pullResources(app)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{user-flow.uml.drawio_svg-tex.pdf}}%
+    \put(0.54931546,0.44294039){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}downloadZIP(app)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{user-flow.uml.drawio_svg-tex.pdf}}%
+    \put(0.32397319,0.37585376){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}return ready\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{user-flow.uml.drawio_svg-tex.pdf}}%
+    \put(0.55103563,0.41025716){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}unpack()\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{user-flow.uml.drawio_svg-tex.pdf}}%
+    \put(0.12959398,0.35521172){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}display ready message\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{user-flow.uml.drawio_svg-tex.pdf}}%
+    \put(0.0711082,0.30532679){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}edit file\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{user-flow.uml.drawio_svg-tex.pdf}}%
+    \put(0.32225302,0.25200152){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}writeFile(file)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{user-flow.uml.drawio_svg-tex.pdf}}%
+    \put(0.10379143,0.21931829){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}press "merge"\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{user-flow.uml.drawio_svg-tex.pdf}}%
+    \put(0.32569336,0.20039642){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}merge(app)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{user-flow.uml.drawio_svg-tex.pdf}}%
+    \put(0.2775286,0.28296458){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}timer ~3sec\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{user-flow.uml.drawio_svg-tex.pdf}}%
+    \put(0.53383393,0.17115353){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}packChange...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{user-flow.uml.drawio_svg-tex.pdf}}%
+    \put(0.54759529,0.12814928){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}uploadZIP(app)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{user-flow.uml.drawio_svg-tex.pdf}}%
+    \put(0.33429421,0.11266775){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}return uploaded\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{user-flow.uml.drawio_svg-tex.pdf}}%
+    \put(0.12787381,0.09718622){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}display success message\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{user-flow.uml.drawio_svg-tex.pdf}}%
+    \put(0.79185943,0.06278282){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}getResources(this)\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

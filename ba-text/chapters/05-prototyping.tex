@@ -11,6 +11,29 @@
 \chapter{5 - Prototyping}
 \label{chap:chapters} 
 
+After collecting the inital user feedback, I started drawing minimal digital ''paper'' prototypes using Figma to gather vizualizations of the proposed UI layouts.
+Two ideas emerged from the interviews: a (file-)editor-centric layout and a preview-centric layout.
+\\
+The editor-centric layout is inspired by modern text editors / IDEs like VS Code (\url{https://code.visualstudio.com/}), which was mentioned as reference during the interviews multiple times.
+There, the central pane is the editor for the currently open file, while in the sides additional panes for file management, preview and more can be shown.
+The familarity especially to developers, who are used to IDE layouts, could help new users adopt patterns to work with the UI they use in other tools as well.
+\\\\
+The idea for a preview-centric layout was inspired by popular generic website builders like \url{https://wix.com} or \url{https://wordpress.com}, where the user
+can see the page in an interactive mode, move, rename or place elements, and then has on the side additional panels like one with information \& options about the
+currently selected one.
+\\
+Ultimately our choice fell to the editor centric layout, the following are some of the reasons for it over the preview-centric one:
+\begin{itemize}
+  \item The configuration structure of the Experience framework was not built with preview-based editing in mind. A lot of functionality is hidden inside the components and invisible for the user,
+  often components only appear under specific conditions that are not easily reproducable in the editor environment. Thus, editing in a preview-centric mode could in many situations
+  lead to more confusion by the editors than speed the process up.
+  \item After evaluation of some avaialble libraries and examples, we concluded that building a reliable and usable preview-centric editor is more complicated, and even without the time restricition of my bachelor thesis, I proposed to not go this way,
+  as it was unclear if it even could result in a viable product in reasonable time. For editor-centric UIs, many thirdparty libraries exist, that can be integrated into the UI.
+  Some relevant are Monaco Editor (the VS Code Open source text editor part) for editing generic web related files like CSS and JS with automatic syntax highlighting and error detection, and an JSON Editor for work with json configs where we could provide a schema.
+  \item Even though this should not be a exclusion criterion, the old tool used a editor-centric layout. Using a compeletely diffrent layout could make the switch to the new tool for users
+  of the exisitng one much harder, as they have to adapt to new layout and possibly new workflow.
+
+\end{itemize}
 
 Figma static prototype
 \\
