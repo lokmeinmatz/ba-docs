@@ -80,3 +80,43 @@ Some useful LaTeX help web pages
 * There are various programs available for organizing your bibtex references. I personally recommend the open source software Jabref 
 (http://jabref.sourceforge.net/download.php) for Windows or Bibdesk (http://bibdesk.sourceforge.net/) for mac. I have not used it but I heard that is is good: Mendeley Desktop (http://www.mendeley.com/download-mendeley-desktop/).
 
+
+
+
+
+
+## Introduction
+
+Here are a few things that you might want to consider including in your introduction:
+
+    Background information: Provide some context for your work by outlining the relevant background information and discussing the factors that motivated you to undertake this research.
+
+- developing new software with new features / added value inside a real company where changes are limited
+- apply HCI to that scenario (brownfield development), find balance between new methods etc and sticking to exisiting flows
+- exisiting user base and clearly definable personas that can be utilized for research
+- in concrete case: improove workflow of users, make lives easier and work less error prone
+
+
+    Problem statement: Clearly articulate the problem or challenge that your work is addressing. This could be a gap in the existing literature, a pressing need or issue in the field, or a problem that you have personally encountered.
+
+    Research question(s): Formulate one or more research questions that your work will aim to answer. These questions should be focused and specific, and should help to guide your research and inform your analysis.
+
+- see thesis question
+
+    Objectives: Clearly state the objectives of your work and outline the specific goals that you hope to achieve through your research.
+
+- determine user group(s)
+- apply HCI methods bronfield development inside of company
+- build UI Editor, scalable, fast and good UX
+
+
+    Scope: Define the scope of your work, including any limitations or constraints that you will need to consider. This will help to provide context for your research and will help readers to understand the specific focus of your work.
+
+- exisiting file system, file strucuture, schemata etc.
+- exisitng processing flow (external APIs)
+- limits to technology
+- process (SCRUM)
+
+    Significance: Explain why your work is important and how it will contribute to the existing body of knowledge in your field.
+
+- most common approach in larger companies to only do one part new, all ecosystem restrictions still hold 

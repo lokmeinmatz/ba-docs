@@ -144,6 +144,52 @@
       \field{title}{Interaction design - beyond human-computer interaction, 5th Edition}
       \field{year}{2019}
     \endentry
+    \entry{Nielsen:2000}{article}{}
+      \name{author}{1}{}{%
+        {{hash=753054f71283d85f82cda8e35daf6bac}{%
+           family={Nielsen},
+           familyi={N\bibinitperiod},
+           given={Jakob},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{753054f71283d85f82cda8e35daf6bac}
+      \strng{fullhash}{753054f71283d85f82cda8e35daf6bac}
+      \strng{bibnamehash}{753054f71283d85f82cda8e35daf6bac}
+      \strng{authorbibnamehash}{753054f71283d85f82cda8e35daf6bac}
+      \strng{authornamehash}{753054f71283d85f82cda8e35daf6bac}
+      \strng{authorfullhash}{753054f71283d85f82cda8e35daf6bac}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{End of Web Design}
+      \field{year}{2000}
+    \endentry
+    \entry{LawsOfUX:2020ys}{book}{}
+      \name{author}{1}{}{%
+        {{hash=737daf6d477293a13972389d91969e37}{%
+           family={Yablonski},
+           familyi={Y\bibinitperiod},
+           given={Yon},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {O'Reilly}%
+      }
+      \strng{namehash}{737daf6d477293a13972389d91969e37}
+      \strng{fullhash}{737daf6d477293a13972389d91969e37}
+      \strng{bibnamehash}{737daf6d477293a13972389d91969e37}
+      \strng{authorbibnamehash}{737daf6d477293a13972389d91969e37}
+      \strng{authornamehash}{737daf6d477293a13972389d91969e37}
+      \strng{authorfullhash}{737daf6d477293a13972389d91969e37}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-96009-156-1}
+      \field{title}{Laws of UX}
+      \field{year}{2020}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

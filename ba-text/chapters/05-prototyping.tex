@@ -8,8 +8,8 @@
 %  Freie Universität Berlin, Institute of Computer Science, Human Centered Computing. 
 %
 % TODO remove 2 - to use auto numbering
-\chapter{5 - Prototyping}
-\label{chap:chapters} 
+\chapter{Prototyping}
+\label{chap:prototyping} 
 
 After collecting the inital user feedback, I started drawing minimal digital ''paper'' prototypes using Figma to gather vizualizations of the proposed UI layouts.
 Two ideas emerged from the interviews: a (file-)editor-centric layout and a preview-centric layout.
@@ -30,11 +30,8 @@ Ultimately our choice fell to the editor centric layout, the following are some 
   \item After evaluation of some avaialble libraries and examples, we concluded that building a reliable and usable preview-centric editor is more complicated, and even without the time restricition of my bachelor thesis, I proposed to not go this way,
   as it was unclear if it even could result in a viable product in reasonable time. For editor-centric UIs, many thirdparty libraries exist, that can be integrated into the UI.
   Some relevant are Monaco Editor (the VS Code Open source text editor part) for editing generic web related files like CSS and JS with automatic syntax highlighting and error detection, and an JSON Editor for work with json configs where we could provide a schema.
-  \item Even though this should not be a exclusion criterion, the old tool used a editor-centric layout. Using a compeletely diffrent layout could make the switch to the new tool for users
-  of the exisitng one much harder, as they have to adapt to new layout and possibly new workflow.
+  \item The userbase consists mostly of tech-affine people who are used to layouts of IDEs, and the old tool also had a similar editor centric layout.
+  As Jakob's Law of the Internet User Experience states (cf. \cite{Nielsen:2000} and \cite[p. 2]{LawsOfUX:2020ys}), the user's understanding of a website is directly tied to his/hers mental model of that system.
+  Introducing a unconventional workflow comes with the danger that the user gets confused, makes mistakes or in the worst case doesn't like working with the tool anymore.
 
 \end{itemize}
-
-Figma static prototype
-\\
-\includegraphics[width=\textwidth]{pics/figma-desktop.png}
