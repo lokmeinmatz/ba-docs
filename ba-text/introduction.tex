@@ -12,38 +12,24 @@
 
 \section{Topic and context}
 
-In the evergrowing world of software companies, many once startups are now in the situation where they maintain a large software ecosystem and have complcated dependencies of other services or users,
+In the evergrowing world of software development, many companies are now in the situation where they maintain a large software ecosystem and have complex dependencies,
 but still want to improve their systems by developing new components and tools.
-
 This poses the challenge of improving the software from aspects like user expeirence, scalability and maintainability while beeing restricted by the ecosystem.
-Greenfield development, as it is taught for the majority of books, can't be applied freely without breaking existing features or behaviours.
-Thus, applying HCI methods for user research and user experience-focused design might needs to be approached in a diffrent way then during greenfield development.
-Also, the common problem of tight deadlines and limited resources allocated by managers tend to lead to premature releases and unstable software.
-Instead of developing software to maximize the three HCI factors \textbf{See HCD principles / factors src, anme the tree?} for the actual users, often ideas from individual stakeholders like the executive floor are realized without adding real value.
-
-On the other hand, having an exsisting user base which works with exisiting tools is a great fundament to evaluate what ''real users'' need. So HCI methods applied to them can yield more helpful and focused results. \textbf{rephrase}
-
-Many of the resources or literature about HCI seem to assume a mostly free degree while developing new tools, and also assume a wide user base with diverse demographic features \textbf{is this valid engilsh?}.
 \\
-\textbf{List literature srces that dont speak about brownfield development?}
-\textbf{Find a contra example that does cope with brownfield}
-	
+Greenfield development\footnote{Greenfield- and brownfield development refer to software development concepts, where Greenfield projects start in a new environment and don't have legacy code, while brownfield projects are about upgrading or redeveloping software in an existing environment. \cite{JohnAdamsIt:Greenfield}}, which is implicitly used in the majority of books about HCI, assumes no pre-exisiting constraints or limitations, or at least not in the extend they are commonly found in todays software enterprise.
+However, applying HCI methods for user research and user experience-focused design in brownfield development, where many choices are already made, must be approached differently.
 
-\section{Goals of this work}
-\begin{itemize}
-	\item Was sind die mit dieser Arbeit verfolgten Ziele? Welches Problem soll gelöst werden?
-	\item Eine Beschreibung der ersten Ideen, der vorgeschlagene Ansatz und die aktuell erreichten Resultate 
-	\item Eine Beschreibung, welchen Beitrag die Arbeit leistet, um das vorgestellte Problem zu lösen
-	\item Eine Diskussion, wie die vorgeschlagene Lösung sich von bestehenden unterscheidet, was ist neu oder besser?
-\end{itemize}
+In addition, the three major factors in HCI (Usability, Accessibility and Time-on-task, \Cite[pp. 38-40]{LearnHCI:2020ys}) are often neglected due to tight deadlines and limited resources, leading to premature releases and unstable software.
 
-The goal of this thesis is to implement a new software product, an UI Editor for Apps \& Websites of digital publishing customers,
-which is embedded in an existing software ecosystem. During that process, diffrent HCI methods get applied and  
+My goal was to demonstrate how HCI principles and methods can be applied in a brownfield project, using a real-world case study as an examle.
+By having an exsisting user base which works with exisiting tools, it is possible to evaluate what ''real users'' need and make more informed design decisions.
+
+The UI Editor, which I will describe more in detail in \ref{chap:background}, is a tool relying on may external systems and is limited by the file system structure and configuration schemas imposed by the Purple Experience Franework. The editor was developed for magazine and news publishers in Germany (DACH) and the UK, and is intended to facilitate the editing of dynamic resources by users with variying leves of expertise.
 
 \section{Procedure for the research and implementation}
 
 While writing the software and thesis, I followed the an software design process described in \cite[p. 104]{LearnHCI:2020ys}.
-There, the process is divided into a ''Idea'' phase using design thinking, lean ux for first prototypes and then agile development (in my case a relaxed SCRUM version).
+There, the process is divided into a ''Idea'' phase using design thinking, lean ux for first prototypes and then agile development (in my case a relaxed SCRUM process).
 Abstractly it looks as following:
 
 \begin{tikzpicture}[node distance=2cm]
@@ -71,24 +57,3 @@ Abstractly it looks as following:
   \draw [arrow] (deploy) -- (feedback);
   \draw [arrow] (feedback) -- (proto);
 \end{tikzpicture}
-  
-
-
-% \section{Aufbau der Arbeit}
-% \begin{itemize}
-% 	\item Welche Schritte werden durchlaufen, um die Ziele zu erreichen?
-% 	\item An dieser Stelle ist beispielsweise eine Grafik hilfreich, um den Aufbau der Arbeit und welche Ergebnisse/Erkenntnisse wo genutzt werden, zu visualisieren. 
-% 	\item Ebenfalls sollten noch Anmerkungen zur Gestaltung der Arbeit gegeben werden, vor allem, da in vielen deutschen Arbeiten englische Fachbegriffe verwendet werden. Ein solcher Text könnte folgendermaßen lauten: 
-% 		\begin{itemize}
-% 			\item ``Abschließend sind hier noch eine Anmerkungen zur Gestaltung der vorliegenden Arbeit. Für die im Folgenden verwendeten personenbezogene Ausdrücke wurde, um die Lesbarkeit der Arbeit zu erhöhen, die männliche Schreibweise gewählt. Des Weiteren werden eine Reihe von englischen Bezeichnungen verwendet, um einerseits dem interessierten Leser das Studium der häufig vorliegenden englischen Originalliteratur zu erleichtern oder andererseits bestehende Fachbegriffe nicht durch die Übersetzung zu verfälschen. Diese Begriffe sind vom herkömmlichen Text in kursiver Schrift unterschieden.''
-% 		\end{itemize}
-% \end{itemize}
-
-% \begin{figure}[!ht]
-% 	% Mit [!h] wird die Position der Grafik bestimmt. So bedeutet h=here und mit dem "!" (Ausrufezeichen) wird dieser Befehl verstärkt. Weitere Möglichkeiten sind : t=top und b=bottom. Zumeist wird angegeben, in welcher Reihenfolge LaTeX versuchen soll das Bild einzufügen, z.B. [!htb].
-% 	\centering
-% 		\includegraphics[width=0.95\textwidth]{pics/structure.pdf}
-% 	\caption[Beispiel einer möglichen Darstellung zum Aufbau der Arbeit]{Beispiel einer möglichen Darstellung zum Aufbau der Arbeit (vgl. Beschreibung Abschnitt  \ref{chap:chapters}).} 
-% 	% Mit Hilfe von caption wird die Bildunterschrift erzeugt. Der Text in geschweiften Klammern erscheint im Text, während der Text in eckigen Klammern sich dann empfiehlt, wenn die Beschreibung besonders lang ist, denn diese wird dann im Bildverzeichnis verwendet. Diese Kurzbeschreibung kann auch weggelassen werden. 
-% 	\label{fig:structurethesis}
-% \end{figure}

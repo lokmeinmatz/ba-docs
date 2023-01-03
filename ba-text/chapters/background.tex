@@ -6,34 +6,41 @@
 %  Freie Universität Berlin, Institute of Computer Science, Human Centered Computing. 
 %
 \chapter{Theoretical background}
+\label{chap:background}
 
-This thesis can be divided into two mayor areas of theoretical background.
-Human-Computer-Interaction (HCI) and project specific background.
+Before discussing the design and implementation of the UI editor, it is necessary to provide a brief overview of the applied parts of HCI and the specific context, challenges and Opportunities in which the UI editor was developed.
+% 
 
 \section{HCI}
-Let me start by explaining the HCI aspects and why this thesis approaches the area from an not so common standpoint.
+Let me start by concretizing the HCI aspects and why this thesis approaches the area from an not so common standpoint.
 \\
 Many HCI books (e.g. \cite{Interactiondesign:2019ys} or \cite{LearnHCI:2020ys}) implicitly assume \label{def:Greenfield} Greenfield development,
 which ''[...] is in its most distinct form when a new product is created from scratch – a new product or product platform, based on new technology, using new methodology and implemented by people who are new to it all.'' \cite{BrownfieldToGreenfield:2021ys}.
 \\
-While they mention \textit{Environmental requirements} as part of the requirement discovery, this usually is more focused on what abilities the users have (TODO), and not on the restrictions imposed by older software companies, especially those colloquially called ''enterprise''.
-
-There, besides the omnipresent time and capacity restrictions and sometimes not that constructive inputs from stake holders, often \label{def:Brownfield} development must be used.
-In this approach, new capabilities are added to the software, while relying on the exisitng technology and knowledge. \cite{BrownfieldToGreenfield:2021ys}.
-\\
-Therefore, some of the HCI methods must get a bit adapted to fit into this system.
+While \cite[p. 392]{Interactiondesign:2019ys} for example mentions \textit{Environmental requirements} and \textit{Technical requirements} as part of the requirement discovery, the descriptions of these terms are more focused on physical limitations or user behaviours and technical requirements are mentioned only once and then not discussed further.
 \\\\
-Also, the UI Editor developed for this thesis has to be counted as internal tooling, so it is reserved for a quite specific user base.
-Not every person on the internet should edit these apps and dynamic resources, as they require understanding of web technologies and the digital publishing nomenclature.
+\textbf{TODO remove paragraph?}
+Another important point for this thesis is the already exisitng and diverse user base of exsiting software in the ecosystem, from Purple Experience Developers over Customer Success Managers to the IT departments of our customers. This made the user research phase quite exiting and provided great value, as there was a lot of detailed input, ideas and whishes from the beginning.
+\\\\
+Thus, the user research phase started with collecting information about diffrent users, and adapting methods like Moderated observations, interviews and questionaires. I approached this phase with an open mind that it is acceptable if individual methods or applications of them are not successful, from which much can also be learned. As an example, after evaluation and test runs, I decided against Questionaires, because they showed less information content than other methods in this case study.
+\\
+Evaluationg the outcomes of the research is at least as important as the research itself.
+I experimented with diffrent ways to prepare and process the data to to present it more clearly as well as to consider different factors when discussing how to progress with the prototype.
 
 \section{Project specific background}
 To understand the usecase and value of the UI Editor, we first have to declare the fundamentals of the environment the editor will be embedded in.
+The publishing houses resp. their digital departments (in the following \textit{customer}) purchase the license for an app or website (in the following just \textit{app}, as there is not much difference besides the end medium).
+Then, they can import content via multiple ways into the system, or the editors write the content directly inside the tools provided as an Software-As-A-Service (SaaS).
 
-The publishing houses resp. their digital departments (in the following ''customer'') purchase the license for an app or website (in the following just ''app'', as there is not much difference besides the end medium).
+\begin{figure}[h]
+  \caption{Use Case diagram showing interactions from publishers, readers and frontend developers with the system}
+  \includegraphics[width=\textwidth]{pics/purple-abstract.drawio.png}
+\end{figure}
 
-Then, they can import content via multiple ways, or the editors write the content directly inside the tools provided as an Software-As-A-Service (SaaS).
-
-The apps are running an Meta framework build ontop of Angular, which is completely configurable via JSON files descripting the routing, rendering of diffrent components,
+The UI editor fits into the Use case ''Per App configuration \& style'', with wich mostly Frontend Developers and Project Managers from Sprylab as well as some external customer's IT admins will interact. The goal is to lower the editing burden as much as possible, so that more of the configuration can be handed off to external customers while also improving usability for the developers of the company.
+\\
+Now that we have established a rough understanding of the environment and usecase the UI editor will be placed in, I want to explain more about the configuration and styling itself.
+For that, it is important to understand the Frontend framework Sprylab uses for the delivery to apps and websites. It is called Purple Experience and is a Meta framework build ontop of Angular. The benefit is, that it is completely configurable via JSON files describing the routing, rendering of diffrent components,
 connecting data sources (an API abstraction) with those components, loading assets like images and ads, and styling the whole page with CSS.
 \\
 These configs and assets are stored on an file system called \label{def:DynamicResources} \textit{dynamic resources}.

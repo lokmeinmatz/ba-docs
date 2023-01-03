@@ -117,6 +117,22 @@
       \verb https://github.com/vanodevium/node-framework-stars
       \endverb
     \endentry
+    \entry{JohnAdamsIt:Greenfield}{online}{}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labeltitlesource}{title}
+      \field{title}{Greenfield vs Brownfield: Understanding the Software Development Differences}
+      \field{urlday}{2}
+      \field{urlmonth}{1}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.johnadamsit.com/software-development-greenfield-vs-brownfield/
+      \endverb
+      \verb{url}
+      \verb https://www.johnadamsit.com/software-development-greenfield-vs-brownfield/
+      \endverb
+    \endentry
     \entry{Interactiondesign:2019ys}{book}{}
       \name{author}{1}{}{%
         {{hash=06fa2c3b9d5cbaa9094b8ad4f4c8a994}{%
