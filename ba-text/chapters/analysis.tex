@@ -32,7 +32,7 @@ For the project, I defined the SMART criteria as following:
 
 \begin{itemize}
   \item \textbf{specfic} - improve the workflow of users modifying dynamic resources for the Purple Experience.
-  \item \textbf{measurable} - interviews after testing period concerning working speed, confidence and <TODO Spaß?> when editing resources, automated user tracking
+  \item \textbf{measurable} - interviews after testing period concerning working speed, confidence and joy when editing resources, automated user tracking
   \item \textbf{assignable} - research and implementation will mostly be conducted by me, with input from CTO \& product owner, connections to external users through customer service team
   \item \textbf{realistic} - new software platform which reacts quicker, prvides more safety regarding errors and is scalable and extensible in the future. Limiting factors are time (as I only have three months for the first phase, including writinh this thesis)
   \item \textbf{time-related} - the new software should have at least the same feature set and be usable by company-internal users until the end of 2022
@@ -67,26 +67,69 @@ I derived the follwoing commomn factors from the users, which made the communica
 % ... more
 \section{Qualitative user resarch}
 
+The existing user base enabled me easy access to subjects for qualitative user research methods.
+Using one or multiple ways of Triangulation \cite[p. 264]{Interactiondesign:2019ys} can strengthen the significance of the research outcome. Limitations of a method or source can be removed by variation of those, resulting in a less distorted picture.
+Therefore I used metholodical triangulation (using multiple data gathering techniques) as well as triangulation of data (collecting data from different people and different sources).
+Moderated observations combined with interviews proofed to be a good fit for this case study, as they are interaction driven and the observer can react directly on behaviours / emerging topics and steer the process.
+This stands is contrast to more passive methods I found like passive observations or user recording and tracking analysis, where the outcome only depends on the
+prepared question / task and the users behaviour and which can't adapt to changed circuumstances etc. during the application.
+\\\\
+The chosen structure for the observations and interviews looks as following:
+
+\begin{description}
+  \item [Introduction (\texttildelow 5min)] used to explain the circuumstances and the goal of the session, how we proceed, which data I will collect and how I will evaluate the data afterwards.
+  \item [Moderated Observation (10-15min)] have the observed perform specific tasks in a prepared environment
+  \item [Semistructured Interview (\texttildelow 15min)] ask prepared questions as well as open ones and discuss observation situation
+\end{description}
+The reason for Interview following the Observation is, that the observer and observed can discuss the situations or issues occured during the Moderated Observation before,
+which was a good point of entry into the open dialog after the mandatory prepared questions were asked. The other way around, I'd have no way to react to workflow and potential problems the observed encountered during the tasks.
+\\
+As I had no prior experience conducting these methods with an scientific approach, it was important to me to test the whole process before scheduling all the other meetings. One of our working students agreed to be a test candidate and we went through the tasks and questions I planned, after which he gave me feedback.
+Testing the methods and specific questions before conducting them on a broader audience helped finding questiones that were ambiguous or lead to a lot of repetition of already known facts. For the moderated observation tasks it gave me feedback on the difficulty and time they would take for others on average, which tasks needed clearer formulations and which were already good.
+\\
+In total, I performed the user research on six persons, from which one was an core Purple Experience developer, two were working students from our project department, one was an developer from an different department who had worked with the software some time prior, one Customer Support Manager from our company and one external user from an publisher.
+
+\subsection{Moderated observation}
+I prepared a list of six tasks, with the last two beeing optional depending on the time left and the confidence of the user with the platform I perceived during the beginning.
+That way I could present the same first tasks to every interviewee regardless of their level of knowledge, and present the last two tasks if we had enough time left.
+Also, it was important that the tasks did not build on each other to prevent the observed person getting stuck because of an earlier mistake.
+To me, it was more important to see a variety of tasks getting performed than one task beeing executed without errors. 
+\\
+In practice, I prepared an example app on our staging system, noted the link down and downloaded the initial state so that I could easily reset the enviornment after each observation.
+The six tasks were
 \begin{itemize}
-  \item mix interview / moderated observation
-  \item experiences, outcomes, what went good and bad
+  \item Change english app menu entry "Newsstand" to "Home" on all platforms (Web, Android and iOS)
+  \item Change the Advertisement banner target on top of the home page to https://google.com 
+  \item Change the exnglish text "Latest Issues" on the home page to "Read new Issues"
+  \item Change color of "Read new Issues" and "Latest Articles" headers on the home page to the app's primary color.
+  \item \textit{(Optional)} Add an dropdown on the home between "Read new Issues" and "Latest Articles"
+    \subitem It should show all publications connected to the app
+    \subitem It should set an URL parameter ''publication'' to the id when selected
+    \subitem Define the reset message as ''All publications''
+  \item \textit{(Optional)} Configure the filter of the ''Latest Articles'' list to only show articles from that publication
 \end{itemize}
+
+These were constructed in a way that I anticipated some errors so I could see how users tried to figure out what went wrong and fix them.
+These cases then also occurred, for example the first task was often only done for one of the three platforms, the ''Latest Issues'' text was not found in the translation files or
+the wrong CSS selector was used to recolor the header elements on the home page, leading to more elements beeing recolored.
+
+The optional tasks were presented to four people, of which three solved them at least one of them successfully, only the core developer solved all six tasks completely.
+With the consent of the interviewees I recorded their screens during the observation to rewatch specific actions or flows if required.
+\\
+TODO: noticed workflow patterns that can be improved? like file opening, switching files (quick links \& file tabs)
 
 \subsection{Interview}
 
-TODO interview preparation and conduction
-
-\subsection{Moderated observation}
-
-TODO prep and conducting
+For the interview, I chose a semistructured interview as the appropriate tool. The interviewer has a list of open and closed questions, through which he can ensure that important topics are covered,
+while still leaving room for deeper covering of specific points the interview might not anticipate before the interview.
 
 \section{Quantitaive user research}
 
-Not used survey / questionaire -> lay down reasons why not necessary in that situation
+- Not used survey / questionaire -> lay down reasons why not necessary in that situation
 
-Tracking of user behaviours
+- Tracking of user behaviours
 
-- on site using G analytics \& (the other GDPR compliant tracking tool name??)
+- on site using G analytics \& squaky.ai (TODO: remove g analytics? ask Peter)
 - using server logs to understand usage patterns
 
 \section{Process and vizualize the outcomes of the initial user research phase}

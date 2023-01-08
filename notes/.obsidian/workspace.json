@@ -4,71 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "929c9db1d7812960",
+        "id": "7e0b13de4781ab29",
         "type": "tabs",
         "children": [
           {
-            "id": "9f29bac3996a3f54",
+            "id": "80ec71c6911b6bec",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HCI/HCD principles.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e83d443e9f0c9567",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Open Questions.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "cd8fb767ca0bce7a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "HCI/Brownfield vs Greenfield.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0defe033a52bd5ac",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "HCI/HCD principles.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ed028c785caf823d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Open Questions.md",
+                "file": "HCI/Plan - Qualtitative User Research starting point.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -97,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "require",
+                "query": "semi",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -135,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HCI/HCD principles.md",
+                "file": "HCI/Plan - Qualtitative User Research starting point.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -152,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HCI/HCD principles.md",
+                "file": "HCI/Plan - Qualtitative User Research starting point.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -175,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HCI/HCD principles.md"
+                "file": "HCI/Plan - Qualtitative User Research starting point.md"
               }
             }
           },
@@ -208,13 +159,13 @@
   },
   "active": "2e0d7ae5bb06d318",
   "lastOpenFiles": [
+    "HCI/Brownfield vs Greenfield.md",
+    "HCI/HCD principles.md",
     "HCI/Plan - Qualtitative User Research starting point.md",
     "HCI/User Research.md",
     "Writing Tipps.md",
     "Open Questions.md",
-    "HCI/HCD principles.md",
     "sources/implementation/Clean Architecture - Robert C. Martin.md",
-    "HCI/Brownfield vs Greenfield.md",
     "sources/gen.1 From Brownfield to Greenfield Development.md",
     "sources/List.md",
     "kanban.md"

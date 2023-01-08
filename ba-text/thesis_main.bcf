@@ -2356,14 +2356,18 @@
     <bcf:citekey order="5" intorder="1">LearnHCI:2020ys</bcf:citekey>
     <bcf:citekey order="6" intorder="1">BrownfieldToGreenfield:2021ys</bcf:citekey>
     <bcf:citekey order="7" intorder="1">Interactiondesign:2019ys</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">Ross:2016</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">Sharon:2012mk</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">Atlassian:2021</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">LearnHCI:2020ys</bcf:citekey>
     <bcf:citekey order="10" intorder="1">LearnHCI:2020ys</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">Interactiondesign:2019ys</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">Nielsen:2000</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">LawsOfUX:2020ys</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">Github:VanoDevium/node-framework-stars</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">LearnHCI:2020ys</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">Ross:2016</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">Sharon:2012mk</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">Interactiondesign:2019ys</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">LearnHCI:2020ys</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">Interactiondesign:2019ys</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">Nielsen:2000</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">LawsOfUX:2020ys</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">Github:VanoDevium/node-framework-stars</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">LearnHCI:2020ys</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

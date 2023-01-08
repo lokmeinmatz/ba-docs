@@ -29,31 +29,48 @@ The UI Editor, which I will describe more in detail in \ref{chap:background}, is
 \section{Procedure for the research and implementation}
 
 While writing the software and thesis, I followed the an software design process described in \cite[p. 104]{LearnHCI:2020ys}.
-There, the process is divided into a ''Idea'' phase using design thinking, lean ux for first prototypes and then agile development (in my case a relaxed SCRUM process).
-Abstractly it looks as following:
+There, the process is divided into three phases: ''Design Thinking'', ''Lean UX'', and ''Agile'' (development and delivery).
 
-\begin{tikzpicture}[node distance=2cm]
-  \tikzstyle{round} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=gray!30]
-  \tikzstyle{rect} = [rectangle, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=gray]
-  \tikzstyle{arrow} = [thick,->,>=stealth]
+For this case study, the abstract plan for the process looks as following:
 
-  \node (dug) [round] {Determine User groups};
-  \node (interview1) [round, below of=dug] {Initial qualitative user research};
-  \node (denv) [round, right of=interview1, xshift=5cm, align=center] {Determine Environment\\requirements \& restrictions};
-  \draw [arrow] (dug) -- (interview1);
-  \node (bl) [rect, below of=interview1] {Feature List / initial Backlog};
-  \draw [arrow] (denv) -- (bl);
-  \draw [arrow] (interview1) -- (bl);
-  \node (tech1) [round, below of=bl, xshift=-2cm] {Tech stack setup};
-  \node (layout) [rect, right of=tech1, xshift=4cm] {Layout prototype};
-  \draw [arrow] (bl) -- (tech1);
-  \draw [arrow] (bl) -- (layout);
-  \node (proto) [round, below of=tech1, xshift=4cm] {Interactive Prototype development};
-  \draw [arrow] (tech1) -- (proto);
-  \draw [arrow] (layout) -- (proto);
-  \node (deploy) [round, below of=proto, xshift=-4cm] {Continous deployment};
-  \draw [arrow] (proto) -- (deploy);
-  \node (feedback) [round, right of=deploy, xshift=4cm] {Guerilla testing \& feedback};
-  \draw [arrow] (deploy) -- (feedback);
-  \draw [arrow] (feedback) -- (proto);
-\end{tikzpicture}
+\begin{figure}
+  \begin{tikzpicture}[node distance=2cm]
+    \tikzstyle{round} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=gray!30]
+    \tikzstyle{rect} = [rectangle, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=gray]
+    \tikzstyle{arrow} = [thick,->,>=stealth]
+  
+    \node (dug) [round] {Determine User groups};
+    \node (interview1) [round, below of=dug] {Initial qualitative user research};
+    \node (denv) [round, right of=interview1, xshift=5cm, align=center] {Determine Environment\\requirements \& restrictions};
+    \draw [arrow] (dug) -- (interview1);
+    \node (bl) [rect, below of=interview1] {Feature List / initial Backlog};
+    \draw [arrow] (denv) -- (bl);
+    \draw [arrow] (interview1) -- (bl);
+    \node (tech1) [round, below of=bl, xshift=-2cm] {Tech stack setup};
+    \node (layout) [rect, right of=tech1, xshift=4cm] {Layout prototype};
+    \node(2-label)[right of=layout,anchor=west,xshift=1cm]{Lean UX};
+    \draw [arrow] (bl) -- (tech1);
+    \draw [arrow] (bl) -- (layout);
+    \node (proto) [round, below of=tech1, xshift=4cm] {Interactive Prototype development};
+    \draw [arrow] (tech1) -- (proto);
+    \draw [arrow] (layout) -- (proto);
+    \node (deploy) [round, below of=proto, xshift=-4cm] {Continous deployment};
+    \draw [arrow] (proto) -- (deploy);
+    \node (feedback) [round, right of=deploy, xshift=4cm] {Guerilla testing \& feedback};
+    \draw [arrow] (deploy) -- (feedback);
+    \draw [arrow] (feedback) -- (proto);
+    \node (prod) [round, below of=feedback] {Production deployment};
+    \draw [arrow] (deploy) -- (prod);
+    \draw [arrow] (prod) -- (feedback);
+  
+    \begin{scope}[on background layer]
+      \node[draw,dashed,gray,rounded corners,fill=black!10,fit=(dug) (denv) (bl)]{};
+      \node(1-label)[right of=dug,anchor=west,xshift=3cm]{Design Thinking};
+      \node[draw,dashed,gray,rounded corners,fill=black!10,fit=(tech1) (layout) (proto) (2-label)]{};
+      \node[draw,dashed,gray,rounded corners,fill=black!10,fit=(deploy) (prod) (feedback)]{};
+      \node(3-label)[left of=prod,anchor=east,xshift=-3cm]{Agile};
+      \end{scope}
+  \end{tikzpicture}
+  \caption{Development Process for the UI Editor}
+	\label{fig:process}
+\end{figure}
