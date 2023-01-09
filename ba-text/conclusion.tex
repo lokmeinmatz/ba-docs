@@ -11,3 +11,18 @@
 \begin{itemize}
 	\item Die Zusammenfassung sollte das Ziel der Arbeit und die zentralen Ergebnisse beschreiben. Des Weiteren sollten auch bestehende Probleme bei der Arbeit aufgezählt werden und Vorschläge herausgearbeitet werden, die helfen, diese Probleme zukünftig zu umgehen. Mögliche Erweiterungen für die umgesetzte Anwendung sollten hier auch beschrieben werden.
 \end{itemize}
+
+TODO: formulate in sentences
+\begin{itemize}
+	\item User research with existing groups of users (small-medium size, easy access for interviews) : qualitative more value than quantitative
+	\item processing of reserach data: personas, 2x2 matrix, jira tickets, feedback rounds
+	\item implementation: Monorepository
+	\item unit \& e2e tests for more confidence
+	\item abstract external systems so that other parts of system can change APIs without strong coupeling
+	\item Problems appeared:
+	\subitem quantitative feedback difficult, not much feedback
+	\subitem limited by other systems (e.g. Git based dynamic resources)
+	\subitem hard to prioritize when many people want different things -> use data viz to figure out impact of features on ''average user''
+	\subitem Architecture: good abstractio	n of server state with multiple instances (prevent inconsistencies)
+	\subitem code review process slowing down development
+\end{itemize}

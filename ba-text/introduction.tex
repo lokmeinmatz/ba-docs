@@ -39,38 +39,39 @@ For this case study, the abstract plan for the process looks as following:
     \tikzstyle{rect} = [rectangle, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=gray]
     \tikzstyle{arrow} = [thick,->,>=stealth]
   
-    \node (dug) [round] {Determine User groups};
-    \node (interview1) [round, below of=dug] {Initial qualitative user research};
-    \node (denv) [round, right of=interview1, xshift=5cm, align=center] {Determine Environment\\requirements \& restrictions};
+    \node (dug) [round, anchor=west] {Determine User groups};
+    \node (interview1) [round, below=of dug.west,anchor=west] {Initial qualitative user research};
+    \node (denv) [round, right=of interview1, anchor=west, align=center] {Determine Environment\\requirements \& restrictions};
     \draw [arrow] (dug) -- (interview1);
-    \node (bl) [rect, below of=interview1] {Feature List / initial Backlog};
+    \node (bl) [rect, below=of interview1.west, anchor=west] {Feature List / initial Backlog};
     \draw [arrow] (denv) -- (bl);
     \draw [arrow] (interview1) -- (bl);
-    \node (tech1) [round, below of=bl, xshift=-2cm] {Tech stack setup};
-    \node (layout) [rect, right of=tech1, xshift=4cm] {Layout prototype};
-    \node(2-label)[right of=layout,anchor=west,xshift=1cm]{Lean UX};
+    \node (tech1) [round, below=of bl.west, anchor=west] {Tech stack setup};
+    \node (layout) [rect, right=of tech1] {Layout prototype};
     \draw [arrow] (bl) -- (tech1);
     \draw [arrow] (bl) -- (layout);
     \node (proto) [round, below of=tech1, xshift=4cm] {Interactive Prototype development};
     \draw [arrow] (tech1) -- (proto);
     \draw [arrow] (layout) -- (proto);
-    \node (deploy) [round, below of=proto, xshift=-4cm] {Continous deployment};
+    \node (deploy) [rect, below=4cm of tech1.west, anchor=west] {Continous staging deployment};
     \draw [arrow] (proto) -- (deploy);
-    \node (feedback) [round, right of=deploy, xshift=4cm] {Guerilla testing \& feedback};
+    \node (feedback) [round, right of=deploy, xshift=4cm] {Testing \& feedback};
     \draw [arrow] (deploy) -- (feedback);
     \draw [arrow] (feedback) -- (proto);
-    \node (prod) [round, below of=feedback] {Production deployment};
+    \node (prod) [rect, below of=feedback] {Production deployment};
     \draw [arrow] (deploy) -- (prod);
     \draw [arrow] (prod) -- (feedback);
+    \draw[arrow,dashed, rounded corners] (feedback)  |- (bl);
+    \node(1-label)[right=of dug.north,anchor=north,xshift=7cm]{Design Thinking};
+    \node(2-label)[right=of layout,anchor=west]{Lean UX};
+    \node(3-label)[right=1cm of feedback]{Agile};
   
     \begin{scope}[on background layer]
       \node[draw,dashed,gray,rounded corners,fill=black!10,fit=(dug) (denv) (bl)]{};
-      \node(1-label)[right of=dug,anchor=west,xshift=3cm]{Design Thinking};
       \node[draw,dashed,gray,rounded corners,fill=black!10,fit=(tech1) (layout) (proto) (2-label)]{};
-      \node[draw,dashed,gray,rounded corners,fill=black!10,fit=(deploy) (prod) (feedback)]{};
-      \node(3-label)[left of=prod,anchor=east,xshift=-3cm]{Agile};
+      \node[draw,dashed,gray,rounded corners,fill=black!10,fit=(deploy) (prod) (feedback) (3-label)]{};
       \end{scope}
   \end{tikzpicture}
-  \caption{Development Process for the UI Editor}
+  \caption{Development Process for the UI Editor. Dark gray boxes represent artefacts, light gray represent tasks. }
 	\label{fig:process}
 \end{figure}

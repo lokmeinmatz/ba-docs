@@ -120,19 +120,36 @@ TODO: noticed workflow patterns that can be improved? like file opening, switchi
 
 \subsection{Interview}
 
-For the interview, I chose a semistructured interview as the appropriate tool. The interviewer has a list of open and closed questions, through which he can ensure that important topics are covered,
-while still leaving room for deeper covering of specific points the interview might not anticipate before the interview.
+For the interview, I chose a semistructured interview as the appropriate tool. The interviewer has a list of open and closed questions, through which he can ensure that important topics are coveredw hile also allowing for flexibility to delve deeper into specific issues and ideas that may arise during the interview.
+\\
+My prepared questions consisted of some closed questions, like how often they interact with the tools, how confident they feel implementing changes or fixing errors, as well as some open questions like to describe step by step what the most recent task was they performed with dynamic resources, how they were onboarded etc.
+Then, if I had notices points during the observation, I addressed these points directly, else I directly introduced the open question ''If you dream of the UI builder, <>, how would it look like, which features would you expect and what workflows are most important to you?''.
+\\
+The semistructured interviews proved to be valuable in providing insight into the experiences and needs of the users. Through the interviews, I was able to gather a lot of new ideas and saw how different features were massively valued differently by the users. Two of the interviewees even provided written lists of their ideas and suggestions which they sent me afterwards. After every interview (wich I also recorded), I filled out a Word document noting basic questions about the person and it's usage of the dynamic resources, important situations from the observation, input from the interview and linked to the recordings in case I needed to rewatch parts of it.
+\\\\
+Some of the outcomes were:
+\begin{itemize}
+  \item The way users validate their changes differs widely, some use a preview window in the old editor, some merge changes into the resources and view it on the website or inspect the app's javascript context, some prefer seperate windows, some embedded frames to see code and preview at the same time.
+  \item Rearranging or adapting the layout of the tools / editor to match the current screen and browser window size is important, e.g. hide unecessary panes if not used, make the window the user currently works in larger to see more content at once.
+  \item Editing multiple files at once (in the old editor one could only edit one file at a time, had to close the current and open the next one).
+  \item Colaborative working: Seeing the current state of the resources, e.g. if a live or preview resource is processing, if other users are working in the same app parallel, and having git-like line-by-line diffs of the changes made.
+\end{itemize}
+
+Some of these points and their implementations will be covered in chapter \ref*{chap:prototyping} \ref*{chap:impl}.
 
 \section{Quantitaive user research}
 
-- Not used survey / questionaire -> lay down reasons why not necessary in that situation
+In the beginning, I thought about also distributing questionaires to the exisitng and potential users, but as the outcome of the qualitative research was already very productive, it felt hard to design a questionaire that provided additional information while still adhering to the common design rules for questionaires concerning length and amount of questions as well as the type of them.
+\\
+Some prototype questionaires exist in Microsoft Forms, but they were either too long,
+the questions difficult to understand or didn't contain anything of interest for the development of prototypes.
+Thus, we decided against questionaires and to stick to qualitative research results for the prototyping, as well as for the feedback, mixed with some automatic tracking implementation. TODO: ref squeaky.ai section
+\\
 
-- Tracking of user behaviours
-
-- on site using G analytics \& squaky.ai (TODO: remove g analytics? ask Peter)
-- using server logs to understand usage patterns
 
 \section{Process and vizualize the outcomes of the initial user research phase}
+
+Besides the already mentioned Word document which contained semi-structured notes from the interviews, and Jira tickets I created for the necessary base tasks for setting up the new software project, I experimented with some alternative methods to explore and vizualize the data.
 
 \subsection{2x2 Opportunity Matrix}
 
