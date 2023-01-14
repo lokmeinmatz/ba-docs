@@ -1,5 +1,5 @@
 - [ ] Research related work: 4h
-- [ ] write background about generated json schema & JSON editors
+- [x] write background about generated json schema & JSON editors
 - [ ] write analysis about JSON editor / ways to configure UIs
 - [ ] Eval: Extra sections about features or in implementation?
 	- [ ] Quicklinks

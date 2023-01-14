@@ -12,20 +12,31 @@
 \label{chap:impl} 
 
 The phase of implementation and deployment followed an agile development process, where I could deploy changes easily to get fast feedback from users.
-I structured the chapter into the following parts:
 
-\localtableofcontents
+% \localtableofcontents
 
+\section{Architecture}
+
+Let's start with an overview about the architecture and high level user flows.
+We have three software components relevant for a basic interaction with the system: the UI editor frontend, the UI editor backend and the ''Manager'' backend, which is responsible for
+authentification, app management and providing the dynamic resources in an ZIP format.
+\\
+At the beginning of a user journey, the user visits the root domain (e.g. \url{https://builder.purplemanager.com} for production apps) and logs himself in with username and password.
+These credentials are validated in the manager backend, returning an session token which grant's the user access to specific apps he is entitled to see and edit.
+Then, he can select one of the available apps he wants to edit.
+The following UML sequence diagram displays a typical interaction of a user with the editor frontend after he selected an app; pulling the latest dynamic resourses, editing a file and merging the changes.
+\begin{figure}[h]
+  \includegraphics[width=\textwidth]{pics/user-flow.uml.drawio.png}
+\end{figure}
 
 \section{Software stack}
-
-A common point appearing in brownfield software projects, or generally in larger companies and software ecosystems, is the limitation in technologies that should be used for a new project.
-Else, one may chose the latest and greatest language or framework for that usecase, but maintainability and availability of persons to review and collaborate are important as well.
-To reduce overhead of learning new languages, tech stacks and keeping the infrastrucuture manageble, often a small set of languages and frameworks is provided by the
-devops- or infrastructure team. In my case, the most important point was the availability of additional persons with knowledge. The contraints from devops side were not that tight,
-since the code gets deployed in Kubernetes, a containerized environment anyways, so as long as it can run on a linux VM, it could get deployed.
+From the company's point of view, it is advantageous to keep the technology stack as narrow as possible.
+Without restrictions one may chose the latest and greatest language or framework for a new project, but maintainability and availability of persons to review and collaborate are not guaranteed.
+For this case study, the most important point was the availability of additional persons with knowledge about the frameworks and languages used. Additional constraints from DevOps'
+\footnote{DevOps, short for developer operations, refers to methods or in this case responsible persons to manage the combination of software developemnt and IT operations, e.g. how the code get's deployed, how services get provided and resolved and more.} side were only vague,
+since the code gets deployed in Kubernetes, a containerized environment, so the only baisc requirement is that the application must be able to run inside a Docker container.
 \\\\
-For this project I decided to use Typescript (\url{https://www.typescriptlang.org}) on both back- and frontend.
+For this project I decided to use Typescript language (\url{https://www.typescriptlang.org}) on both back- and frontend.
 The advantages are wide availability of persons in the company who also work with it, a mature ecosystem, and shared type declarations between server and client,
 reducing the risk of working with incompatabile data types by accident.
 \\
@@ -34,9 +45,9 @@ with additional libraries for state management, UI Components and API query mana
 \\
 For the backend, I used Node as a Javascript runtime, combined with the most used HTTP server framework for Node, Express JS \cite{Github:VanoDevium/node-framework-stars}.
 On top of express, a framework called TSOA (\url{https://github.com/lukeautry/tsoa}) is used to improve the developer expeirence. It provides a class based architecture similar
-to the well known Spring platform for java, including dependency injection, type safety and automatic API documentation.
+to the well known Spring platform for java, including dependency injection, type validation of the http parameters at runtime and automatic API documentation in the OpenAPI specifications.
 
-Frontend, backend and shared libraries are stored in a monorepo to speed up development and deployments and make refactorings more consistent.
+Frontend, backend and shared libraries are stored in a monorepo to speed up development and deployments and make refactorings more consistent while maintaining clear APIs and reducing accidental tight coupling.
 
 \section{Feature examples}
 
