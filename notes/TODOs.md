@@ -1,6 +1,7 @@
 - [ ] Research related work: 4h
 - [x] write background about generated json schema & JSON editors
 - [ ] write analysis about JSON editor / ways to configure UIs
+- [ ] UI Editor groß/klein
 - [ ] Eval: Extra sections about features or in implementation?
 	- [ ] Quicklinks
 	- [ ] pipelines
@@ -14,3 +15,10 @@
 	- [ ] Software: current state
 	- [ ] Software/HCI: learnings tooling / UI edtiro
 	- [ ] Software: ideas for the future
+
+
+## Questions
+
+- Length limit
+- citing rules?
+	- number ref or author name?

@@ -12,66 +12,42 @@
 
 \section{Topic and context}
 
-In the evergrowing world of software development, many companies are now in the situation where they maintain a large software ecosystem and have complex dependencies,
-but still want to improve their systems by developing new components and tools.
-This poses the challenge of improving the software from aspects like user expeirence, scalability and maintainability while beeing restricted by the ecosystem.
+In the ever-growing world of software development, many companies are now in the situation to maintain a large software ecosystem with complex dependencies.
+Still, there is need for continuous improvement and development to stay competitive.
+% but still want to improve their systems by developing new components and tools.
+This poses the challenge of improving the software from aspects like user experience, scalability and maintainability while being restricted by the ecosystem.
 \\
-Greenfield development\footnote{Greenfield- and brownfield development refer to software development concepts, where Greenfield projects start in a new environment and don't have legacy code, while brownfield projects are about upgrading or redeveloping software in an existing environment. \cite{JohnAdamsIt:Greenfield}}, which is implicitly used in the majority of books about HCI, assumes no pre-exisiting constraints or limitations, or at least not in the extend they are commonly found in todays software enterprise.
+From my point of view, Greenfield development\footnote{Greenfield- and brownfield development refer to software development concepts, where Greenfield projects start in a new environment and don't have legacy code, while brownfield projects are about upgrading or redeveloping software in an existing environment. \cite{JohnAdamsIt:Greenfield}} is implicitly assumed in the majority of books about HCI.
+This approach is not applicable to the situation many software companies are in today.
+\\
+TODO: rewrite that HCI methods might need different weight / get a bit adapted for brownfield development
 However, applying HCI methods for user research and user experience-focused design in brownfield development, where many choices are already made, must be approached differently.
 
-In addition, the three major factors in HCI (Usability, Accessibility and Time-on-task, \Cite[pp. 38-40]{LearnHCI:2020ys}) are often neglected due to tight deadlines and limited resources, leading to premature releases and unstable software.
+In addition, the three major factors in HCI (Usability, Accessibility and Time-on-task, \Cite[pp. 38-40]{LearnHCI:2020ys}) are often neglected due to tight deadlines and limited resources which usually leads to premature releases and unstable software.
+\\\\
+My goal was to demonstrate how HCI principles and methods can be applied in a brownfield project, using a real world case study at the company Sprylab as an example.
+Sprylab is a company which is engaged in the digital publishing industry, providing SaaS\footnote{Software as a Service, TODO definition} to publishing houses for editing and distributing content.
+% Intro UI editor
+The case study consists of the redevelopment of a UI Editor which I will describe more in detail in chapter \ref{chap:background} in order to improve user expeirence and usability.
 
-My goal was to demonstrate how HCI principles and methods can be applied in a brownfield project, using a real-world case study as an examle.
-By having an exsisting user base which works with exisiting tools, it is possible to evaluate what ''real users'' need and make more informed design decisions.
+\newpage
+\section{Process for research, prototyping and implementation}
 
-The UI Editor, which I will describe more in detail in \ref{chap:background}, is a tool relying on may external systems and is limited by the file system structure and configuration schemas imposed by the Purple Experience Franework. The editor was developed for magazine and news publishers in Germany (DACH) and the UK, and is intended to facilitate the editing of dynamic resources by users with variying leves of expertise.
-
-\section{Procedure for the research and implementation}
-
-While writing the software and thesis, I followed the an software design process described in \cite[p. 104]{LearnHCI:2020ys}.
-There, the process is divided into three phases: ''Design Thinking'', ''Lean UX'', and ''Agile'' (development and delivery).
-
+While writing the software and thesis, I followed the software design process described in \cite[p. 104]{LearnHCI:2020ys}.
+There, the process is divided into three phases: 
+\\
+\begin{minipage}{\linewidth}
+  \begin{itemize}
+    \item ''Design Thinking''
+    \item ''Lean UX''
+    \item ''Agile''
+  \end{itemize}
+\end{minipage}
+\\
 For this case study, the abstract plan for the process looks as following:
 
 \begin{figure}
-  \begin{tikzpicture}[node distance=2cm]
-    \tikzstyle{round} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=gray!30]
-    \tikzstyle{rect} = [rectangle, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=gray]
-    \tikzstyle{arrow} = [thick,->,>=stealth]
-  
-    \node (dug) [round, anchor=west] {Determine User groups};
-    \node (interview1) [round, below=of dug.west,anchor=west] {Initial qualitative user research};
-    \node (denv) [round, right=of interview1, anchor=west, align=center] {Determine Environment\\requirements \& restrictions};
-    \draw [arrow] (dug) -- (interview1);
-    \node (bl) [rect, below=of interview1.west, anchor=west] {Feature List / initial Backlog};
-    \draw [arrow] (denv) -- (bl);
-    \draw [arrow] (interview1) -- (bl);
-    \node (tech1) [round, below=of bl.west, anchor=west] {Tech stack setup};
-    \node (layout) [rect, right=of tech1] {Layout prototype};
-    \draw [arrow] (bl) -- (tech1);
-    \draw [arrow] (bl) -- (layout);
-    \node (proto) [round, below of=tech1, xshift=4cm] {Interactive Prototype development};
-    \draw [arrow] (tech1) -- (proto);
-    \draw [arrow] (layout) -- (proto);
-    \node (deploy) [rect, below=4cm of tech1.west, anchor=west] {Continous staging deployment};
-    \draw [arrow] (proto) -- (deploy);
-    \node (feedback) [round, right of=deploy, xshift=4cm] {Testing \& feedback};
-    \draw [arrow] (deploy) -- (feedback);
-    \draw [arrow] (feedback) -- (proto);
-    \node (prod) [rect, below of=feedback] {Production deployment};
-    \draw [arrow] (deploy) -- (prod);
-    \draw [arrow] (prod) -- (feedback);
-    \draw[arrow,dashed, rounded corners] (feedback)  |- (bl);
-    \node(1-label)[right=of dug.north,anchor=north,xshift=7cm]{Design Thinking};
-    \node(2-label)[right=of layout,anchor=west]{Lean UX};
-    \node(3-label)[right=1cm of feedback]{Agile};
-  
-    \begin{scope}[on background layer]
-      \node[draw,dashed,gray,rounded corners,fill=black!10,fit=(dug) (denv) (bl)]{};
-      \node[draw,dashed,gray,rounded corners,fill=black!10,fit=(tech1) (layout) (proto) (2-label)]{};
-      \node[draw,dashed,gray,rounded corners,fill=black!10,fit=(deploy) (prod) (feedback) (3-label)]{};
-      \end{scope}
-  \end{tikzpicture}
-  \caption{Development Process for the UI Editor. Dark gray boxes represent artefacts, light gray represent tasks. }
+  \includegraphics{pics/process.drawio.png}
+  \caption{Software design process for the UI Editor.}
 	\label{fig:process}
 \end{figure}
