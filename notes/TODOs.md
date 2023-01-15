@@ -15,6 +15,12 @@
 	- [ ] Software: current state
 	- [ ] Software/HCI: learnings tooling / UI edtiro
 	- [ ] Software: ideas for the future
+- [ ] project specific background
+	- [ ] prozessualer Hintergrund
+		- [ ] das use case diagram
+	- [ ] technischer Hintergrund
+		- [ ] Grafik für dynamische resources
+		- [ ] Assets vs Content
 
 
 ## Questions
@@ -22,3 +28,4 @@
 - Length limit
 - citing rules?
 	- number ref or author name?
+- welche Bindung?
