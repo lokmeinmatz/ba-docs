@@ -32,34 +32,9 @@ Furthermore, two concepts were used as foundation and guidelines during the proc
   \item[3 major factors of HCI] <todo> 
 \end{description}
 
-TODO idea for restructure:
-
-- HCI extremely complex, impossible to respect all aspects.
-
-- focus on technical requirements as well which often come short
-
-- brownfield namedrop
-
-- 3 Erhebungsmethoden for non-technical requirements: observation and interview yes (link to chapter analysis), questionaire no (short sentence why not)
-
-- concept 1: SMART: .... (and link to chapter)
-
-- concept 2: 3 major factors HCI: .... (and link to chapter)
-\\
-Many HCI books (e.g. \cite{Interactiondesign:2019ys} or \cite{LearnHCI:2020ys}) implicitly assume \label{def:Greenfield} Greenfield development,
-which ''[...] is in its most distinct form when a new product is created from scratch – a new product or product platform, based on new technology, using new methodology [...]'' \cite{BrownfieldToGreenfield:2021ys}.
-\\
-\cite[p. 392]{Interactiondesign:2019ys} for example mentions \textit{Environmental requirements} and \textit{Technical requirements} as part of the requirement discovery, but the descriptions of these terms are focused on physical limitations or user behaviours. Technical requirements are mentioned only once and then not discussed further.
-In contrast, I set my focus on the development inside a software company and an existing ecosystem, where resource, time and API limitations are present and existing users need to get productive with new software quickly.
-\\
-Thus, the user research phase started with collecting information about diffrent exisitng users as well as potentially new user groups the editor should target and adapting common HCI methods for qualtitative and quantitative user research like Moderated observations, interviews and questionaires.
-I approached this phase with an open mind, recognizing that individual methods or applications of them might not be successful or don't provide value in this case study, but that much can still be learned from such experiences. As an example, after evaluation and test runs, I decided against Questionaires, because they showed less information content than other methods in this case study.
-\\
-Evaluationg the outcomes of the research is at least as important as the research itself.
-I experimented with diffrent ways to prepare and process the data to to present it more clearly as well as to consider different factors when discussing how to progress with the prototype.
-
 \section{Project specific background}
 
+\subsection{Functional}
 
 TODO: use this?
 \\
@@ -77,8 +52,9 @@ Then, they can import content via multiple ways into the system, or the editors 
 \end{figure}
 
 The UI editor fits into the Use case ''Per App configuration \& style'' (see fig. \ref*{fig:usecase1}), with wich mostly Frontend Developers and Project Managers from Sprylab as well as some external customer's IT admins will interact. The goal is to lower the editing burden as much as possible, so that more of the configuration can be handed off to external customers while also improving usability for the developers of the company.
-\\
-Now that we have established a rough understanding of the environment and usecase the UI editor will be placed in, I want to explain more about the configuration and styling itself.
+
+\subsection{Technical}
+Now that we have established a rough understanding of the environment and use case the UI editor will be placed in, I want to explain more about the configuration and styling itself.
 For that, it is important to understand the Frontend framework Sprylab uses for the delivery to apps and websites. It is called Purple Experience and is a Meta framework build ontop of Angular. The benefit is, that it is completely configurable via JSON files describing the routing, rendering of diffrent components,
 connecting data sources (an API abstraction) with those components, loading assets like images and ads, and styling the whole page with CSS.
 \\
@@ -89,6 +65,11 @@ Similar, when a end user requests a website, the backend server just looks up th
 This way, all customers can share the same server instance(s) in case of websites, or at least don't require extra native sourcecode changes per app.
 \\
 In addition, there are preview and live resources for every app, so that changes can be tested before they are released to the end users.
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{pics/experience_resources.drawio.png}
+  \caption{Sprylab preview and live dynamic resources for two imaginary apps 1 and 2}
+  \label{fig:dynres}
+\end{figure}
 \\
 If you have worked with larger, deeply nested JSON files before, you may recall that they get convoluted quite fast.
 Also, manually handling ZIP files, changing assets and config files, packing everything back in a zip file and hoping one didn't introduce a typo anywhere is an inefficient an at times quite dangerous workflow.
