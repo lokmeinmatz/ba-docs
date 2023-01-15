@@ -38,6 +38,16 @@ For the project, I defined the SMART criteria as following:
   \item \textbf{time-related} - the new software should have at least the same feature set and be usable by company-internal users until the end of 2022
 \end{itemize}
 
+TODO: flow first and second concept
+The second one are ''three major factors that an HCI designer should consider'' \cite[pp. 37-41]{LearnHCI:2020ys} according to Becker, which are
+\begin{description}
+  \item[Usability Factor] describes the spectrum from ''usable'' to ''unusable'' software. This is determined through the software design features implemented and how they help the user archieve their tasks in the environment provided.
+  \item[Accessibility Factor] is high when as many users from different backgrounds can use the software in different enviornments. It includes, but is not limited to access for people with physical and other disabilites, as well as the entry hurdle a new user must overcome.
+While it might look like this factor is not as important as the other two for specialized software mostly used internally, it should not be left out when designing and implementing. For example, even if currently no user with visual impairment is working with the software, it can always happen that an exisitng or new colleague suddenly has to rely on screen readers to continue his work.
+  \item[Time-On-Task Factor] refers to ''[...] solutions that use up the appropriate of time to solve a problem.'' \Cite[p. 40]{LearnHCI:2020ys}. Obviously, to save users as much time as possible, a fast system is required.
+But it is inevidable that the system, network delay and complexity of computation all have some minimal required time, and users understand that some operations might take time. More important is to reduce the perceived lag of interactions and give users feedback if a task takes longer to complete.
+\end{description}
+
 \section{Identifying and categorizing users and user groups}
 \label{sec:user-groups}
 In order to effectively design and implement the UI editor, it is crucial to understand the needs and preferences of the various users and user groups who will be using the tool.
@@ -90,6 +100,7 @@ Testing the methods and specific questions before conducting them on a broader a
 In total, I performed the user research on six persons, from which one was an core Purple Experience developer, two were working students from our project department, one was an developer from an different department who had worked with the software some time prior, one Customer Support Manager from our company and one external user from an publisher.
 
 \subsection{Moderated observation}
+\label{subsec:modobs}
 I prepared a list of six tasks, with the last two beeing optional depending on the time left and the confidence of the user with the platform I perceived during the beginning.
 That way I could present the same first tasks to every interviewee regardless of their level of knowledge, and present the last two tasks if we had enough time left.
 Also, it was important that the tasks did not build on each other to prevent the observed person getting stuck because of an earlier mistake.
@@ -119,7 +130,7 @@ With the consent of the interviewees I recorded their screens during the observa
 TODO: noticed workflow patterns that can be improved? like file opening, switching files (quick links \& file tabs)
 
 \subsection{Interview}
-
+\label{subsec:interview}
 For the interview, I chose a semistructured interview as the appropriate tool. The interviewer has a list of open and closed questions, through which he can ensure that important topics are coveredw hile also allowing for flexibility to delve deeper into specific issues and ideas that may arise during the interview.
 \\
 My prepared questions consisted of some closed questions, like how often they interact with the tools, how confident they feel implementing changes or fixing errors, as well as some open questions like to describe step by step what the most recent task was they performed with dynamic resources, how they were onboarded etc.

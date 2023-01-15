@@ -87,40 +87,6 @@
       \field{title}{Learn Human-Computer-Interaction}
       \field{year}{2020}
     \endentry
-    \entry{Atlassian:2021}{article}{}
-      \name{author}{1}{}{%
-        {{hash=7af816d62c7bc11d71fe9cc48d6c335f}{%
-           family={Boogaard},
-           familyi={B\bibinitperiod},
-           given={Kat},
-           giveni={K\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Atlassian}%
-      }
-      \strng{namehash}{7af816d62c7bc11d71fe9cc48d6c335f}
-      \strng{fullhash}{7af816d62c7bc11d71fe9cc48d6c335f}
-      \strng{bibnamehash}{7af816d62c7bc11d71fe9cc48d6c335f}
-      \strng{authorbibnamehash}{7af816d62c7bc11d71fe9cc48d6c335f}
-      \strng{authornamehash}{7af816d62c7bc11d71fe9cc48d6c335f}
-      \strng{authorfullhash}{7af816d62c7bc11d71fe9cc48d6c335f}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{How to write SMART goals}
-      \field{urlday}{5}
-      \field{urlmonth}{1}
-      \field{urlyear}{2023}
-      \field{year}{2021}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.atlassian.com/blog/productivity/how-to-write-smart-goals
-      \endverb
-      \verb{url}
-      \verb https://www.atlassian.com/blog/productivity/how-to-write-smart-goals
-      \endverb
-    \endentry
     \entry{Github:VanoDevium/node-framework-stars}{misc}{}
       \name{author}{1}{}{%
         {{hash=fb9a41f42c637c51b5461bc73bc14fcd}{%

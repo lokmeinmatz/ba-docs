@@ -14,8 +14,24 @@ Before discussing the design and implementation of the UI editor, it is necessar
 % 
 
 \section{Applied human-computer interaction methods}
-Let me start by concretizing the HCI aspects and why this work approaches the subject from a not so common point of view.
+
+Let me start by concretizing the HCI aspects of this work and why this I approached the subject from a not so common point of view.
+HCI is a complex topic with a long list of available methods and even more ways to adapt them to a concrete project, so it is impossible to cover all aspects.
+As a brownfield software project
+\footnote{Brownfield development is the opposite of greenfield development, brownfield refers to adding ''new capabilities on an existing product or product platform, using existing technology'' \cite{BrownfieldToGreenfield:2021ys}.},
+the development of the UI editor faced the challenge of integrating with an existing ecosystem and adhering to pre-existing technical requirements.
+In my opinion, these technical requirements face only limited coverage in HCI literature, which is why I set some special focus on them during this case study.
 \\
+To determine the initial functional requirements, I chose to apply qualitative user research methods like moderated observations (\ref{subsec:modobs}) and interviews (\ref{subsec:interview}).
+While I also use quantitative research methods to get insights during the testing phase, I decided against using them during the inital functional requirements phase.
+The available user base was small enough to get meaningful and representative statements only from qualitative research and a questionnaire would either be too long or not provide enough helpful insights.
+\\
+Furthermore, two concepts were used as foundation and guidelines during the process:
+\begin{description}
+  \item[SMART goals] <todo> 
+  \item[3 major factors of HCI] <todo> 
+\end{description}
+
 TODO idea for restructure:
 
 - HCI extremely complex, impossible to respect all aspects.
@@ -38,18 +54,7 @@ In contrast, I set my focus on the development inside a software company and an 
 \\
 Thus, the user research phase started with collecting information about diffrent exisitng users as well as potentially new user groups the editor should target and adapting common HCI methods for qualtitative and quantitative user research like Moderated observations, interviews and questionaires.
 I approached this phase with an open mind, recognizing that individual methods or applications of them might not be successful or don't provide value in this case study, but that much can still be learned from such experiences. As an example, after evaluation and test runs, I decided against Questionaires, because they showed less information content than other methods in this case study.
-To align the methods with the projects goal and to select methods worthwhile trying from the large pool of user research methods, I used two systems:
 \\
-SMART criteria, which is a popular machanism to formulate goals and objectives that are clearly defined and also realistic to be implemented in time. \cite*{Atlassian:2021}.
-I'll introduce them more in detail in chapter \ref*{chap:research}.
-The second one are ''three major factors that an HCI designer should consider'' \cite[pp. 37-41]{LearnHCI:2020ys} according to Becker, which are
-\begin{description}
-  \item[Usability Factor] describes the spectrum from ''usable'' to ''unusable'' software. This is determined through the software design features implemented and how they help the user archieve their tasks in the environment provided.
-  \item[Accessibility Factor] is high when as many users from different backgrounds can use the software in different enviornments. It includes, but is not limited to access for people with physical and other disabilites, as well as the entry hurdle a new user must overcome.
-While it might look like this factor is not as important as the other two for specialized software mostly used internally, it should not be left out when designing and implementing. For example, even if currently no user with visual impairment is working with the software, it can always happen that an exisitng or new colleague suddenly has to rely on screen readers to continue his work.
-  \item[Time-On-Task Factor] refers to ''[...] solutions that use up the appropriate of time to solve a problem.'' \Cite[p. 40]{LearnHCI:2020ys}. Obviously, to save users as much time as possible, a fast system is required.
-But it is inevidable that the system, network delay and complexity of computation all have some minimal required time, and users understand that some operations might take time. More important is to reduce the perceived lag of interactions and give users feedback if a task takes longer to complete.
-\end{description}
 Evaluationg the outcomes of the research is at least as important as the research itself.
 I experimented with diffrent ways to prepare and process the data to to present it more clearly as well as to consider different factors when discussing how to progress with the prototype.
 
