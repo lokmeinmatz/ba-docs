@@ -1,0 +1,52 @@
+6.5 Building Personas
+TODO: move to appendix?
+Personas are descriptions of fictional users of the product, incorporating as-
+sumptions and optinally data for a user group. They aim to give developers
+17
+6.5. Building Personas
+Figure 6.1: 2x2 Opportunity Matrix during the early phases of development
+and designers more context and depict real potential users, which makes it eas-
+ier for a developer to empathize with the user. The following three Role-based
+Personas are derived from 6.1 and the outcomes of the interviews, based on
+the description of Personas in [5, pp. 403-405]
+6.5.1 John - Purple Expeirence Product Developer
+Background and Skills
+John (34) is a senior Angular Web Developer at Sprylab, working there for two
+years. He was born in Berlin and lives in Lichterfelde with his wife and mostly
+works from home. He is passionate about Angular, Typescript and Developer
+Experience in general, studied Computer Science at the Beuth Hochschule and
+hosts Angular conferences.
+Goals and work with the Editor
+• Test newly developed features and the related configurations
+• Configure test apps for development and QA purposes
+• Support in case Project Developers like <TODO> encounter problems
+• John works with the editor multiple times a week
+18
+6.5.2 Steffi - Project Developer
+Background and Skills
+Steffi (23) studies media informatics and works as a working student at Spry-
+lab since a year. This is her first job in the industry and she is learning new
+things every day. Her skills include writing CSS and understanding modern
+web technologies, but she still struggles using native and custom debugging
+tools if something goes wrong.
+Goals and work with the Editor
+• Configure new apps based on existing templates and adapt them to cus-
+tomer’s requirements
+• Add new components or change data sources for existing apps
+• Add custom HTML pages or Javascript snippets to intergrate external
+services
+• Change styles, color schemas or icons when a customer has a rebranding
+• Steffi uses the editor as a primary tool for her work
+6.5.3 Karsten - IT department at a publishing house
+Background and Skills
+Karsten (46) worked in the publishing industry for 20 years, but only during
+the last years his company, aga magazine publisher, tries to catch up with
+the digital development and trends. He is still struggling with his role and is
+thankful for every trick or tool that makes his life managing the digital prod-
+ucts easier.
+Goals and work with the Editor
+• Exchange logos and colors when the magazines he supervies get a re-
+design
+• Add new ads to different views when a new campaign starts
+• Manage URLs to external sites when they change
+• Karsten uses the Editor once a month on average

@@ -188,7 +188,17 @@ Mostly the bugs were edge cases where a file wouldn't open or the changes were n
 - beta flags
 
 \section{Communication and Documentation}
+Communicating with the test users and documenting the technical aspects of the software, the progress and how to use certain features is
+another building block towards a good user- and developer experience.
+\\
+For the communication, we utilized a Microsoft Teams Channel, a group chat where all invited persons (in case of the internal bet company wide) can write with each other and create posts.
+This was used for notifications about new deployments and if in the aftermath someone found a bug that could affect multiple people.
 
-- teams
-- jira
-- documentation in tool \& external
+Even though this adds a bit overhead, it prooved easier than having everyone write bug tickets directly, as user often don't know the actual reason for the problem which leads to unclear descriptions, wrong tags and more.
+Rather, a developer with knowledge about the system looked at the reports and created a new ticket if the problem was new, else referenced an existing ticket or forwarded the problem to the responsible team.
+Jira tickets were all assigned to the UI builder component as well as specific releases so everyone can see with one click which changes and fixes are contained in which release.
+\\\\
+For the feature documentation, Sprylab uses Confluence for internal documentation and Archbee for external documentation that customers can access too.
+As we have the common problem of documentation getting postponed indefinitely, I tried to integrate writing documentation directly int o the development flow and only close a ticket if the documentation
+was written and reviewed by one additional person. Due to time and personnel shortages, this was unfortunately not always possible and will require more future attention.
+
