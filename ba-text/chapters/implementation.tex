@@ -18,50 +18,92 @@ The phase of implementation and deployment followed an agile development process
 \section{Architecture}
 
 Let's start with an overview about the architecture and high level user flows.
-We have three software components relevant for a basic interaction with the system: the UI editor frontend, the UI editor backend and the ''Manager'' backend, which is responsible for
-authentification, app management and providing the dynamic resources in an ZIP format.
+We have three software components relevant for a basic interaction with the system: the editor frontend, the editor backend and the ''Manager'' backend, which is responsible for
+authentication, app management and providing the dynamic resources in an ZIP format.
+At the beginning of a user journey, the user visits the root domain (e.g. \url{https://builder.purplemanager.com} for production apps) and logs himself in.
+I will not explain the authentication details, as these would go beyond the scope of a bachelor thesis and are not relevant for the UX.
+The API the manager exposed and the way dynamic resources get downloaded and merged is one of the basic technical requirements introduced by the surrounding ecosystem.
 \\
-At the beginning of a user journey, the user visits the root domain (e.g. \url{https://builder.purplemanager.com} for production apps) and logs himself in with username and password.
-These credentials are validated in the manager backend, returning an session token which grant's the user access to specific apps he is entitled to see and edit.
-Then, he can select one of the available apps he wants to edit.
-The following UML sequence diagram displays a typical interaction of a user with the editor frontend after he selected an app; pulling the latest dynamic resourses, editing a file and merging the changes.
-\begin{figure}[h]
+The following UML sequence diagram displays a typical interaction of a user with the editor frontend after he selected an app; pulling the latest dynamic resources, editing a file and merging the changes.
+\begin{figure}[h!]
   \includegraphics[width=\textwidth]{pics/user-flow.uml.drawio.png}
 \end{figure}
-
+\pagebreak
 \section{Software stack}
-From the company's point of view, it is advantageous to keep the technology stack as narrow as possible.
-Without restrictions one may chose the latest and greatest language or framework for a new project, but maintainability and availability of persons to review and collaborate are not guaranteed.
-For this case study, the most important point was the availability of additional persons with knowledge about the frameworks and languages used. Additional constraints from DevOps'
-\footnote{DevOps, short for developer operations, refers to methods or in this case responsible persons to manage the combination of software developemnt and IT operations, e.g. how the code get's deployed, how services get provided and resolved and more.} side were only vague,
-since the code gets deployed in Kubernetes, a containerized environment, so the only baisc requirement is that the application must be able to run inside a Docker container.
+From a company's perspective, it is advantageous to keep the technology stack as narrow as possible.
+For this case study, the most important point was the availability of additional personnel with knowledge about the frameworks and languages used.
+To conform with the company's \Gls{devops} practices the application only requirement is to be able to run inside a Docker container in a Kubernetes environment.
 \\\\
 For this project I decided to use Typescript language (\url{https://www.typescriptlang.org}) on both back- and frontend.
-The advantages are wide availability of persons in the company who also work with it, a mature ecosystem, and shared type declarations between server and client,
-reducing the risk of working with incompatabile data types by accident.
+The advantage is the availability of many skilled personnel in the company as well as an established ecosystem and easy sharing of code and type definitions between front-end and back-end.
 \\
-The rest of the stack is fairly common in the web developemnt industry too, the frontend uses React JS as a rendering and reactivity framework,
-with additional libraries for state management, UI Components and API query management on top.
-\\
-For the backend, I used Node as a Javascript runtime, combined with the most used HTTP server framework for Node, Express JS \cite{Github:VanoDevium/node-framework-stars}.
-On top of express, a framework called TSOA (\url{https://github.com/lukeautry/tsoa}) is used to improve the developer expeirence. It provides a class based architecture similar
-to the well known Spring platform for java, including dependency injection, type validation of the http parameters at runtime and automatic API documentation in the OpenAPI specifications.
+The rest of the software stack is fairly common in todays web development industry too:
 
-Frontend, backend and shared libraries are stored in a monorepo to speed up development and deployments and make refactorings more consistent while maintaining clear APIs and reducing accidental tight coupling.
+\begin{description}
+  \item[Frontend] \leavevmode
+  \begin{description}
+    \item[Rendering framework] \textit{React JS v18} (\url{https://reactjs.org/})
+    \item[UI Component Library] \textit{Blueprint JS} (\url{https://blueprintjs.com/}) provides components so we can rely on a consistent design system with common functionality like buttons, dropdowns, filters etc. already implemented.
+    \item[Other libraries] \textit{ReactQuery / TanQuery} to manage, cache and invalidate HTTP API requests to the backend, \textit{Zustand JS} for shared reactive state management and \textit{Zod} for type validation at runtime.
+  \end{description}
+  \item[Backend] \leavevmode
+  \begin{description}
+    \item[HTTP Server] Express on Node JS, which is the most common combination to run an Javascript based HTTP server (see \cite{Github:VanoDevium/node-framework-stars}).
+    \item[Routing abstraction] TSOA (\url{https://github.com/lukeautry/tsoa}) on top of Express, which is a Typescript library to provide Java-Spring like syntax with controllers, dependency injection and parameter validation at runtime.
+  \end{description}
+  \item[Testing] using Vitest (\url{https://vitest.dev/}) for Unit tests and Playwright (\url{https://playwright.dev/}) as E2E test runtime. 
+  \item[DevOps] Gitlab Pipelines to build, test and package on every merge request or commit to develop and master branch.
+  \item[Project Setup] Monorepository with PNPM as package manager and Turborepo to manage package dependencies and automatic optimal build scheduling and caching.
+\end{description}
+
+\section{CI/CD}
+
+CI/CD, a core practice of agile software development, enables fast release and deployment cycles which is crucial for agile prototyping and development.
+A Gitlab CICD Pipeline was set up for the UI builder, consisting of Build, Package, and Deploy stages.
+The Build stage also executed unit and end-to-end tests due to technical reasons for efficiency.\\
+Having a fast and reliable CI/CD process during development and prototyping was valuable, as it allowed for quick reactions to user input and deployment to a staging domain for feedback in under 10 minutes.
+Separating staging and production systems also allowed for more confident deployment of quick fixes for validation in a production-like environment without interrupting users.
 
 \section{Feature examples}
 
 In the following section, I'll present a selection of the features that were implemented during the UI editor case study.
 These features are chosen as examples to how the HCI methods and outcomes from the user research phase influenced their design and how they can improve the user's experience with the tool. 
 
-(connect to HCI research)
-\\
-Files:
+\subsection{File management - open multiple files as tabs}
 
-- multiple tabs as files -> switch between files more fluent, no wait times, discovered during mod. observation
-
-- quick links -> shortcut to often used files, input from interview
+A common workflow consists of editing multiple files at the same time, for example having the view configuration open while adding translations for newly added components.
+The old editor tool only allowed to open one file at a time and get closed when the user opened another one. This showed up as a big slowdown during the moderated observation.
+All subjects mentioned they have to work on multiple files and that they are annoyed by the workflow, especially when opening large view configs can take more than 30 seconds.
 \\
+The solution was inspired by the file management that most IDEs provide, a bar on top where all the opened files are listed and the user can quickly switch between them or close the ones he doesn't need anymore.
+
+\begin{figure}[h]
+  \includegraphics[width=\textwidth]{pics/file_tabs.png}
+  \label{fig:file-tabs}
+  \caption{Screenshot of the latest iteration of file tabs}
+\end{figure}
+
+\subsection{File management - quick links}
+
+A second feature regarding the file management are so called ''quick links''. While all target groups benefit from this, especially for the personas \textit{Steffi, \ref{subsec:persona:productdev}} and \textit{Karsten, \ref{subsec:persona:itpublishing}}
+this can speed up common tasks considerably.
+
+The basic idea is to bookmark commonly used files, e.g. the translation or ad config, and have them prominently available when opening a new app.
+For the implementation, three factors needed to be considered:
+\begin{description}
+  \item[Where to save?] The quick links are stored in the \Gls{localstorage} of the user's browser, so the list is available across apps.
+  \item[How to manage?] Currently, the user has a list on the settings view, where he can add or delete new entries, but has to enter the file path manually.
+  A proposal already exists to either add a file picker in the settings or add a bookmark button to the file manager on the primary editing view.
+  \item[How to present the links?] The links must be easily accessible to provide the intended benefit. The solution was to show them when entering the \textit{edit} view and no file was opened yet.
+  In addition, the UI shows if the link points to a file, which gets opened as a new file tab, to a folder which will navigate the file explorer to there, or if the path doesn't exist in the current app.
+  \begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.4\textwidth]{pics/quick_links.png}
+    \caption{The three types of quick links: Folder, file and not available}
+  \end{figure}
+\end{description}
+
+
 Editing
 
 - messages.json custom editor (feedback Anja) -> demo for custom editors per file, 
@@ -73,37 +115,18 @@ Editing
 Post processing pipelines
 
 
-\section{CI/CD}
-
-CI/CD, short for Continous Integration and Continous Deployment, is a core practice of agile software development and provides a log of value to
-HCI projects. The first part, Continous Integration, means ''[...] developers add to a shared repository frequently that integrates their code.'' \cite[p. 81]{LearnHCI:2020ys}
-The integration consists of automatic builds and tests (cf. \ref*{sec:automated-testing}) to improve quality of the code and confidence of the developers to publish changes more frequently.
-
-As Sprylab uses and private gitlab, for the Expeirence Builder I set up a Gitlab CICD Pipeline. The stages may change when additional build steps or tests are added, but currently it consists of the following stages: \textit{Build}, \textit{Package} and \textit{Deploy}.
-\\
-\textit{Deploy} is only active on the develop and master Branches and contains the code to upload the docker image to the company's staging and production clusters and update the kubernetes deployment to run the latest build.
-The other two stages are run for every Commit of an Merge request. This has the benefit that as soon as a developer pushes his code to a branch that has a Merge Request open,
-he and all others can see if the latest commit could be merged safely or if there is more work to do.
-The \textit{Build} stage installs the dependencies, builds all packages in the monorepo and executes unit- and e2e-tests afterwards. If any of these steps fail, the Merge request can't be merged until this issue is resolved.
-
-Of course the benefit of CI/CD depends on the setup of the build chain, amount, coverage and quality of tests and other factors. To further improve code quality, we integrated Sonarqube into the repository on gitlab (\url{https://www.sonarqube.org}),
-which is a service that automatically scans the code and reports code quality, security issues and technical debt added in a commit.
-
-Having a fast and reliable CI/CD process early on during prototyping and development prooved very valuable, as I could quickly react to user's input on new features or bugs, implement and deploy them quickly on a staging system and get feedback
-on the new behaviour in less than 15 minutes. Through the seperation of staging and production system, I could deploy quick fixes with more confidence even when beta testers were working on the production system, as I could verify that my changes
-worked in a production-like environment without interrupting users.
-
 \section{Automated Testing}
 \label{sec:automated-testing}
 
-As already elaborated, the quality and quantity of automated tests plays a huge role when using CI/CD, as it drastically reduces the time required by Quailty Assurance testers to go through all the edge cases on every change.
+As already elaborated, as fast CI/CD piepline plays a crucial role for agile prototyping and development. Automated tests in turn contribute to the confidence of
+developers to deploy more frequently and can reduce load from the QA team to test standard workflows every time a new release is planned.
 For the Experience Builder I stuck to two of the most common testing levels: unit tests and End-to-End tests (also known as E2E or System tests).
 \\\\
 Unit tests are mostly used to test one ''component'' in an sandboxed environment. For the server, this meant testing Services and classes or even finer grained; single functions.
 On the client, we distinguished between UI testing of single react components, and business logic code that is encapsulated in classes or Javascript modules.
 
 They also are helpful during development to test software patterns before dogin large refactorings and to do test-driven development (TDD), where the specifications and constraints can be laid out as code
-with invariants, pre- and postconditions, and then the implementation is performed while continously running the tests again until the don't fail anymore.
+with invariants, pre- and postconditions, and then the implementation is done while continously running the tests again until they don't fail anymore.
 \\
 Espeically for TDD, but also for the CI/CD Pipelines, the speed of the tests is important. If a single test run takes multiple minutes, the developer is blocked during that time and can't progress on the task,
 but the duration is also not long enough to start working on another task in the meantime.

@@ -28,7 +28,7 @@
 \usepackage[english]{babel} %\usepackage[english]{babel}  
 \usepackage{ae}
 \usepackage{biblatex}
-\usepackage{bibgerm}    
+\usepackage{bibgerm}
 
 \usepackage{fancyhdr} % Define simple headings 
 \usepackage{xcolor}
@@ -43,6 +43,7 @@
 \usepackage[pdftex]{graphicx}  
 \usepackage{hyperref} % turn all your internal references into hyperlinks
 \usepackage{svg}
+\usepackage{glossaries}
 %\usepackage[pdfstartview=FitH,pdftitle={<<Titel der Arbeit>>}, pdfauthor={<<Autor>>}, pdfkeywords={<<Schlüsselwörter>>}, pdfsubject={<<Titel der Arbeit>>}, colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black, hypertexnames=false, bookmarksnumbered=true, bookmarksopen=true, pdfborder = {0 0 0}]{hyperref}
 %
 % table settings 
@@ -180,6 +181,9 @@
 % appendix
 % }
 
+\makenoidxglossaries
+\loadglsentries{glossary}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % The content part of the documentent starts here! %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -251,7 +255,6 @@
 \setcounter{tocdepth}{3}   % reduce the included sections in the table of content
 
 \listoffigures
-\listoftables
 
 %---------------------------------------------------
 %----- Main part
@@ -282,6 +285,7 @@
 %----- Appendix   
 %---------------------------------------------------
 \backmatter
+\printnoidxglossaries
 \include{appendix}
 
 \end{document}

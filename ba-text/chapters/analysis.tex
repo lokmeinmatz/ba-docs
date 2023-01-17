@@ -38,8 +38,9 @@ For the project, I defined the SMART criteria as following:
   \item \textbf{time-related} - the new software should have at least the same feature set and be usable by company-internal users until the end of 2022
 \end{itemize}
 
-TODO: flow first and second concept
-The second one are ''three major factors that an HCI designer should consider'' \cite[pp. 37-41]{LearnHCI:2020ys} according to Becker, which are
+Remembering these points over and over again has helped me a lot when the focus on the actual goals was a bit unclear.
+In addition, Becker (\cite[pp. 37-41]{LearnHCI:2020ys}) states that there are ''three major factors that an HCI designer should consider''.
+Even though I couldn't find other publications mentioning them, they work well as additional guidelines to get broader research and product.
 \begin{description}
   \item[Usability Factor] describes the spectrum from ''usable'' to ''unusable'' software. This is determined through the software design features implemented and how they help the user archieve their tasks in the environment provided.
   \item[Accessibility Factor] is high when as many users from different backgrounds can use the software in different enviornments. It includes, but is not limited to access for people with physical and other disabilites, as well as the entry hurdle a new user must overcome.
@@ -53,12 +54,12 @@ But it is inevidable that the system, network delay and complexity of computatio
 In order to effectively design and implement the UI editor, it is crucial to understand the needs and preferences of the various users and user groups who will be using the tool.
 Therefore, the first step in the user research process was to identify and categorize the different users and user groups who will be using the editor.
 
-In a later chapter (\ref{sec:personas}), I'll build concrete Personas for the different user groups utilizing the information gained from the interviews.
+In a later section (\ref{sec:personas}), I'll build concrete Personas for the different user groups utilizing the information gained from the interviews.
 \\
 Because we already have existing users that work with the previous editors and other tools from the ecosystem, it was relatively easy to collect a list of internal and extneral users, which either I personally knew or I could write a short message asking about if and how they use existing tools and modify dynamic resources.
 I see that this won't be as easy when dealing with a larger user base or primary external customers, when this first step probably requires more effort to collect a user overview upfront.
 \\
-With a list of many of the users, I started grouping them to understand the characteristics and needs of each user group, through which can ensure that the UI editor is tailored to their specific requirements and can be used effectively by all users\footnote{When I refer to ''all users'', I mean the group of users that are expected to work with the tool. There is an expected technical and domain specific base knowledge that the Editor won't cover}.
+With a list of many of the users, I started grouping them to understand the characteristics and needs of each user group, through which can ensure that the UI editor is tailored to their specific requirements and can be used effectively by all users\footnote{When I refer to ''all users'', I mean the group of users that are expected to work with the tool. There is an expected technical and domain specific base knowledge that the Editor won't cover in it's initial form}.
 \\
 I derived the follwoing common factors from the users, which made the communication and categorization a lot easier.
 
@@ -75,7 +76,7 @@ I derived the follwoing common factors from the users, which made the communicat
 \end{itemize}
 
 % ... more
-\section{Qualitative user resarch}
+\section{Qualitative user research}
 
 The existing user base enabled me easy access to subjects for qualitative user research methods.
 Using one or multiple ways of Triangulation \cite[p. 264]{Interactiondesign:2019ys} can strengthen the significance of the research outcome. Limitations of a method or source can be removed by variation of those, resulting in a less distorted picture.
@@ -87,17 +88,18 @@ prepared question / task and the users behaviour and which can't adapt to change
 The chosen structure for the observations and interviews looks as following:
 
 \begin{description}
-  \item [Introduction (\texttildelow 5min)] used to explain the circuumstances and the goal of the session, how we proceed, which data I will collect and how I will evaluate the data afterwards.
+  \item [Introduction (ca. 5min)] used to explain the circuumstances and the goal of the session, how we proceed, which data I will collect and how I will evaluate the data afterwards.
   \item [Moderated Observation (10-15min)] have the observed perform specific tasks in a prepared environment
-  \item [Semistructured Interview (\texttildelow 15min)] ask prepared questions as well as open ones and discuss observation situation
+  \item [Semistructured Interview (ca. 15min)] ask prepared questions as well as open ones and discuss observation situation
 \end{description}
-The reason for Interview following the Observation is, that the observer and observed can discuss the situations or issues occured during the Moderated Observation before,
-which was a good point of entry into the open dialog after the mandatory prepared questions were asked. The other way around, I'd have no way to react to workflow and potential problems the observed encountered during the tasks.
+Interviews followed observations to discuss issues encountered during the moderated observation and to gain deeper insight into the workflow and potential problems.
 \\
-As I had no prior experience conducting these methods with an scientific approach, it was important to me to test the whole process before scheduling all the other meetings. One of our working students agreed to be a test candidate and we went through the tasks and questions I planned, after which he gave me feedback.
+As I had no prior experience conducting these methods with a scientific approach, it was important to me to test the whole process before scheduling all the other meetings. One of our working students agreed to be a test candidate and we went through the tasks and questions I planned, after which he gave me feedback.
 Testing the methods and specific questions before conducting them on a broader audience helped finding questiones that were ambiguous or lead to a lot of repetition of already known facts. For the moderated observation tasks it gave me feedback on the difficulty and time they would take for others on average, which tasks needed clearer formulations and which were already good.
 \\
 In total, I performed the user research on six persons, from which one was an core Purple Experience developer, two were working students from our project department, one was an developer from an different department who had worked with the software some time prior, one Customer Support Manager from our company and one external user from an publisher.
+\\
+TODO: SME (subject matter expert) (ref. ABOUT FACE - The essentials of interaction design) ''authorities on the domain on which the product will operate. This is of critical importance in domains that are highly complex or very technical.'' p.41
 
 \subsection{Moderated observation}
 \label{subsec:modobs}
@@ -150,17 +152,18 @@ Some of these points and their implementations will be covered in chapter \ref*{
 
 \section{Quantitaive user research}
 
-In the beginning, I thought about also distributing questionaires to the exisitng and potential users, but as the outcome of the qualitative research was already very productive, it felt hard to design a questionaire that provided additional information while still adhering to the common design rules for questionaires concerning length and amount of questions as well as the type of them.
+In the initial stages of research, the use of questionnaires was considered as a method of gathering information from existing and potential users.
+However, as the outcome of the qualitative research was already productive, it proved difficult to design a questionnaire that would provide additional information while adhering to common design rules for questionnaires in terms of length, number of questions, and type of questions.
+While prototype questionnaires were created using Microsoft Forms, I found them to be too long, difficult to understand, or not relevant to the development of prototypes.
+Therefore, it was decided to rely solely on qualitative research results for prototyping and feedback, along with some automatic tracking implementation (See TODO squeaky ref).
 \\
-Some prototype questionaires exist in Microsoft Forms, but they were either too long,
-the questions difficult to understand or didn't contain anything of interest for the development of prototypes.
-Thus, we decided against questionaires and to stick to qualitative research results for the prototyping, as well as for the feedback, mixed with some automatic tracking implementation. TODO: ref squeaky.ai section
-\\
+\section{Process and visualize the outcomes of the initial user research phase}
 
-
-\section{Process and vizualize the outcomes of the initial user research phase}
-
-Besides the already mentioned Word document which contained semi-structured notes from the interviews, and Jira tickets I created for the necessary base tasks for setting up the new software project, I experimented with some alternative methods to explore and vizualize the data.
+To gain as much value from the raw research data it is crucial to find some methods to process and visualize the outcomes.
+A common approach at companies is to write ''tickets'' in their ticket system of choice, in case of Sprylab Jira (\url{https://www.atlassian.com/de/software/jira}).
+From my experience, Jira and co. proof valuable once the development process itself started and the state of the tasks must be tracked.
+But for discovery and prioritization of features, scrolling through lists of tickets with different priority levels, where then the tickets in the lists are sorted differently again, does not allow a good overview of effort and benefit of each feature.
+Thus, based on the condensed notes from the observations and interviews I tried out two alternative ways to figure out different features and how they can be prioritized.
 
 \subsection{2x2 Opportunity Matrix}
 
@@ -169,7 +172,7 @@ as it shows the (approximated) cost of implementation as well as the value the f
 
 The matrix I used is a slightly modified adaption from \cite[p. 181]{LearnHCI:2020ys}, replaced the term ''idea originality'' on the x-axis with ''Value''.
 
-\begin{figure}[ht]
+\begin{figure}[h!]
 	\centering
   \includegraphics[width=\textwidth]{pics/feature_cost_matrix.excalidraw.png}
 	\caption{2x2 Opportunity Matrix during the early phases of development}
@@ -180,6 +183,8 @@ The matrix I used is a slightly modified adaption from \cite[p. 181]{LearnHCI:20
 \section{Building Personas}
 \label{sec:personas}
 
+TODO: move to appendix?
+
 Personas are descriptions of fictional users of the product, incorporating assumptions and optinally data for a user group.
 They aim to give developers and designers more context and depict real potential users, which makes it easier for a developer to empathize with the user.
 The following three Role-based Personas are derived from \ref{sec:user-groups} and the outcomes of the interviews, based on the description of Personas in \cite[pp. 403-405]{Interactiondesign:2019ys}
@@ -187,6 +192,7 @@ The following three Role-based Personas are derived from \ref{sec:user-groups} a
 \hrule
 % Persona 1
 \subsection{John - Purple Expeirence Product Developer}
+\label{subsec:persona:productdev}
 \subsubsection{Background and Skills}
 John (34) is a senior Angular Web Developer at Sprylab, working there for two years. He was born in Berlin and lives in Lichterfelde with his wife and mostly works from home. He is passionate about Angular, Typescript and Developer Experience in general, studied Computer Science at the Beuth Hochschule and hosts Angular conferences.
 \\
@@ -201,6 +207,7 @@ John (34) is a senior Angular Web Developer at Sprylab, working there for two ye
 \hrule
 % Persona 2
 \subsection{Steffi - Project Developer}
+\label{subsec:persona:projectdev}
 \subsubsection{Background and Skills}
 Steffi (23) studies media informatics and works as a working student at Sprylab since a year. This is her first job in the industry and she is learning new things every day. Her skills include writing CSS and understanding modern web technologies, but she still struggles using native and custom debugging tools if something goes wrong.  
 \\
@@ -216,6 +223,7 @@ Steffi (23) studies media informatics and works as a working student at Sprylab 
 \hrule
 % Persona 2
 \subsection{Karsten - IT department at a publishing house}
+\label{subsec:persona:itpublishing}
 \subsubsection{Background and Skills}
 Karsten (46) worked in the publishing industry for 20 years, but only during the last years his company, aga magazine publisher, tries to catch up with the digital development and trends. He is still struggling with his role and is thankful for every trick or tool that makes his life managing the digital products easier.
 \\

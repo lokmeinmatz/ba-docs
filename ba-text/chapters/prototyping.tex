@@ -22,24 +22,20 @@ The idea for a preview-centric layout was inspired by popular generic website bu
 can see the page in an interactive mode, move, configure or place elements, and then has on the side additional panels like one with information \& options about the
 currently selected element.
 There are also framework-agnostic tools like \url{https://vwo.com/why-us/technology/visual-editor/}, but they either focused more on only editing the style and not the structure of the page or were not
-compatible with the Experience's framework and data fromat. 
-\\
-Ultimately our choice fell to the editor centric layout, the following are some of the reasons for it over the preview-centric one:
-\begin{itemize}
-  \item The configuration structure of the Experience framework was not built with preview-based editing in mind. A lot of functionality is hidden inside the components and invisible for the user,
-  often components only appear under specific conditions that are not easily reproducable in the editor environment. Thus, editing in a preview-centric mode could in many situations
-  lead to more confusion by the editors than speed the process up. As the configuration schemata are mostly fixed and I can't prevent 
-  \item After evaluation of some avaialble libraries and examples, we concluded that building a reliable and usable preview-centric editor is more complicated, and even without the time restricition of my bachelor thesis, I proposed to not go this way,
-  as it was unclear if it even could result in a viable product in reasonable time. For editor-centric UIs, many thirdparty libraries exist, that can be integrated into the UI.
-  Some relevant are Monaco Editor (the VS Code Open source text editor part) for editing generic web related files like CSS and JS with automatic syntax highlighting and error detection, and an JSON Editor for work with json configs where we could provide a schema.
-  \item The userbase consists mostly of tech-affine people who are used to layouts of IDEs, and the old tool also had a similar editor centric layout.
-  As Jakob's Law of the Internet User Experience states (cf. \cite{Nielsen:2000} and \cite[p. 2]{LawsOfUX:2020ys}), the user's understanding of a website is directly tied to his/hers mental model of that system.
-  Introducing a unconventional workflow comes with the danger that the user gets confused, makes mistakes or in the worst case doesn't like working with the tool anymore.
-
-\end{itemize}
-
+compatible with the Experience's framework and data format. 
 \begin{figure}[h]
   \includegraphics[width=\textwidth]{pics/editor_centric_vs_preview_centric.png}
   \caption{Mockups: Editor centric vs preview centric editor layout}
 \end{figure}
+Ultimately our choice fell to the editor centric layout, the following are some of the reasons for it over the preview-centric one:
+\begin{itemize}
+  \item The configuration structure of the Experience framework was not built with preview-based editing in mind, causing many functionalities to be hidden and invisible to the user, making it difficult to reproduce specific conditions in the editor environment.
+  Thus, editing in a preview-centric mode could lead to more confusion for the editors than speeding up the process.
+  As the configuration schemata are mostly fixed, it was deemed that preview-based editing would not be suitable in this case.
+  \item After evaluating available libraries and examples, we concluded that building a reliable and usable preview-centric editor is more complicated and uncertain to result in a viable product within the limited time frame of this bachelor thesis.
+  For editor-centric UIs, many third-party libraries exist that can be integrated into the UI, such as Microsoft's Monaco Editor (\url{https://microsoft.github.io/monaco-editor/}) for editing generic web-related files with automatic syntax highlighting and error detection, and JSON Editor for working with JSON configurations with provided schema.
+  \item The user base consists mostly of tech-affine people who are used to layouts of IDEs, and the old tool also had a similar editor-centric layout.
+  As Jakob's Law of the Internet User Experience states, the user's understanding of a website is directly tied to their mental model of that system \cite{Nielsen:2000} and \cite[p. 2]{LawsOfUX:2020ys}. Introducing an unconventional workflow comes with the danger of confusing the user, causing mistakes, and potentially leading to dissatisfaction with the tool.
+ 
+\end{itemize}
 
