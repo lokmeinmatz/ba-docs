@@ -7,22 +7,14 @@
 %
 \chapter{Conclusion and outlook}
 \label{chap:conclusion}      
-
-\begin{itemize}
-	\item Die Zusammenfassung sollte das Ziel der Arbeit und die zentralen Ergebnisse beschreiben. Des Weiteren sollten auch bestehende Probleme bei der Arbeit aufgezählt werden und Vorschläge herausgearbeitet werden, die helfen, diese Probleme zukünftig zu umgehen. Mögliche Erweiterungen für die umgesetzte Anwendung sollten hier auch beschrieben werden.
-\end{itemize}
-
-TODO: formulate in sentences
-\begin{itemize}
-	\item User research with existing groups of users (small-medium size, easy access for interviews) : qualitative more value than quantitative
-	\item processing of reserach data: personas, 2x2 matrix, jira tickets, feedback rounds
-	\item implementation: Monorepository
-	\item unit \& e2e tests for more confidence
-	\item abstract external systems so that other parts of system can change APIs without strong coupeling
-	\item Problems appeared:
-	\subitem quantitative feedback difficult, not much feedback
-	\subitem limited by other systems (e.g. Git based dynamic resources)
-	\subitem hard to prioritize when many people want different things -> use data viz to figure out impact of features on ''average user''
-	\subitem Architecture: good abstractio	n of server state with multiple instances (prevent inconsistencies)
-	\subitem code review process slowing down development
-\end{itemize}
+In conclusion, this thesis has demonstrated the challenges and opportunities of applying HCI principles and methods in a brownfield software development project through the redevelopment of a UI editor for a digital publishing company, Sprylab.
+During the process, I have shown how common user research methods can be adapted them for this specific case study.
+Agile development and Lean UX enabled to iterate quickly with new ideas and archive fast deployments to a staging system.
+With a growing group of users already using the software in production and the majority of feedback positive, I'm confident that this new software is a stable and extensible tool, especially regarding the two factors Usability and Time-on-Task.
+\\\\
+However, there is still room for improvements in terms of accessibility and entry hurdle for new users.
+The entry hurdle is still high and a lot of background knowledge is assumed, which is partly due to the complexity of other systems in the ecosystem that were set as technical requirements from the beginning on.
+Moving forward, replacing the JSON editor with a custom implementation that combines JSON schemata and generated UI is one of the next steps, which will speed up the user's
+workflow even more and allow for further improvements that are impossible with a third-party library.
+\\\\
+Overall, this thesis has demonstrated the importance of considering HCI principles and methods in brownfield software development projects, and the potential benefits that can be achieved when these approaches are applied in a real-world context.

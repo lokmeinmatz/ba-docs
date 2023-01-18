@@ -9,3 +9,5 @@
 *.toc
 *.fdb_latexmk
 /ba-proposal/_minted-main
+splitted-1.pdf
+node_modules

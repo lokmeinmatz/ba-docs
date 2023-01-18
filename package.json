@@ -1,0 +1,16 @@
+{
+  "name": "ba-docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "pdf_analysis.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pdfjs-dist": "^3.2.146"
+  }
+}

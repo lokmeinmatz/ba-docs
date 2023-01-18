@@ -25,11 +25,7 @@ To determine the initial functional requirements, I chose to apply qualitative u
 While I also use quantitative research methods to get insights during the testing phase, I decided against using them during the inital functional requirements phase.
 The available user base was small enough to get meaningful and representative statements only from qualitative research and a questionnaire would either be too long or not provide enough helpful insights.
 \\
-Furthermore, two concepts were used as foundation and guidelines during the process:
-\begin{description}
-  \item[SMART goals] <todo> 
-  \item[3 major factors of HCI] <todo> 
-\end{description}
+Furthermore, two concepts "SMART goals" and "three major factors of HCI" were used as foundation and guidelines during the process, which is described in chapter \ref{chap:research} more in detail.
 
 \section{Project specific background}
 
@@ -54,10 +50,9 @@ The UI editor fits into the Use case ''Per App configuration \& style'' (see fig
 
 \subsection{Technical}
 Now that we have established a rough understanding of the environment and use case the UI editor will be placed in, I want to explain more about the configuration and styling itself.
-For that, it is important to understand the Frontend framework Sprylab uses for the delivery to apps and websites. It is called Purple Experience and is a Meta framework build ontop of Angular. The benefit is, that it is completely configurable via JSON files describing the routing, rendering of diffrent components,
-connecting data sources (an API abstraction) with those components, loading assets like images and ads, and styling the whole page with CSS.
-\\
-These configs and assets are stored on an file system called \label{def:DynamicResources} \textit{dynamic resources}.
+The UI editor will be implemented within the context of the proprietary web framework, Purple Experience, which is built on top of Angular.
+This framework allows for complete configurability through JSON files, including routing, rendering of different components, connecting data sources, loading assets, and styling the page with CSS.
+These configs and assets are stored in a per-app file system called \label{def:DynamicResources} \textit{dynamic resources}.
 \\\\
 Dynamic resources are individually managed and loaded for every app. This way, on mobile phones the endusers download an native core app, which in turn just downloads the dynamic resources and executes the angular app with the configs provided from the resources.
 Similar, when a end user requests a website, the backend server just looks up the dynamic resources matching this app's Domain and renders the website using that config.
@@ -107,5 +102,9 @@ as well show the missing features and features the interview candidates noted as
   ]
 }
   \end{lstlisting}
-  \caption{Simplified example of an view configuration showing purchasable issues}
+  \caption{Simplified example of a view configuration showing purchasable issues}
 \end{figure}
+
+\section{Related Work}
+
+TODO

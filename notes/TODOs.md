@@ -5,11 +5,11 @@
 - [ ] Eval: Extra sections about features or in implementation?
 	- [x] Quicklinks
 	- [x] pipelines
-	- [x] live status information
+	- [ ] abstract file editors
 - [x] show screenshots
 - [x] common user flow? (move from background to implementation section)
 - [x] reference personas etc. from research
-- [ ] documentation section
+- [x] documentation section
 - [ ] Write conclusion (then fill in abstract last part)
 	- [ ] HCI: methods and what went well / not well
 	- [ ] Software: current state

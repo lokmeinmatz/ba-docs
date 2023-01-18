@@ -103,16 +103,28 @@ For the implementation, three factors needed to be considered:
   \end{figure}
 \end{description}
 
+\subsection{Editor - Abstraction to provide per-file custom editors}
 
-Editing
+The Purple Experience relies on a variety of configuration files, all with different schemata and functional intents.
+To provide an efficient and error reduced workflow to users, it is important to have specialized file editors.
 
-- messages.json custom editor (feedback Anja) -> demo for custom editors per file, 
+For view configurations for example, we utilize the JSON Editor Library (\url{https://github.com/json-editor/json-editor}) combined with the generated JSON schema files,
+for the translations we have a custom editor that has a fuzzy search function and makes it easy to manage translation entries.
 
-- changed files -> current implementation, plans to use git as source of truth
+The abstraction is done solely in the frontend and follows React's "\Gls{comp-over-inh}" pattern.
+To add a new specialized editor the only two steps are creating a new functional component that implements the \textit{EditorImpl} interface
+and add that editor in the \textit{EditorRegistry} to get returned for the file paths in question.
 
-- editor abstraction? (more techincal for prechelt for example)
-\\
-Post processing pipelines
+\begin{figure}[h]
+  \includegraphics[width=\textwidth]{pics/abstract_editor_uml.drawio.png}
+  \caption{Class diagram showing the editor abstraction in React JS}
+  \label{fig:abstract-editor}
+\end{figure}
+\begin{figure}[h]
+  \includegraphics[width=\textwidth]{pics/ads_json_editor.jpg}
+  \caption{Screenshot: JSON Editor when configuring ads}
+  \label{fig:ads-editor}
+\end{figure}
 
 
 \section{Automated Testing}
@@ -146,12 +158,6 @@ At an internal training day some colleagues introduced a new E2E test framework 
 After looking through some examples and seeing how it can get integrated into our pipelines, I started porting the exisitng tests to playwright, and after a few hours the tests run on the new framework, now with much better debugging tools and the ability to add new tests much faster.
 \\
 This can be an example for others, that investing time to investigate new tools and port code to them if they bring value, can improve developer expeirence and thus also speed and confidence.
-
-\section{Scalability}
-
-TODO maybe as appendix or remove? only relevant for architecture but not HCI
-- REDIS pubsub + observables
-- code example
 
 \section{Privacy friendly analytics \& monitoring}
 
