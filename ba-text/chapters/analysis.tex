@@ -17,63 +17,68 @@ TODO maybe use this reference?:
   \item \cite{Ross:2016} why companies dont conduct user research
 \end{itemize}
 
-Over ten years after the publication of Tomer Sharon's book ''It's our Research'', the listing of qoutes in the introduction about user research in software companies still feel as relevant as ever.
+Over ten years after the publication of Tomer Sharon's book ''It's our Research'', the list of quotes in the introduction about user research in software companies still feels as relevant as ever.
 \\
-''Yeah, but this study will delay our launch date.'', ''Yeah, but we can't learn much from only five participants.'', ''Yeah, but research sounds so academic.'' \cite[p. 4]{Sharon:2012mk} are only some of the statements that according to Sharon are often heard in software companies when discussing if UX research should be conducted.
+''Yeah, but this study will delay our launch date.'', ''Yeah, but we can't learn much from only five participants.'', ''Yeah, but research sounds so academic.'' \cite[p. 4]{Sharon:2012mk} are only some of the statements that according to Sharon are often heard in software companies in discussions about \Gls{ux} research.
+% TODO "ux" important, but conducting UX research is not used, maybe lik to Ross:2016
 \\
-The common pressure from different stakeholders often leads to quick implementation of features and workflows without first investing time to figure the user's needs out, which may be faster in the beginning, but can badly impact the user's acceptance of the product due to cumbersome and slow workflows,
-in the worst case leading to the user not using the product anymore.
+The pressure from stakeholders often leads to quick implementation of features and workflows without figuring out the user's needs.
+This seems faster in the beginning, but can badly impact the user's acceptance of the product due to cumbersome and slow workflows,
+in the worst case it leads to the refusal of the whole product.
 
-To counteract this, it is crucial to conduct and evaluate user research methods, which is what I did for the development of the UI builder.
-
+To counteract this, it is crucial to conduct user research methods and evaluate the user's needs.
+This fact is taken into account in the development of the UI Editor.
 A starting point for qualitative user research is to define the goals through the help of the SMART criteria, which provide guidelines and formulated goals during research.
-
 For the project, I defined the SMART criteria as following:
-
 \begin{itemize}
-  \item \textbf{specfic} - improve the workflow of users modifying dynamic resources for the Purple Experience.
+  \item \textbf{specfic} - improve the workflow of users modifying dynamic resources for Purple Experience
   \item \textbf{measurable} - interviews after testing period concerning working speed, confidence and joy when editing resources, automated user tracking
-  \item \textbf{assignable} - research and implementation will mostly be conducted by me, with input from CTO \& product owner, connections to external users through customer service team
-  \item \textbf{realistic} - new software platform which reacts quicker, prvides more safety regarding errors and is scalable and extensible in the future. Limiting factors are time (as I only have three months for the first phase, including writinh this thesis)
-  \item \textbf{time-related} - the new software should have at least the same feature set and be usable by company-internal users until the end of 2022
+  \item \textbf{achievable} - research and implementation will mostly be conducted by me, with input from CTO \& product owner, connections to external users through customer service team
+  \item \textbf{relevant} - new software platform which reacts quicker, provides more safety regarding errors and is scalable and extensible in the future. Limiting factors are time (as I only have three months for the first phase, including writing this thesis)
+  \item \textbf{time-bound} - the new software should have at least the same feature set and be usable by company-internal users until the end of 2022
 \end{itemize}
-
-Remembering these points over and over again has helped me a lot when the focus on the actual goals was a bit unclear.
+Remembering these points was helpful when the focus on the actual goals was unclear.
+\\\\
 In addition, Becker (\cite[pp. 37-41]{LearnHCI:2020ys}) states that there are ''three major factors that an HCI designer should consider''.
-Even though I couldn't find other publications mentioning them, they work well as additional guidelines to get broader research and product.
+These three factors were seldom mentioned in publications but are helpful guidelines.
 \begin{description}
-  \item[Usability Factor] describes the spectrum from ''usable'' to ''unusable'' software. This is determined through the software design features implemented and how they help the user archieve their tasks in the environment provided.
-  \item[Accessibility Factor] is high when as many users from different backgrounds can use the software in different enviornments. It includes, but is not limited to access for people with physical and other disabilites, as well as the entry hurdle a new user must overcome.
-While it might look like this factor is not as important as the other two for specialized software mostly used internally, it should not be left out when designing and implementing. For example, even if currently no user with visual impairment is working with the software, it can always happen that an exisitng or new colleague suddenly has to rely on screen readers to continue his work.
-  \item[Time-On-Task Factor] refers to ''[...] solutions that use up the appropriate of time to solve a problem.'' \Cite[p. 40]{LearnHCI:2020ys}. Obviously, to save users as much time as possible, a fast system is required.
-But it is inevidable that the system, network delay and complexity of computation all have some minimal required time, and users understand that some operations might take time. More important is to reduce the perceived lag of interactions and give users feedback if a task takes longer to complete.
+  \item[Usability Factor] describes the spectrum from ''usable'' to ''unusable'' software. This is determined by the implemented software design features and how they support the user achieve their tasks in the environment provided.
+  \item[Accessibility Factor] is high when as many users from different backgrounds can use the software in different environments. 
+  It includes access for people with and without disabilities as well as low entry hurdles for new users.
+  At first glance this factors doesn't look as important as the other two, especially for specialized applications, but it shouldn't be left out when designing and implementing software.
+  \item[Time-On-Task Factor] refers to ''[...] solutions that use up the appropriate of time to solve a problem.'' \Cite[p. 40]{LearnHCI:2020ys}. Obviously, to save users time, a fast system is required.
+But it is inevitable that the system, network delay and complexity of computation all have some minimal required time, and users understand that fact. More important is to reduce the perceived lag of interactions and give users feedback if a task takes longer to complete.
 \end{description}
 
 \section{Identifying and categorizing users and user groups}
 \label{sec:user-groups}
 In order to effectively design and implement the UI editor, it is crucial to understand the needs and preferences of the various users and user groups who will be using the tool.
-Therefore, the first step in the user research process was to identify and categorize the different users and user groups who will be using the editor.
 
-In a later section (\ref{sec:personas}), I'll build concrete Personas for the different user groups utilizing the information gained from the interviews.
+The first step in the user research process was to identify and categorize them.
+Then, detailed information is gained through the observations and interviews and finally in section (\ref{sec:personas}) concrete Personas for the different user groups are built.
 \\
-Because we already have existing users that work with the previous editors and other tools from the ecosystem, it was relatively easy to collect a list of internal and extneral users, which either I personally knew or I could write a short message asking about if and how they use existing tools and modify dynamic resources.
-I see that this won't be as easy when dealing with a larger user base or primary external customers, when this first step probably requires more effort to collect a user overview upfront.
+It was easy to collect a list of internal and external users for research because Sprylab already had existing users familiar with previous editors and tools from the ecosystem.
+A larger group of different users or external customers requires more effort to identify and contact suitable users.
 \\
 With a list of many of the users, I started grouping them to understand the characteristics and needs of each user group, through which can ensure that the UI editor is tailored to their specific requirements and can be used effectively by all users\footnote{When I refer to ''all users'', I mean the group of users that are expected to work with the tool. There is an expected technical and domain specific base knowledge that the Editor won't cover in it's initial form}.
 \\
-I derived the follwoing common factors from the users, which made the communication and categorization a lot easier.
-
-\begin{itemize}
-  \item \textbf{quantitative usage} There were users who relied on the tools for most of their work, while others like the external customers accessed the tool a few times a year.
-  \item \textbf{common tasks} I roughly categorized the common tasks into three groups:
-    \subitem \textbf{Heavy configuration} Mostly internal devs used the tools to build new apps and websites from scratch (or derived from exisiting apps), making many modifications, from structural changes to the seperate views, menus, data sources and more, over styling and translating messages to diffrent languages.
-    \subitem \textbf{Moderate configuration} Project devs and customer support people copy resources from existing apps and adapt them for new brands, which often includes changing colors and logos, adapting texts or switching authentification flows.
-    \subitem \textbf{Small changes} External customers often only use the tools to exchange some ads, translations or logos, which affects a small set of files.
-  \item \textbf{expertise} 
+The information of the users leads to the following common factors:
+TODO uppercase/lowercase
+\begin{description}
+  \item \textbf{quantitative usage -} There were users who relied on the tools for most of their work, while others like the external customers accessed the tool a few times a year.
+  \item \textbf{common tasks -} I roughly categorized the common tasks into three groups:
+  \begin{description}
+    \item \textbf{Heavy configuration - } Mostly internal devs used the tools to build new apps and websites from scratch, making a wide range of modifications and structural changes.
+    \item \textbf{Moderate configuration -} Project devs and customer support people copy resources from existing apps and adapt them for new brands, which often includes changing colors and logos, adapting texts or switching authentication flows.
+    \item \textbf{Small changes -} External customers often only use the tools to exchange some ads, translations or logos, which affects a small set of files.
+  \end{description}
+  \item \textbf{expertise}
+  \begin{description}
+    \item \textbf{Technical -} Depending on the area of education and work experience in the web development industry, the expertise about web technologies, languages like CSS and JSON and often also intuition differs between users.
+    \item \textbf{Domain- and Platform Specific -} There is a lot of vocabulary, functionality of Purple Experience and other systems as well as permutations of configurations that users learn with time.
+  \end{description}
   %<kann man bei schlechter software gut erkennen, leute mit viel erfahrung checken sachen, aber ist für neue nicht intutitiv>
-    \subitem \textbf{Technical} Depending on the area of education and working time in the web development industry, the expertise about web technologies, languages like CSS and JSON and often also intuition differs between users.
-    \subitem \textbf{Domain- and Platform Specific} There is a lot of vocabulary, functionality of the Purple Experience and other systems as well as permutations of configurations that users learn with time.
-\end{itemize}
+\end{description}
 
 % ... more
 \section{Qualitative user research}

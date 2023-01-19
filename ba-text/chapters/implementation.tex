@@ -105,10 +105,10 @@ For the implementation, three factors needed to be considered:
 
 \subsection{Editor - Abstraction to provide per-file custom editors}
 
-The Purple Experience relies on a variety of configuration files, all with different schemata and functional intents.
+Purple Experience relies on a variety of configuration files, all with different schemata and functional intents.
 To provide an efficient and error reduced workflow to users, it is important to have specialized file editors.
 
-For view configurations for example, we utilize the JSON Editor Library (\url{https://github.com/json-editor/json-editor}) combined with the generated JSON schema files,
+For view configurations for example, we utilize the JSON Editor Library (\url{https://github.com/json-editor/json-editor}) combined with the generated JSON Schema files,
 for the translations we have a custom editor that has a fuzzy search function and makes it easy to manage translation entries.
 
 The abstraction is done solely in the frontend and follows React's "\Gls{comp-over-inh}" pattern.
