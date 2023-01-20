@@ -10,23 +10,23 @@
 \chapter{Theoretical background}
 \label{chap:background}
 
-Before discussing the design and implementation of the UI editor, it is necessary to provide a brief overview of the applied parts of HCI and the specific context, challenges and opportunities in which the UI editor was developed.
+Before discussing the design and implementation of the UI Editor, it is necessary to provide a brief overview of the applied parts of HCI and the specific context, challenges and opportunities in which the UI Editor was developed.
 % 
 
 \section{Applied human-computer interaction methods}
 
-Let me start by concretizing the HCI aspects of this work and why this I approached the subject from a not so common point of view.
+This section concretizes the HCI aspects of this work and describes how and why the subject is approached from a not so common point of view.
 HCI is a complex topic with a long list of available methods and even more ways to adapt them to a concrete project, so it is impossible to cover all aspects.
-The UI editor development faced challenges in integrating with an existing ecosystem and meeting technical requirements in a \gls{brownfield} project.
+The UI Editor development faced challenges in integrating with an existing ecosystem and meeting technical requirements in a \gls{brownfield} project.
 In my opinion, technical requirements face only limited coverage in HCI literature.
 Therefore, the focus was set on them during this case study.
 \\
-To determine the initial functional requirements, I chose to apply qualitative user research methods like moderated observations (\ref{subsec:modobs}) and interviews (\ref{subsec:interview}).
-While I also use quantitative research methods to get insights during the testing phase, I decided against using them during the inital functional requirements phase.
+To determine the initial functional requirements, qualitative user research methods like moderated observations (\ref{subsec:modobs}) and interviews (\ref{subsec:interview}) were chosen to be applied in an initial Design Thinking phase.
+While quantitative research methods were also used to get insights during the testing phase, the decision was made against using them for this phase.
 The available user base was small enough to get meaningful and representative statements only from qualitative research.
 A questionnaire would either be too long or not provide enough helpful insights.
 \\
-Furthermore, the two concepts "SMART goals" and "three major factors of HCI" were used as foundation and guidelines during the process, which is described in chapter \ref{chap:research} more in detail.
+Furthermore, the two concepts "SMART goals" and "three major factors of HCI" were used as foundation and guidelines during the process, which is described in chapter \ref{chap:research} in more detail.
 
 \section{Project specific background}
 
@@ -43,11 +43,11 @@ Then, they can import content via multiple ways into the system, or the editors 
   \label{fig:usecase1}
 \end{figure}
 
-The UI editor fits into the use case "Per App configuration \& style" (see fig. \ref*{fig:usecase1}), with which mostly Frontend Developers and Project Managers from Sprylab as well as some external customer's IT Admins will interact. The goal is to lower the editing burden as much as possible, so that more of the configuration can be handed off to external customers while also improving usability for the developers of the company.
+The UI Editor fits into the use case "Per App configuration \& style" (see fig. \ref*{fig:usecase1}), with which mostly Frontend Developers and Project Managers from Sprylab as well as some external customer's IT Admins will interact. The goal is to lower the editing burden as much as possible, so that more of the configuration can be handed off to external customers while also improving usability for the developers of the company.
 
 \subsection{Technical}
 
-The UI editor will be implemented within the context of the proprietary web framework Purple Experience which is built on top of Angular.
+The UI Editor will be implemented within the context of the proprietary web framework Purple Experience which is built on top of Angular.
 This framework allows complete configurability through JSON files, including routing, rendering of different components, connecting data sources, loading assets and styling the page with CSS.
 These configs and assets are stored in a per-app file system called \label{def:DynamicResources} dynamic resources.
 \\\\
@@ -70,12 +70,12 @@ As a base for making editing of these configuration JSON files easier, Purple Ex
 JSON Schema is a specification and a declarative language ''that allows you to annotate and validate JSON documents.'' (Retrieved 11th January 2023, from \url{https://json-schema.org/}).
 The use of UI elements generated from JSON Schemas allows for direct validation of user input and prevents the entry of invalid states.
 
-At Sprylab exists a tool called "Storefront Editor", which is used as the template for this new editor.
-It uses a open source software called \textit{Json Editor} (\url{https://github.com/json-editor/json-editor}), TODO duplicate with above: which takes a JSON Schema and a matching JSON config as input and generates such a mentioned UI to manipulate the JSON in a safe way.
-In chapter \ref{chap:research} about User Research and Analysis, state of the JSON editor for that use case is evaluated and the positive aspects and approaches which I reused for the new editor are generally outlined.
+At Sprylab exists a tool called "Storefront Editor", which is the predecessor for this new UI Editor.
+It uses an open source software called \textit{Json Editor} (\url{https://github.com/json-editor/json-editor}), which is an implementation of the UI elements for JSON validation mentioned above.
+In chapter \ref{chap:research}, the state of the JSON Editor for that use case is evaluated and the positive aspects and approaches which I reused for the new editor are generally outlined.
 Furthermore, features are described which are missing, or the interview candidates noted as confusing, not working or slowing down their work.
 
-\begin{figure}
+\begin{figure}[h]
   \lstset{language=json,basicstyle=\footnotesize,numbers=left,showstringspaces=false,frame=single}
   \begin{lstlisting}
 {
@@ -90,7 +90,7 @@ Furthermore, features are described which are missing, or the interview candidat
       "dataSource": {
         "type": "issue",
         "filter": {
-          "purchasable": {
+          "purchased": {
             "value": true
           }
         }
@@ -99,9 +99,16 @@ Furthermore, features are described which are missing, or the interview candidat
   ]
 }
   \end{lstlisting}
-  \caption{Simplified example of a view configuration showing purchasable issues}
+  \caption{Simplified example of a view configuration showing purchased issues}
   \label{fig:viewexample}
 \end{figure}
+
+Figure \ref{fig:viewexample} shows a minimal example of a view configuration with which the Purple Experience could render a simple page.
+The page would be accessible under the domain of the app; for example \textit{https://app1.com/newsstand} and show a list of issue components.
+The data for these components is taken from the data source of type \textit{issue} which filters the published content for issues that are purchased by the current user. 
+\\
+In public apps, the configs are more advanced with conditionals declaring when components are rendered or filters are applied, event handlers when a user interacts with an element and many more functionalities that are modeled through the JSON Schema.
+
 
 \section{Related Work}
 

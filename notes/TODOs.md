@@ -1,4 +1,4 @@
-- [ ] UI editor -> UI Editor
+- [x] UI editor -> UI Editor
 - [ ] pronoun not I -> passive form
 - [ ] Conclusion
 	- [ ] Combination technical possibilities & users needs
@@ -6,8 +6,8 @@
 	- [ ] Link Sprylab & positive Akzeptance of the HCI methods
 - [ ] Checklist 
 	- [ ] Seitenzahlen außen
-	- [ ] Seite 1 zu "Introduction"
-	- [ ] Abstract & Zusammenfassung ohne Chapter
+	- [x] Seite 1 zu "Introduction"
+	- [x] Abstract & Zusammenfassung ohne Chapter
 	- [ ] Warum Appendix keine nummer 9?
 	- [ ] Glossar in inhalt ohne nummer
-	- [ ] Nummern nur Kapitel mit inhalt!!!!!!!
+	- [x] Nummern nur Kapitel mit inhalt!!!!!!!

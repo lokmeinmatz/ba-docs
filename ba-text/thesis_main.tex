@@ -240,15 +240,16 @@
 %---------------------------------------------------
 %----- Abstracts in English and German   
 %---------------------------------------------------
-\mainmatter
 
 \include{abstract_en}
 \include{abstract_de}  
-                                          
+
 %---------------------------------------------------
 %----- Directories   
 %---------------------------------------------------
-
+\makeatletter
+\renewcommand\@dotsep{0}
+\makeatother
 %\pagenumbering{roman}
 \phantomsection
 \addcontentsline{toc}{chapter}{Table of Contents}
@@ -260,9 +261,10 @@
 %---------------------------------------------------
 %----- Main part
 %---------------------------------------------------
-\pagenumbering{arabic} 
 \pagestyle{fancy} 
 
+\mainmatter
+\pagenumbering{arabic} 
 \include{introduction}
 \include{chapters/background}
 \include{chapters/analysis}

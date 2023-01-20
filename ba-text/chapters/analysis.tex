@@ -29,13 +29,13 @@ in the worst case it leads to the refusal of the whole product.
 To counteract this, it is crucial to conduct user research methods and evaluate the user's needs.
 This fact is taken into account in the development of the UI Editor.
 A starting point for qualitative user research is to define the goals through the help of the SMART criteria, which provide guidelines and formulated goals during research.
-For the project, I defined the SMART criteria as following:
+For the project, the SMART criteria were defined as following:
 \begin{itemize}
   \item \textbf{specfic} - improve the workflow of users modifying dynamic resources for Purple Experience
   \item \textbf{measurable} - interviews after testing period concerning working speed, confidence and joy when editing resources, automated user tracking
   \item \textbf{achievable} - research and implementation will mostly be conducted by me, with input from CTO \& product owner, connections to external users through customer service team
-  \item \textbf{relevant} - new software platform which reacts quicker, provides more safety regarding errors and is scalable and extensible in the future. Limiting factors are time (as I only have three months for the first phase, including writing this thesis)
-  \item \textbf{time-bound} - the new software should have at least the same feature set and be usable by company-internal users until the end of 2022
+  \item \textbf{relevant} - new software platform which reacts quicker, provides more safety regarding errors and is scalable and extensible in the future.
+  \item \textbf{time-bound} - the new software should have a feature set enabling productive work, replace the old \textit{Storefront Editor} and be usable by company-internal users until the end of 2022
 \end{itemize}
 Remembering these points was helpful when the focus on the actual goals was unclear.
 \\\\
@@ -52,7 +52,7 @@ But it is inevitable that the system, network delay and complexity of computatio
 
 \section{Identifying and categorizing users and user groups}
 \label{sec:user-groups}
-In order to effectively design and implement the UI editor, it is crucial to understand the needs and preferences of the various users and user groups who will be using the tool.
+In order to effectively design and implement the UI Editor, it is crucial to understand the needs and preferences of the various users and user groups who will be using the tool.
 
 The first step in the user research process was to identify and categorize them.
 Then, detailed information is gained through the observations and interviews and finally in section (\ref{sec:personas}) concrete Personas for the different user groups are built.
@@ -60,22 +60,24 @@ Then, detailed information is gained through the observations and interviews and
 It was easy to collect a list of internal and external users for research because Sprylab already had existing users familiar with previous editors and tools from the ecosystem.
 A larger group of different users or external customers requires more effort to identify and contact suitable users.
 \\
-With a list of many of the users, I started grouping them to understand the characteristics and needs of each user group, through which can ensure that the UI editor is tailored to their specific requirements and can be used effectively by all users\footnote{When I refer to ''all users'', I mean the group of users that are expected to work with the tool. There is an expected technical and domain specific base knowledge that the Editor won't cover in it's initial form}.
+With an overview over current and potential users, the next step was grouping them to understand the characteristics and needs of each user group.
+Having a rough set of groups makes it easier to ensure that the UI Editor is tailored to their specific requirements and can be used effectively by all users\footnote{When I refer to ''all users'', I mean the group of users that are expected to work with the tool. There is an expected technical and domain specific base knowledge that the Editor won't cover in it's initial form}.
+Also, when choosing who to use as research subjects this list can help getting broad coverage of users with different needs an abilities.
 \\
 The information of the users leads to the following common factors:
 TODO uppercase/lowercase
 \begin{description}
-  \item \textbf{quantitative usage -} There were users who relied on the tools for most of their work, while others like the external customers accessed the tool a few times a year.
-  \item \textbf{common tasks -} I roughly categorized the common tasks into three groups:
+  \item[Quantitative usage -] There were users who relied on the tools for most of their work, while others like the external customers accessed the tool a few times a year.
+  \item[Common tasks -] I roughly categorized the common tasks into three groups:
   \begin{description}
-    \item \textbf{Heavy configuration - } Mostly internal devs used the tools to build new apps and websites from scratch, making a wide range of modifications and structural changes.
-    \item \textbf{Moderate configuration -} Project devs and customer support people copy resources from existing apps and adapt them for new brands, which often includes changing colors and logos, adapting texts or switching authentication flows.
-    \item \textbf{Small changes -} External customers often only use the tools to exchange some ads, translations or logos, which affects a small set of files.
+    \item[Heavy configuration -] Mostly internal devs used the tools to build new apps and websites from scratch, making a wide range of modifications and structural changes.
+    \item[Moderate configuration -] Project devs and customer support people copy resources from existing apps and adapt them for new brands, which often includes changing colors and logos, adapting texts or switching authentication flows.
+    \item[Small changes -] External customers often only use the tools to exchange some ads, translations or logos, which affects a small set of files.
   \end{description}
-  \item \textbf{expertise}
+  \item[Expertise] -
   \begin{description}
-    \item \textbf{Technical -} Depending on the area of education and work experience in the web development industry, the expertise about web technologies, languages like CSS and JSON and often also intuition differs between users.
-    \item \textbf{Domain- and Platform Specific -} There is a lot of vocabulary, functionality of Purple Experience and other systems as well as permutations of configurations that users learn with time.
+    \item[Technical -] Depending on the area of education and work experience in the web development industry, the expertise about web technologies, languages like CSS and JSON and often also intuition differs between users.
+    \item[Domain- and Platform Specific -] There is a lot of vocabulary, functionality of Purple Experience and other systems as well as permutations of configurations that users learn with time.
   \end{description}
   %<kann man bei schlechter software gut erkennen, leute mit viel erfahrung checken sachen, aber ist für neue nicht intutitiv>
 \end{description}
@@ -83,28 +85,29 @@ TODO uppercase/lowercase
 % ... more
 \section{Qualitative user research}
 
-The existing user base enabled me easy access to subjects for qualitative user research methods.
+The existing user base simplified access to subjects for qualitative user research methods, in combination with the advantage of having most users accessable via company-internal communication channels.
 Using one or multiple ways of Triangulation \cite[p. 264]{Interactiondesign:2019ys} can strengthen the significance of the research outcome. Limitations of a method or source can be removed by variation of those, resulting in a less distorted picture.
-Therefore I used metholodical triangulation (using multiple data gathering techniques) as well as triangulation of data (collecting data from different people and different sources).
-Moderated observations combined with interviews proofed to be a good fit for this case study, as they are interaction driven and the observer can react directly on behaviours / emerging topics and steer the process.
-This stands is contrast to more passive methods I found like passive observations or user recording and tracking analysis, where the outcome only depends on the
-prepared question / task and the users behaviour and which can't adapt to changed circuumstances etc. during the application.
+Therefore, metholodical triangulation (using multiple data gathering techniques) as well as triangulation of data (collecting data from different people and different sources) seemed well suited.
+Moderated observations combined with interviews proofed to be a good fit for this case study, as they are interaction driven and the observer can react directly on behaviors / emerging topics and steer the process.
+This stands in contrast to more passive methods like passive observations or user recording and tracking analysis, where the outcome only depends on the
+prepared question / task and the users behavior and which can't adapt to changed circumstances etc. during the application.
 \\\\
 The chosen structure for the observations and interviews looks as following:
 
 \begin{description}
-  \item [Introduction (ca. 5min)] used to explain the circuumstances and the goal of the session, how we proceed, which data I will collect and how I will evaluate the data afterwards.
+  \item [Introduction (ca. 5min)] used to explain the circumstances and the goal of the session, how we proceed, which data I will collect and how I will evaluate the data afterwards.
   \item [Moderated Observation (10-15min)] have the observed perform specific tasks in a prepared environment
   \item [Semistructured Interview (ca. 15min)] ask prepared questions as well as open ones and discuss observation situation
 \end{description}
 Interviews followed observations to discuss issues encountered during the moderated observation and to gain deeper insight into the workflow and potential problems.
 \\
-As I had no prior experience conducting these methods with a scientific approach, it was important to me to test the whole process before scheduling all the other meetings. One of our working students agreed to be a test candidate and we went through the tasks and questions I planned, after which he gave me feedback.
-Testing the methods and specific questions before conducting them on a broader audience helped finding questiones that were ambiguous or lead to a lot of repetition of already known facts. For the moderated observation tasks it gave me feedback on the difficulty and time they would take for others on average, which tasks needed clearer formulations and which were already good.
+To validate the metholodical approach and concrete questions fit the process and can yield desired information, it was important to test the whole process with a small group before scheduling all the other meetings. One of Sprylab's working students agreed to be a test candidate and we went through the tasks and questions I planned, after which he gave me feedback.
+Testing the methods and specific questions before conducting them on a broader audience helped to find questions that were ambiguous or lead to a lot of repetition of already known facts.
+For the moderated observation tasks the test gave feedback on the difficulty and time the sessions would probably take on average, which tasks needed clearer formulations and which were already sufficient.
 \\
-In total, I performed the user research on six persons, from which one was an core Purple Experience developer, two were working students from our project department, one was an developer from an different department who had worked with the software some time prior, one Customer Support Manager from our company and one external user from an publisher.
+In total, I performed the user research with six persons, from which one was a core Purple Experience developer, two were working students from our project department, one was a developer from a different department who had worked with the software some time prior, one Customer Support Manager from our company and one external user from a publisher.
 \\
-TODO: SME (subject matter expert) (ref. ABOUT FACE - The essentials of interaction design) ''authorities on the domain on which the product will operate. This is of critical importance in domains that are highly complex or very technical.'' p.41
+An interesting concept relevant for the choice if subjects from \cite[p. 41]{AboutFace:2014ys} is the Subject Matter Expert (SME), who represents ''authorities on the domain on which the product will operate.'' \cite[p. 41]{AboutFace:2014ys}. Having at least one SME in the process is important as he can give input on technical details and patterns other less involved users might not know. For this case study, the Purple Experience developer represents the SME for the underlying platform the UI Editor os built for.
 
 \subsection{Moderated observation}
 \label{subsec:modobs}
@@ -180,7 +183,7 @@ The matrix I used is a slightly modified adaption from \cite[p. 181]{LearnHCI:20
 \begin{figure}[h!]
 	\centering
   \includegraphics[width=\textwidth]{pics/feature_cost_matrix.excalidraw.png}
-	\caption{2x2 Opportunity Matrix during the early phases of development}
+	\caption{2x2 Opportunity Matrix during the early phases of development TODO: redo chart in drawio}
 	\label{fig:opportunitymatrix}
 \end{figure}
 
