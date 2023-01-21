@@ -29,9 +29,10 @@
 \usepackage{ae}
 \usepackage{biblatex}
 \usepackage{bibgerm}
-
+\usepackage{enumitem}
 \usepackage{fancyhdr} % Define simple headings 
 \usepackage{xcolor}
+\usepackage[toc,title,page]{appendix}
 \usepackage{url}
 \usepackage{listings}
 %\usepackage{vmargin} % Adjust margins in a simple way
@@ -93,7 +94,7 @@
 \colorlet{numb}{magenta!60!black}
 
 \lstdefinelanguage{json}{
-    basicstyle=\normalfont\ttfamily,
+    basicstyle=\footnotesize\ttfamily,
     commentstyle=\color{eclipseStrings}, % style of comment
     stringstyle=\color{eclipseKeywords}, % style of strings
     numbers=left,
@@ -281,11 +282,37 @@
 % \bibliographystyle{alpha}
 \printbibliography
 
+\phantomsection
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures
 %---------------------------------------------------
 %----- Appendix   
 %---------------------------------------------------
-\backmatter
+% \backmatter
 \printnoidxglossaries
-\include{appendix}
+
+% ---------------------------------------------------
+% ----- Appendix of the template
+% ----- for Bachelor-, Master thesis and class papers
+% ---------------------------------------------------
+%  Created by C. Müller-Birn on 2012-08-17, CC-BY-SA 3.0.
+%  Freie Universität Berlin, Institute of Computer Science, Human Centered Computing. 
+%
+
+\
+
+\appendix
+\renewcommand\chaptermark[1]{\markboth{\sffamily\normalsize\bfseries \appendixname~\thechapter.}{}}
+\renewcommand{\thesection}{\Alph{section}.\arabic{section}}
+
+\appendixpage
+%   \addappheadtotoc
+\label{ch:Appendix}
+\include{appendix/app_personas}
+\include{appendix/app_interviews}
+
+
+
+
 
 \end{document}

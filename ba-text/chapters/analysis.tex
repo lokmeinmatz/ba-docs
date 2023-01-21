@@ -56,7 +56,7 @@ But it is inevitable that the system, network delay and complexity of computatio
 In order to effectively design and implement the UI Editor, it is crucial to understand the needs and preferences of the various users and user groups who will be using the tool.
 
 The first step in the user research process was to identify and categorize them.
-Then, detailed information is gained through the observations and interviews and finally in section (\ref{sec:personas}) concrete Personas for the different user groups are built.
+Then, detailed information is gained through the observations and interviews and finally in section (\ref{subsec:personas}) concrete Personas for the different user groups are built.
 \\
 It was easy to collect a list of internal and external users for research because Sprylab already had existing users familiar with previous editors and tools from the ecosystem.
 A larger group of different users or external customers requires more effort to identify and contact suitable users.
@@ -87,8 +87,8 @@ TODO uppercase/lowercase
 \section{Qualitative user research}
 
 The existing user base simplified access to subjects for qualitative user research methods, in combination with the advantage of having most users accessable via company-internal communication channels.
-Using one or multiple ways of Triangulation \cite[p. 264]{Interactiondesign:2019ys} can strengthen the significance of the research outcome. Limitations of a method or source can be removed by variation of those, resulting in a less distorted picture.
-Therefore, metholodical triangulation (using multiple data gathering techniques) as well as triangulation of data (collecting data from different people and different sources) seemed well suited.
+Using one or multiple ways of triangulation \cite[p. 264]{Interactiondesign:2019ys} can strengthen the significance of the research outcome. Limitations of method or source can be removed by variation of those, resulting in a less distorted picture.
+Therefore, methodical triangulation (using multiple data gathering techniques) as well as triangulation of data (collecting data from different people and different sources) seemed well suited.
 Moderated observations combined with interviews proofed to be a good fit for this case study, as they are interaction driven and the observer can react directly on behaviors / emerging topics and steer the process.
 This stands in contrast to more passive methods like passive observations or user recording and tracking analysis, where the outcome only depends on the
 prepared question / task and the users behavior and which can't adapt to changed circumstances etc. during the application.
@@ -96,24 +96,24 @@ prepared question / task and the users behavior and which can't adapt to changed
 The chosen structure for the observations and interviews looks as following:
 
 \begin{description}
-  \item [Introduction (ca. 5min)] used to explain the circumstances and the goal of the session, how we proceed, which data I will collect and how I will evaluate the data afterwards.
-  \item [Moderated Observation (10-15min)] have the observed perform specific tasks in a prepared environment
-  \item [Semistructured Interview (ca. 15min)] ask prepared questions as well as open ones and discuss observation situation
+  \item [Introduction (ca. 5min)] used to explain the circumstances and the goal of the session, the method, which data will be collected and how they will be evaluated afterwards.
+  \item [Moderated Observation (10-15min)] let the observed perform specific tasks in a prepared environment
+  \item [Semistructured Interview (ca. 15min)] ask open and closed and discuss observation situation
 \end{description}
 Interviews followed observations to discuss issues encountered during the moderated observation and to gain deeper insight into the workflow and potential problems.
 \\
-To validate the metholodical approach and concrete questions fit the process and can yield desired information, it was important to test the whole process with a small group before scheduling all the other meetings. One of Sprylab's working students agreed to be a test candidate and we went through the tasks and questions I planned, after which he gave me feedback.
-Testing the methods and specific questions before conducting them on a broader audience helped to find questions that were ambiguous or lead to a lot of repetition of already known facts.
-For the moderated observation tasks the test gave feedback on the difficulty and time the sessions would probably take on average, which tasks needed clearer formulations and which were already sufficient.
+To validate the methodical approach and the concrete questions fit the process and can yield desired information, it was important to pretest the whole process with a small group before scheduling the other meetings. One of Sprylab's working students agreed to be a test candidate and we verified the tasks and questions I planned.
+Pretesting the methods and specific questions before conducting them on a broader audience helped to sharpen them by identifying ambiguous, repetitive or already known facts.
+For the moderated observation tasks the test gave feedback on the difficulty, time the sessions would probably take on average, which tasks needed clearer formulations and which were already sufficient.
 \\
-In total, I performed the user research with six persons, from which one was a core Purple Experience developer, two were working students from our project department, one was a developer from a different department who had worked with the software some time prior, one Customer Support Manager from our company and one external user from a publisher.
+The user research was carried out with six persons, including a core Purple Experience developer, two were working students from our project department, one was a developer from a different department who had worked with the software some time prior, one Customer Support Manager from our company and one external user from a publisher.
 \\
-An interesting concept relevant for the choice if subjects from \cite[p. 41]{AboutFace:2014ys} is the Subject Matter Expert (SME), who represents ''authorities on the domain on which the product will operate.'' \cite[p. 41]{AboutFace:2014ys}. Having at least one SME in the process is important as he can give input on technical details and patterns other less involved users might not know. For this case study, the Purple Experience developer represents the SME for the underlying platform the UI Editor os built for.
+An interesting concept relevant for the choice if subjects from \cite[p. 41]{AboutFace:2014ys} is the Subject Matter Expert (SME), who represents ''authorities on the domain on which the product will operate.'' \cite[p. 41]{AboutFace:2014ys}. The SME is important for the process as he can give input on technical details and patterns other less involved users might not know. For this case study, the Purple Experience developer represents the SME for the underlying platform the UI Editor is built for.
 
 \subsection{Moderated observation}
 \label{subsec:modobs}
-I prepared a list of six tasks, with the last two beeing optional depending on the time left and the confidence of the user with the platform I perceived during the beginning.
-That way I could present the same first tasks to every interviewee regardless of their level of knowledge, and present the last two tasks if we had enough time left.
+For the moderated observation a list of six tasks was prepared. Two of them were optional depending on the time left and the familiarity of the user with the platform I perceived during the first tasks.
+The same first tasks could be given to every interviewee regardless of their level of knowledge, and the optional tasks if there was still enough time.
 Also, it was important that the tasks did not build on each other to prevent the observed person getting stuck because of an earlier mistake.
 To me, it was more important to see a variety of tasks getting performed than one task beeing executed without errors. 
 \\
@@ -147,7 +147,7 @@ For the interview, I chose a semistructured interview as the appropriate tool. T
 My prepared questions consisted of some closed questions, like how often they interact with the tools, how confident they feel implementing changes or fixing errors, as well as some open questions like to describe step by step what the most recent task was they performed with dynamic resources, how they were onboarded etc.
 Then, if I had notices points during the observation, I addressed these points directly, else I directly introduced the open question ''If you dream of the UI builder, <>, how would it look like, which features would you expect and what workflows are most important to you?''.
 \\
-The semistructured interviews proved to be valuable in providing insight into the experiences and needs of the users. Through the interviews, I was able to gather a lot of new ideas and saw how different features were massively valued differently by the users. Two of the interviewees even provided written lists of their ideas and suggestions which they sent me afterwards. After every interview (wich I also recorded), I filled out a Word document noting basic questions about the person and it's usage of the dynamic resources, important situations from the observation, input from the interview and linked to the recordings in case I needed to rewatch parts of it.
+The semistructured interviews proved to be valuable in providing insight into the experiences and needs of the users. Through the interviews, I was able to gather a lot of new ideas and saw how different features were massively valued differently by the users. Two of the interviewees even provided written lists of their ideas and suggestions which they sent me afterwards.
 \\\\
 Some of the outcomes were:
 \begin{itemize}
@@ -164,36 +164,73 @@ Some of these points and their implementations will be covered in chapter \ref*{
 In the initial stages of research, the use of questionnaires was considered as a method of gathering information from existing and potential users.
 However, as the outcome of the qualitative research was already productive, it proved difficult to design a questionnaire that would provide additional information while adhering to common design rules for questionnaires in terms of length, number of questions, and type of questions.
 While prototype questionnaires were created using Microsoft Forms, I found them to be too long, difficult to understand, or not relevant to the development of prototypes.
-Therefore, it was decided to rely solely on qualitative research results for prototyping and feedback, along with some automatic tracking implementation (See TODO squeaky ref).
+Therefore, it was decided to rely solely on qualitative research results for prototyping and feedback, along with some automatic tracking implementation (See \ref{sec:analytics}).
 \\
+\section{User research outcomes}
+
+After every observation and interview, wich were additionally recorded, a Word document noting facts about the subject and the session was filled out by me.
+The mandatory fields consisted of basic informations like the role of the user, frequency and typical tasks with the resources.
+Additionally important situations from the observation, a description of the workflows, input from the interview and the linked recordings were noted.
+
+A shortened and anonymized version of the notes can be found in the Appendix \ref{app:interviews}.
+Derived from these notes, combined with the technical requirements, the following list shows a subset of mandatory features that emerged:
+
+\begin{description}[nosep]
+  \item[App Selection] \leavevmode
+  \begin{itemize}
+    \item Having quick access to recently opened apps, search by App name, App ID and Publisher Name.
+  \end{itemize}
+  \item[App Editing] \leavevmode
+  \begin{itemize}
+    \item Better support from the file editors, like syntax highlighting and feedback in case of errors.
+    \item Fast load times or the possibility to have multiple files open at once.
+    \item Faster load times or the possibility to have multiple files open at once.
+  \end{itemize}
+  \item[App Preview]\leavevmode
+   \begin{itemize}
+    \item See a frame on the side showing the latest changes instantly, load "real" data from the API.
+    \item Ability to pop out into extra window.
+    \item Ability to load current state of config and assets inside a app connected for debugging.
+  \end{itemize}
+  \item[Dynamic Resource Change Management] \leavevmode
+  \begin{itemize}
+    \item See which files were changed since last upload.
+    \item Reset single files.
+    \item Have version control features like "commit messages" and version diffs (this is dependent on external work as the Purple Manager only stores ZIP files, where having git-like version control features is technically not possible).
+    \item See who uploaded new changes and if some changes are being processed.
+  \end{itemize}
+\end{description}
+
+
 \section{Process and visualize the outcomes of the initial user research phase}
 
 To gain as much value from the raw research data it is crucial to find some methods to process and visualize the outcomes.
-A common approach at companies is to write ''tickets'' in their ticket system of choice, in case of Sprylab Jira (\url{https://www.atlassian.com/de/software/jira}).
+A common approach at companies is to write "tickets" in their ticket system of choice, in case of Sprylab Jira (\url{https://www.atlassian.com/de/software/jira}).
 From my experience, Jira and co. proof valuable once the development process itself started and the state of the tasks must be tracked.
 But for discovery and prioritization of features, scrolling through lists of tickets with different priority levels, where then the tickets in the lists are sorted differently again, does not allow a good overview of effort and benefit of each feature.
-Thus, based on the condensed notes from the observations and interviews I tried out two alternative ways to figure out different features and how they can be prioritized.
+Thus, based on the notes from observations and interviews two alternative ways were tried to figure out different features and how they can be prioritized.
 
 \subsection{2x2 Opportunity Matrix}
 
-This two-dimensional vizualization of a set of proposed features prooved helpful when prioritizing tasks with other stakeholders,
-as it shows the (approximated) cost of implementation as well as the value the feature can have for users.
+Fig. \ref{fig:opportunitymatrix} shows a two-dimensional visualization of a subset of proposed features.
+It prooved helpful when prioritizing tasks with other stakeholders,
+as it shows the approximated cost of implementation as well as the value the feature can have for users.
+Cost includes possible financial cost as well as required time and amount of resources needed to implement the feature.
 
-The matrix I used is a slightly modified adaption from \cite[p. 181]{LearnHCI:2020ys}, replaced the term ''idea originality'' on the x-axis with ''Value''.
+It is a slightly modified adaption from \cite[p. 181]{LearnHCI:2020ys}, replaced the term ''idea originality'' on the x-axis with ''Value''.
+The benefit of visualizing multiple possible features is to see at one glance the relation between value for users but also cost of implementation in a more clear way than lists of tickets with different priorities would provide.
 
 \begin{figure}[h!]
 	\centering
-  \includegraphics[width=\textwidth]{pics/feature_cost_matrix.excalidraw.png}
-	\caption{2x2 Opportunity Matrix during the early phases of development TODO: redo chart in drawio}
+  \includegraphics[width=\textwidth]{pics/feature_cost_matrix.drawio.png}
+	\caption{2x2 Opportunity Matrix during the early phases of development with additional ideas for features}
 	\label{fig:opportunitymatrix}
 \end{figure}
 
 
-\section{Building Personas}
-\label{sec:personas}
+\subsection{Building Personas}
+\label{subsec:personas}
 
-TODO: move to appendix?
-
-Personas are descriptions of fictional users of the product, incorporating assumptions and optinally data for a user group.
+Personas are descriptions of fictional users of the product, incorporating assumptions and optionally data for a user group.
 They aim to give developers and designers more context and depict real potential users, which makes it easier for a developer to empathize with the user.
-The following three Role-based Personas are derived from \ref{sec:user-groups} and the outcomes of the interviews, based on the description of Personas in \cite[pp. 403-405]{Interactiondesign:2019ys}
+For this case study three Role-based Personas were derived from \ref{sec:user-groups} and the outcomes of the interviews, based on the description of Personas in \cite[pp. 403-405]{Interactiondesign:2019ys}. They can be found in Appendix \ref{app:personas} and are mentioned later in this thesis.
