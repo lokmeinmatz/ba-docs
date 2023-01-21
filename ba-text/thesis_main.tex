@@ -289,6 +289,9 @@
 %----- Appendix   
 %---------------------------------------------------
 % \backmatter
+
+\phantomsection
+\addcontentsline{toc}{chapter}{\glossaryname}
 \printnoidxglossaries
 
 % ---------------------------------------------------
@@ -305,7 +308,7 @@
 \renewcommand\chaptermark[1]{\markboth{\sffamily\normalsize\bfseries \appendixname~\thechapter.}{}}
 \renewcommand{\thesection}{\Alph{section}.\arabic{section}}
 
-\appendixpage
+\addappheadtotoc
 %   \addappheadtotoc
 \label{ch:Appendix}
 \include{appendix/app_personas}

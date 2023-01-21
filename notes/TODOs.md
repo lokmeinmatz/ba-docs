@@ -3,20 +3,20 @@
 - [x] Fig 1.1: blassere Hintergrundfarben
 - [x] Fig. 2.2 unterste Reihe gestrichelte dervices?
 - [ ] Fig. 2.3. listing monospace
-- [ ] Personas subsection rewrite to "see appendix"
+- [x] Personas subsection rewrite to "see appendix"
 - [ ] 5.6 / unter fig. 5.5 
 - [ ] 3.6: Ergebnis der Umfragen / zusammenfassende Darstellun was aus Interview etc. rausgekommen ist (bzw. vor Personas und Matrix, 3.4)
 	- [ ] Personas as subsection
 - [ ] Conclusion
-	- [ ] Darauf geachtet dass Codebasis erweiterbar ist und gut wartbar
+	- [x] Darauf geachtet dass Codebasis erweiterbar ist und gut wartbar
 	- [x] Combination technical possibilities & users needs
 	- [x] Wird in production genutzt und postives feedback -> zeigt dass gewählter Weg (interviews etc) dass zum erfolg beigetragen hat / richtiger Weg war: richtige Nutzer, tech&func Anforderungen gut zusammen
 	- [x] Link Sprylab & positive Akzeptance of the HCI methods
 - [ ] Checklist 
-	- [ ] fig. vs figure
+	- [x] fig. vs figure
 	- [ ] Seitenzahlen außen
 	- [x] Seite 1 zu "Introduction"
 	- [x] Abstract & Zusammenfassung ohne Chapter
-	- [ ] Warum Appendix keine nummer 9?
+	- [x] Warum Appendix keine nummer 9?
 	- [ ] Glossar in inhalt ohne nummer
 	- [x] Nummern nur Kapitel mit inhalt!!!!!!!

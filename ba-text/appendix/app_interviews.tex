@@ -1,7 +1,7 @@
 \chapter{Interview notes}
 \label{app:interviews}
 
-\begin{tabular}{l l}
+\begin{tabularx}{\linewidth}{lX}
   Date: & 6.10.22 \\
   \hline
   Usage: & "all the time"\\
@@ -11,7 +11,7 @@
   Works for: & ca 8 months \\
   \hline
   Common task: & task: general structuring of websites \& apps
-\end{tabular}
+\end{tabularx}
 \\\\
 Current workflow:
 \begin{itemize}[nosep]
@@ -39,117 +39,159 @@ Common problems:
 \end{itemize}
 
 Quotes:
-“Man muss sich dran gewöhnen, man muss sich selbst ein System bauen“ - Problematisch, sollte software selber providen
+“Man muss sich dran gewöhnen, man muss sich selbst ein System bauen“ - problematic as systems of different users might be incompatible.
 
 Observations during Mod. Obs.
-views.json didn't work, he did not know why
-used “copy raw json text” a lot -> indicates that editing json is faster than editing via UI editor
-used preview popout
+\begin{itemize}[nosep]
+  \item views.json didn't work, he did not know why
+  \item used “copy raw json text” a lot -> indicates that editing json is faster than editing via extra tools
+  \item used preview popout
+\end{itemize}
 
 Ideas for improvements
-Resizable file explorer
-See if other people are editing same file / app?
-In upload name set “changed file” and “change component”?
-Link manager -> editor
-Quick links to common files
-Easy mode
-
+\begin{itemize}[nosep]
+  \item Resizable file explorer
+  \item See if other people are editing same file / app?
+  \item In upload name set “changed file” and “change component”?
+  \item Link manager -> editor
+  \item Quick links to common files
+  \item Easy mode
+\end{itemize}
+\bigskip
 \hrule
-Date: 11.10.22
-Usage: every day
-Role: customer success
-usage time: multiple years
-common task: Small adaptions for customers, setting up new apps from cloned resources
+
+\begin{tabularx}{\linewidth}{lX}
+  Date: & 11.10.22 \\
+  \hline
+  Usage: & "every day at least once"\\
+  \hline
+  Role: & customer success team \\
+  \hline
+  Works for: & multiple years \\
+  \hline
+  Common task: &  Small adaptions for customers, setting up new apps from cloned resources
+\end{tabularx}
+\\\\
+
 
 Current workflow:
-Opens editor with shortcut
-Only used popout preview
-does Styling changes on the website / app itself in dev tools
-copies changed files back into editor
-→ not using preview
+\begin{itemize}[nosep]
+  \item Opens editor with shortcut
+  \item Only used popout preview
+  \item does Styling changes on the website / app itself in dev tools
+  \item copies changed files back into editor → not using preview
+\end{itemize}
 
 Uses manager UI for:
-Versions Lock \& Copy to release
-Comparing files
+\begin{itemize}[nosep]
+  \item Versions Lock \& Copy to release
+  \item Comparing files (download, unzip, use extra software to compare folders)
+\end{itemize}
 
 Common problems:
-views.json broken, no info what is the problem
-slow performance
-“internal”: a lot of versions copied around (in thesis: filter input relating to other software)
-
-Quotes:
-TODO
+\begin{itemize}[nosep]
+  \item views.json broken, no info what is the problem
+  \item slow performance
+  \item “internal”: a lot of versions copied around (in thesis: filter input relating to other software)
+\end{itemize}
 
 Observations during Mod. Obs.
-No overview over overwrites
-resources wild
+\begin{itemize}[nosep]
+  \item No overview over overwrites of different platforms
+  \item resources not cleaned up -> no templates
+\end{itemize}
 
 Ideas for improvements
-Upgrade Storefront: only show official released versions by default
-Kolja doesn't like preview on side (Ref. Sandra uses it all the time!)
-Uploads should be included in merge
-Upload folders recursively
-hide mac specific files
-JSON validator
+\begin{itemize}[nosep]
+  \item Upgrade Storefront: only show official released versions by default
+  \item Person doesn't like preview on side (Ref. working student uses it all the time!)
+  \item Uploads should be included in merge
+  \item Upload folders recursively
+  \item hide mac specific files
+  \item JSON validator to show detailed where the error is
+\end{itemize}
+\bigskip
 \hrule
-Sandra - 12.10.22
-Usage: “most of her work”
-Role: project dev
-usage time: ca 1 year
-common task: web kiosk migration \& bug fixes, kleine views anpassungen, styling, impression tracking
 
+\begin{tabularx}{\linewidth}{lX}
+  Date: & 12.10.22 \\
+  \hline
+  Usage: & "most of work in dynamic resources"\\
+  \hline
+  Role: & project dev / support customer success \\
+  \hline
+  Works for: & 1 year \\
+  \hline
+  Common task: &  web kiosk migration \& bug fixes, small views adaptions, styling, impression tracking
+\end{tabularx}
+\\\\
 Current workflow:
-open through history + typing name in URL
-search app by manager name
-“Noticed for all platforms”
-Flow for renaming → views-json → messages.json (umständlich)
-Merge ohne Name
-
+\begin{itemize}[nosep]
+  \item open through history + typing name in URL
+  \item search app by manager name
+  \item Noticed challenge if mod. observation task to see all platform overwrites
+  \item Flow for renaming of translation → views-json → messages.json cumbersome
+  \item Merge without clear description for others what change contained
+\end{itemize}
 Uses manager UI for:
-merge problems
-reset after broken merge
-First impression:
-peer2peer
-probeapp
-trial \& error
+\begin{itemize}[nosep]
+  \item merge problems
+  \item reset after broken merge
+\end{itemize}
+First impression: pair "programming" sessions on extra test app, lots of trial and error
 
 Common problems:
-upgrade wurde nicht übertragen
-App Menu changes not testable
-merge not reliable
-updates not transparent
-Quotes:
+\begin{itemize}[nosep]  
+  \item upgrades not automatically, lots of manual steps involved -> more change of errors
+  \item App Menu changes not testable without restarting real app
+  \item merge not reliable, deleted files don't get deleted from ZIP file
+  \item updates not transparent what changed
+\end{itemize}
 
 
 Observations during Mod. Obs.
-heavily uses side preview !! (ref to Kolja who doesn’t use it at all)
-preview → right click → refresh frame
+\begin{itemize}[nosep]  
+  \item Heavily uses side preview (ref to customer success member who doesn't use it at all)
+  \item preview → right click → refresh frame
+\end{itemize}
 
 Ideas for improvements
-change log
-“more or less happy”
-hide file manager completely
+\begin{itemize}[nosep]  
+  \item change log
+  \item hide file manager completely if not needed
+  \item “Ansonsten mehr oder weniger zufrieden” - more or less happy
+\end{itemize}
+\bigskip
 \hrule
-Micha - 11.10.22
-Usage: “depends on task, for purple most of time”
-Role: project dev
-usage time: ca 1 year with breaks
-common task: 
-building new apps for customers
+\begin{tabularx}{\linewidth}{lX}
+  Date: & 11.10.22 \\
+  \hline
+  Usage: & "depends on task, if working for Purple most of time"\\
+  \hline
+  Role: & project dev / other business unit \\
+  \hline
+  Works for: & ca. 1 year with breaks \\
+  \hline
+  Common task: &  building new apps for customers
+\end{tabularx}
+\\\\
 Current workflow:
-always open tab
-navigate to file
-multiple browser tabs to work on files in parallel → can lead to inconsistencies in data or empty files
+\begin{itemize}[nosep]
+  \item always open tab, a person that never closes tabs :)
+  \item navigate to file
+  \item multiple browser tabs to work on files in parallel → can lead to inconsistencies in data or empty files
+\end{itemize}
 Uses manager UI for:
-resets
-see when data is ready
-First impression:
+\begin{itemize}[nosep]
+  \item reset of broken changes
+  \item see when data is ready to be delivered to apps / websites
+\end{itemize}
 
-
-Common problems:
-Quotes:
-Observations during Mod. Obs.
-missing link manager → App is taking much time to figure out URL + app name
-navigation betw. files slow
-auto link view key → messages.json?
-Ideas for improvements
+First impression: -\\
+Common problems: -\\
+Observations during Mod. Obs.:
+\begin{itemize}[nosep]
+  \item missing link manager → App is taking much time to figure out URL + app name
+  \item navigation between files slow
+  \item auto link view key → messages.json when adding new translations
+\end{itemize}
