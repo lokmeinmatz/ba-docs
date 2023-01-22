@@ -11,7 +11,7 @@
 \chapter{Implementation and deployment}
 \label{chap:impl} 
 
-The phase of implementation and deployment followed an agile development process, where I could deploy changes easily to get fast feedback from users.
+The phase of implementation and deployment followed an agile development process where changes could be deployed easily to get fast feedback from users.
 
 % \localtableofcontents
 
@@ -21,12 +21,14 @@ Let's start with an overview about the architecture and high level user flows.
 We have three software components relevant for a basic interaction with the system: the editor frontend, the editor backend and the ''Manager'' backend, which is responsible for
 authentication, app management and providing the dynamic resources in an ZIP format.
 At the beginning of a user journey, the user visits the root domain (e.g. \url{https://builder.purplemanager.com} for production apps) and logs himself in.
-I will not explain the authentication details, as these would go beyond the scope of a bachelor thesis and are not relevant for the UX.
-The API the manager exposed and the way dynamic resources get downloaded and merged is one of the basic technical requirements introduced by the surrounding ecosystem.
+The authentication details will not be covered here as these would go beyond the scope of a bachelor thesis and are not relevant for the UX.
+The API the \Gls{manager} exposed and the way dynamic resources get downloaded and merged is one of the basic technical requirements introduced by the surrounding ecosystem.
 \\
-The following UML sequence diagram displays a typical interaction of a user with the editor frontend after he selected an app; pulling the latest dynamic resources, editing a file and merging the changes.
+The UML sequence diagram fig. \ref{fig:userflow} displays a typical interaction of a user with the editor frontend after he selected an app; pulling the latest dynamic resources, editing a file and merging the changes.
 \begin{figure}[h!]
   \includegraphics[width=\textwidth]{pics/user-flow.uml.drawio.png}
+  \caption{A typical interaction of a user with the UI Editor frontend and it's dependencies}
+  \label{fig:userflow}
 \end{figure}
 \pagebreak
 \section{Software stack}
@@ -34,8 +36,8 @@ From a company's perspective, it is advantageous to keep the technology stack as
 For this case study, the most important point was the availability of additional personnel with knowledge about the frameworks and languages used.
 To conform with the company's \Gls{devops} practices the application only requirement is to be able to run inside a Docker container in a Kubernetes environment.
 \\\\
-For this project I decided to use Typescript language (\url{https://www.typescriptlang.org}) on both back- and frontend.
-The advantage is the availability of many skilled personnel in the company as well as an established ecosystem and easy sharing of code and type definitions between front-end and back-end.
+For this project the Typescript language (\url{https://www.typescriptlang.org}) is used on back- and frontend.
+The advantage is the availability of many skilled personnel in the company as well as an established ecosystem and easy sharing of code and type definitions between frontend and backend.
 \\
 The rest of the software stack is fairly common in todays web development industry too:
 
@@ -58,29 +60,29 @@ The rest of the software stack is fairly common in todays web development indust
 
 \section{CI/CD}
 
-CI/CD, a core practice of agile software development, enables fast release and deployment cycles which is crucial for agile prototyping and development.
+Continuous Integration and Continuous Delivery, short CI/CD, a core practice of agile software development, enables fast release and deployment cycles which is crucial for agile prototyping and development.
 A Gitlab CICD Pipeline was set up for the UI builder, consisting of Build, Package, and Deploy stages.
 The Build stage also executed unit and end-to-end tests due to technical reasons for efficiency.\\
-Having a fast and reliable CI/CD process during development and prototyping was valuable, as it allowed for quick reactions to user input and deployment to a staging domain for feedback in under 10 minutes.
+Having a fast and reliable CI/CD process during development and prototyping was valuable, as it allowed for quick reactions to user input and deployment to a staging domain for user feedback in under 10 minutes.
 Separating staging and production systems also allowed for more confident deployment of quick fixes for validation in a production-like environment without interrupting users.
 
 \section{Feature examples}
 
-In the following section, I'll present a selection of the features that were implemented during the UI Editor case study.
+In the following section, a selection of features is presented that were implemented during the UI Editor case study.
 These features are chosen as examples to how the HCI methods and outcomes from the user research phase influenced their design and how they can improve the user's experience with the tool. 
 
 \subsection{File management - open multiple files as tabs}
 
 A common workflow consists of editing multiple files at the same time, for example having the view configuration open while adding translations for newly added components.
 The old editor tool only allowed to open one file at a time and get closed when the user opened another one. This showed up as a big slowdown during the moderated observation.
-All subjects mentioned they have to work on multiple files and that they are annoyed by the workflow, especially when opening large view configs can take more than 30 seconds.
+All interview subjects mentioned they have to work on multiple files and that they are annoyed by the workflow, especially when opening large view configs can take more than 30 seconds.
 \\
-The solution was inspired by the file management that most IDEs provide, a bar on top where all the opened files are listed and the user can quickly switch between them or close the ones he doesn't need anymore.
+The solution was inspired by the file management that most IDEs provide, a bar on top where all the opened files are listed and the user can quickly switch between them or close the ones he doesn't need anymore (see fig. \ref{fig:file-tabs}). 
 
 \begin{figure}[h]
   \includegraphics[width=\textwidth]{pics/file_tabs.png}
-  \label{fig:file-tabs}
   \caption{Screenshot of the latest iteration of file tabs}
+  \label{fig:file-tabs}
 \end{figure}
 
 \subsection{File management - quick links}

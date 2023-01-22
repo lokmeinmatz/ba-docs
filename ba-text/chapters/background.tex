@@ -10,12 +10,12 @@
 \chapter{Theoretical background}
 \label{chap:background}
 
-Before discussing the design and implementation of the UI Editor, it is necessary to provide a brief overview of the applied parts of HCI and the specific context, challenges and opportunities in which the UI Editor was developed.
+Before discussing the design and implementation of the UI Editor, it is necessary to give a brief overview of the applied parts of HCI and the specific context, challenges and opportunities in which the UI Editor was developed.
 % 
 
 \section{Applied human-computer interaction methods}
 
-This section concretizes the HCI aspects of this work and describes how and why the subject is approached from a not so common point of view.
+This section concretizes the HCI aspects of this thesis and describes how and why the subject is approached from a not so common point of view.
 HCI is a complex topic with a long list of available methods and even more ways to adapt them to a concrete project, so it is impossible to cover all aspects.
 The UI Editor development faced challenges in integrating with an existing ecosystem and meeting technical requirements in a \gls{brownfield} project.
 In my opinion, technical requirements face only limited coverage in HCI literature.
@@ -30,9 +30,9 @@ Furthermore, the two concepts "SMART goals" and "three major factors of HCI" wer
 
 \section{Project specific background}
 
-In the following the functional and technical requirements are described to gain an understanding of the application domain.
+In the following the functional and technical backgrounds are described to gain an understanding of the application domain.
 
-\subsection{Functional}
+\subsection{Functional background}
 
 The publishing houses respectively their digital departments (in the following \textit{customer}) purchase the license for an app or website (in the following just \textit{app}, as there is not much difference besides the end medium).
 Then, they can import content via multiple ways into the system, or the editors write the content directly inside the tools provided as \Gls{saas}.
@@ -45,17 +45,17 @@ Then, they can import content via multiple ways into the system, or the editors 
 
 The UI Editor fits into the use case "Per App configuration \& style" (see fig. \ref*{fig:usecase1}), with which mostly Frontend Developers and Project Managers from Sprylab as well as some external customer's IT Admins will interact. The goal is to lower the editing burden as much as possible, so that more of the configuration can be handed off to external customers while also improving usability for the developers of the company.
 
-\subsection{Technical}
+\subsection{Technical background}
 
-The UI Editor will be implemented within the context of the proprietary web framework Purple Experience which is built on top of Angular.
+The UI Editor will be implemented within the context of the proprietary web framework named \Gls{experience} which is built on top of Angular.
 This framework allows complete configurability through JSON files, including routing, rendering of different components, connecting data sources, loading assets and styling the page with CSS.
 These configs and assets are stored in a per-app file system called \label{def:DynamicResources} dynamic resources.
 \\\\
 Dynamic resources are individually managed and loaded for every app. This way, on mobile phones the end users download a native core app, which in turn just downloads the dynamic resources and executes the angular app with the configs provided from the resources.
 Similar, when an end user requests a website, the backend server just looks up the dynamic resources matching this app's domain and renders the website using that config.
-As a result all customers can share the same server instance(s) in case of websites, or at least don't require extra native sourcecode changes per app.
+As a result, all customers can share the same server instance(s) in case of websites, or at least do not require extra native sourcecode changes per app.
 \\
-In addition, there are preview and live resources for every app, so that changes can be tested before they are released to the end users.
+In addition, there are preview and live resources for every app, so that changes can be tested before they are released to the end users. (see fig. \ref{fig:dynres})
 \begin{figure}[h!]
   \includegraphics[width=\linewidth]{pics/experience_resources.drawio.png}
   \caption{Sprylab preview and live dynamic resources for two imaginary apps}
@@ -64,10 +64,9 @@ In addition, there are preview and live resources for every app, so that changes
 \\
 Working with large and deeply nested JSON files quickly becomes convoluted.
 Manual handling of ZIP files, including modification of assets, repackaging, and the subsequent risk of introducing errors, is a labor-intensive and error-prone workflow.
-TODO ref to \ref{fig:viewexample}
 \\
 As a base for making editing of these configuration JSON files easier, Purple Experience generates JSON Schema files directly from the interfaces in the source code for every released version.
-JSON Schema is a specification and a declarative language ''that allows you to annotate and validate JSON documents.'' (Retrieved 11th January 2023, from \url{https://json-schema.org/}).
+JSON Schema is a specification and a declarative language "that allows you to annotate and validate JSON documents." (Retrieved 11th January 2023, from \url{https://json-schema.org/}).
 The use of UI elements generated from JSON Schemas allows for direct validation of user input and prevents the entry of invalid states.
 
 At Sprylab exists a tool called "Storefront Editor", which is the predecessor for this new UI Editor.
@@ -107,7 +106,7 @@ Figure \ref{fig:viewexample} shows a minimal example of a view configuration wit
 The page would be accessible under the domain of the app; for example \textit{https://app1.com/newsstand} and show a list of issue components.
 The data for these components is taken from the data source of type \textit{issue} which filters the published content for issues that are purchased by the current user. 
 \\
-In public apps, the configs are more advanced with conditionals declaring when components are rendered or filters are applied, event handlers when a user interacts with an element and many more functionalities that are modeled through the JSON Schema.
+In public apps, the configs are more advanced with conditionals declaring when components are rendered or filters are applied, event handlers when a user interacts with an element and many more functionalities that are modelled through the JSON Schema.
 
 
 \section{Related Work}

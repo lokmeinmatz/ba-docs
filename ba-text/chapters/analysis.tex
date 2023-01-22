@@ -11,12 +11,6 @@
 
 
 % Due to the limited size of the user group, the goal was not to gain <TODO> with high diversity of their demographics, but to have information saturation from fewer but more valuable insights into peolpe with diffrent workflows.
-
-TODO maybe use this reference?:
-\begin{itemize}
-  \item \cite{Ross:2016} why companies dont conduct user research
-\end{itemize}
-
 Over ten years after the publication of Tomer Sharon's book ''It's our Research'', the list of quotes in the introduction about user research in software companies still feels as relevant as ever.
 \\
 ''Yeah, but this study will delay our launch date.'', ''Yeah, but we can't learn much from only five participants.'', ''Yeah, but research sounds so academic.'' \cite[p. 4]{Sharon:2012mk} are only some of the statements that according to Sharon are often heard in software companies in discussions about \Gls{ux} research.
@@ -27,16 +21,16 @@ This seems faster in the beginning, but can badly impact the user's acceptance o
 in the worst case it leads to the refusal of the whole product.
 
 To counteract this, it is crucial to conduct user research methods and evaluate the user's needs.
-This fact is taken into account in the development of the UI Editor.
+This fact is considered in the development of the UI Editor.
 A starting point for qualitative user research is to define the goals through the help of the SMART criteria, which provide guidelines and formulated goals during research.
-For the project, the SMART criteria were defined as following:
+For the project, the SMART criteria were defined like this:
 \label{fig:smart}
 \begin{itemize}
-  \item \textbf{specfic} - improve the workflow of users modifying dynamic resources for Purple Experience
+  \item \textbf{specific} - improve the workflow of users modifying dynamic resources for \Gls{experience}
   \item \textbf{measurable} - interviews after testing period concerning working speed, confidence and joy when editing resources, automated user tracking
   \item \textbf{achievable} - research and implementation will mostly be conducted by me, with input from CTO \& product owner, connections to external users through customer service team
   \item \textbf{relevant} - new software platform which reacts quicker, provides more safety regarding errors and is scalable and extensible in the future.
-  \item \textbf{time-bound} - the new software should have a feature set enabling productive work, replace the old \textit{Storefront Editor} and be usable by company-internal users until the end of 2022
+  \item \textbf{time-bound} - the new software should have a feature set enabling productive work, replace the old \textit{Storefront Editor} and be usable by company internal users until the end of 2022
 \end{itemize}
 Remembering these points was helpful when the focus on the actual goals was unclear.
 \\\\
@@ -46,7 +40,7 @@ These three factors were seldom mentioned in publications but are helpful guidel
   \item[Usability Factor] describes the spectrum from ''usable'' to ''unusable'' software. This is determined by the implemented software design features and how they support the user achieve their tasks in the environment provided.
   \item[Accessibility Factor] is high when as many users from different backgrounds can use the software in different environments. 
   It includes access for people with and without disabilities as well as low entry hurdles for new users.
-  At first glance this factors doesn't look as important as the other two, especially for specialized applications, but it shouldn't be left out when designing and implementing software.
+  At first glance this factor doesn't look as important as the other two, especially for specialized applications, but it should not be left out when designing and implementing software.
   \item[Time-On-Task Factor] refers to ''[...] solutions that use up the appropriate of time to solve a problem.'' \Cite[p. 40]{LearnHCI:2020ys}. Obviously, to save users time, a fast system is required.
 But it is inevitable that the system, network delay and complexity of computation all have some minimal required time, and users understand that fact. More important is to reduce the perceived lag of interactions and give users feedback if a task takes longer to complete.
 \end{description}
@@ -63,16 +57,15 @@ A larger group of different users or external customers requires more effort to 
 \\
 With an overview over current and potential users, the next step was grouping them to understand the characteristics and needs of each user group.
 Having a rough set of groups makes it easier to ensure that the UI Editor is tailored to their specific requirements and can be used effectively by all users\footnote{When I refer to ''all users'', I mean the group of users that are expected to work with the tool. There is an expected technical and domain specific base knowledge that the Editor won't cover in it's initial form}.
-Also, when choosing who to use as research subjects this list can help getting broad coverage of users with different needs an abilities.
+Also, when choosing who to use as research subjects this list can help to get broad coverage of users with different needs and abilities.
 \\
-The information of the users leads to the following common factors:
-TODO uppercase/lowercase
+The information about the users leads to the following common factors:
 \begin{description}
   \item[Quantitative usage -] There were users who relied on the tools for most of their work, while others like the external customers accessed the tool a few times a year.
   \item[Common tasks -] I roughly categorized the common tasks into three groups:
   \begin{description}
-    \item[Heavy configuration -] Mostly internal devs used the tools to build new apps and websites from scratch, making a wide range of modifications and structural changes.
-    \item[Moderate configuration -] Project devs and customer support people copy resources from existing apps and adapt them for new brands, which often includes changing colors and logos, adapting texts or switching authentication flows.
+    \item[Heavy configuration -] Mostly internal developers used the tools to build new apps and websites from scratch, making a wide range of modifications and structural changes.
+    \item[Moderate configuration -] Project developers and customer support people copy resources from existing apps and adapt them for new brands, which often includes changing colors and logos, adapting texts or switching authentication flows.
     \item[Small changes -] External customers often only use the tools to exchange some ads, translations or logos, which affects a small set of files.
   \end{description}
   \item[Expertise] -
@@ -86,72 +79,71 @@ TODO uppercase/lowercase
 % ... more
 \section{Qualitative user research}
 
-The existing user base simplified access to subjects for qualitative user research methods, in combination with the advantage of having most users accessable via company-internal communication channels.
+The existing user base simplified access to subjects for qualitative user research methods, in combination with the advantage of having most users accessible via company-internal communication channels.
 Using one or multiple ways of triangulation \cite[p. 264]{Interactiondesign:2019ys} can strengthen the significance of the research outcome. Limitations of method or source can be removed by variation of those, resulting in a less distorted picture.
 Therefore, methodical triangulation (using multiple data gathering techniques) as well as triangulation of data (collecting data from different people and different sources) seemed well suited.
 Moderated observations combined with interviews proofed to be a good fit for this case study, as they are interaction driven and the observer can react directly on behaviors / emerging topics and steer the process.
 This stands in contrast to more passive methods like passive observations or user recording and tracking analysis, where the outcome only depends on the
-prepared question / task and the users behavior and which can't adapt to changed circumstances etc. during the application.
+prepared question / task and the user's behavior and which can't adapt to changed circumstances etc. during the application.
 \\\\
-The chosen structure for the observations and interviews looks as following:
+The chosen structure for the observations and interviews looks like this:
 
 \begin{description}
   \item [Introduction (ca. 5min)] used to explain the circumstances and the goal of the session, the method, which data will be collected and how they will be evaluated afterwards.
   \item [Moderated Observation (10-15min)] let the observed perform specific tasks in a prepared environment
-  \item [Semistructured Interview (ca. 15min)] ask open and closed and discuss observation situation
+  \item [Semistructured Interview (ca. 15min)] ask open and closed questions and discuss observation situation
 \end{description}
-Interviews followed observations to discuss issues encountered during the moderated observation and to gain deeper insight into the workflow and potential problems.
+Interviews came after observations to allow discussing issues encountered during the moderated observation and to gain deeper insight into the workflow and potential problems.
 \\
-To validate the methodical approach and the concrete questions fit the process and can yield desired information, it was important to pretest the whole process with a small group before scheduling the other meetings. One of Sprylab's working students agreed to be a test candidate and we verified the tasks and questions I planned.
+To verify the methodical approach and whether the concrete questions fit the process and can yield desired information, it was important to pretest the whole process with a small group before scheduling the other meetings. One of Sprylab's working students agreed to be a test candidate and we verified the prepared tasks and questions I planned.
 Pretesting the methods and specific questions before conducting them on a broader audience helped to sharpen them by identifying ambiguous, repetitive or already known facts.
-For the moderated observation tasks the test gave feedback on the difficulty, time the sessions would probably take on average, which tasks needed clearer formulations and which were already sufficient.
+For the tasks of the moderated observation the test gave feedback on the difficulty, time the sessions would probably take on average, which tasks needed clearer formulations and which were already sufficient.
 \\
-The user research was carried out with six persons, including a core Purple Experience developer, two were working students from our project department, one was a developer from a different department who had worked with the software some time prior, one Customer Support Manager from our company and one external user from a publisher.
+The user research was conducted with six persons, including a core Purple Experience developer, two working students from our project department, one developer from a different department who had worked with the software some time prior, one Customer Support Manager from our company and one external user from a publisher.
 \\
 An interesting concept relevant for the choice if subjects from \cite[p. 41]{AboutFace:2014ys} is the Subject Matter Expert (SME), who represents ''authorities on the domain on which the product will operate.'' \cite[p. 41]{AboutFace:2014ys}. The SME is important for the process as he can give input on technical details and patterns other less involved users might not know. For this case study, the Purple Experience developer represents the SME for the underlying platform the UI Editor is built for.
 
 \subsection{Moderated observation}
 \label{subsec:modobs}
-For the moderated observation a list of six tasks was prepared. Two of them were optional depending on the time left and the familiarity of the user with the platform I perceived during the first tasks.
+For the moderated observation a list of six tasks was prepared. Two of them were optional depending on the time left and how familiar the user felt with dynamic resources.
 The same first tasks could be given to every interviewee regardless of their level of knowledge, and the optional tasks if there was still enough time.
 Also, it was important that the tasks did not build on each other to prevent the observed person getting stuck because of an earlier mistake.
-To me, it was more important to see a variety of tasks getting performed than one task beeing executed without errors. 
+Instead, seeing a variety of tasks getting performed gave more insights than one task being executed without errors. 
 \\
-In practice, I prepared an example app on our staging system, noted the link down and downloaded the initial state so that I could easily reset the enviornment after each observation.
+Therefore an example app was created on Sprylab's staging system, so it was easy to prepare and also reset after each observation session.
 The six tasks were
-\begin{itemize}
-  \item Change english app menu entry "Newsstand" to "Home" on all platforms (Web, Android and iOS)
-  \item Change the Advertisement banner target on top of the home page to https://google.com 
-  \item Change the exnglish text "Latest Issues" on the home page to "Read new Issues"
-  \item Change color of "Read new Issues" and "Latest Articles" headers on the home page to the app's primary color.
-  \item \textit{(Optional)} Add an dropdown on the home between "Read new Issues" and "Latest Articles"
+\begin{itemize}[itemsep=0mm]
+  \item Change app menu entry "Newsstand" to "Home" on all platforms (Web, Android and iOS).
+  \item Change the advertisement banner target on top of the home page to https://google.com. 
+  \item Change the text "Latest Issues" on the home page to "Read new Issues".
+  \item Change color of "Read new Issues" and "Latest Articles" headers on the home page to the app's primary color..
+  \item \textit{(Optional)} Add a dropdown on the home page between "Read new Issues" and "Latest Articles"
     \subitem It should show all publications connected to the app
     \subitem It should set an URL parameter ''publication'' to the id when selected
     \subitem Define the reset message as ''All publications''
   \item \textit{(Optional)} Configure the filter of the ''Latest Articles'' list to only show articles from that publication
 \end{itemize}
 
-These were constructed in a way that I anticipated some errors so I could see how users tried to figure out what went wrong and fix them.
-These cases then also occurred, for example the first task was often only done for one of the three platforms, the ''Latest Issues'' text was not found in the translation files or
-the wrong CSS selector was used to recolor the header elements on the home page, leading to more elements beeing recolored.
+These tasks were constructed in a way that errors could occur and were expected, which allowed to see how users try to figure the source of the problem out and how to fix it.
+As expected these cases then also occurred, for example the first task was often done for ONLY one of the three platforms, the ''Latest Issues'' text was not found in the translation files or the color change was applied to more elements than desired.
 
-The optional tasks were presented to four people, of which three solved them at least one of them successfully, only the core developer solved all six tasks completely.
+The optional tasks were presented to four people, of which three solved at least one task successfully, only the core developer solved all six tasks completely.
 With the consent of the interviewees I recorded their screens during the observation to rewatch specific actions or flows if required.
-\\
-TODO: noticed workflow patterns that can be improved? like file opening, switching files (quick links \& file tabs)
 
 \subsection{Interview}
 \label{subsec:interview}
-For the interview, I chose a semistructured interview as the appropriate tool. The interviewer has a list of open and closed questions, through which he can ensure that important topics are coveredw hile also allowing for flexibility to delve deeper into specific issues and ideas that may arise during the interview.
+For the interview, a semistructured interview was chosen as the appropriate tool.
+The interviewer has a list of open and closed questions, through which he can ensure that important topics are covered.
+Furthermore, it allows flexibility to delve deeper into specific issues and ideas if needed.
 \\
-My prepared questions consisted of some closed questions, like how often they interact with the tools, how confident they feel implementing changes or fixing errors, as well as some open questions like to describe step by step what the most recent task was they performed with dynamic resources, how they were onboarded etc.
-Then, if I had notices points during the observation, I addressed these points directly, else I directly introduced the open question ''If you dream of the UI builder, <>, how would it look like, which features would you expect and what workflows are most important to you?''.
+The prepared questions consisted of closed ones, like how often they interact with the tools, how confident they feel implementing changes or fixing errors, and open questions like to describe step by step what the most recent task was they performed with dynamic resources, how they were onboarded etc.
+If notable points occurred during the observation, these were addressed now either directly or in form of an open question like ''If you imagine an UI builder with no technical limits, how would it look like, which features would you expect and what workflows are most important to you?''.
 \\
-The semistructured interviews proved to be valuable in providing insight into the experiences and needs of the users. Through the interviews, I was able to gather a lot of new ideas and saw how different features were massively valued differently by the users. Two of the interviewees even provided written lists of their ideas and suggestions which they sent me afterwards.
+The semi-structured interviews proved to be valuable in gaining insight into the experiences and needs of the users. They made it possible to gather lots of new information and show how different features were massively valued differently by the users. Two interviewees even provided written lists of their ideas and suggestions afterwards.
 \\\\
-Some of the outcomes were:
+Here are some examples of the outcomes:
 \begin{itemize}
-  \item The way users validate their changes differs widely, some use a preview window in the old editor, some merge changes into the resources and view it on the website or inspect the app's javascript context, some prefer seperate windows, some embedded frames to see code and preview at the same time.
+  \item The way users validate their changes differs widely; some use a preview window in the old editor, some merge changes into the resources and view it on the website or inspect the app's Javascript context, some prefer separate windows, some embedded frames to see code and preview at the same time.
   \item Rearranging or adapting the layout of the tools / editor to match the current screen and browser window size is important, e.g. hide unecessary panes if not used, make the window the user currently works in larger to see more content at once.
   \item Editing multiple files at once (in the old editor one could only edit one file at a time, had to close the current and open the next one).
   \item Colaborative working: Seeing the current state of the resources, e.g. if a live or preview resource is processing, if other users are working in the same app parallel, and having git-like line-by-line diffs of the changes made.
@@ -159,18 +151,18 @@ Some of the outcomes were:
 
 Some of these points and their implementations will be covered in chapter \ref*{chap:prototyping} \ref*{chap:impl}.
 
-\section{Quantitaive user research}
+\section{Quantitative user research}
 
 In the initial stages of research, the use of questionnaires was considered as a method of gathering information from existing and potential users.
 However, as the outcome of the qualitative research was already productive, it proved difficult to design a questionnaire that would provide additional information while adhering to common design rules for questionnaires in terms of length, number of questions, and type of questions.
-While prototype questionnaires were created using Microsoft Forms, I found them to be too long, difficult to understand, or not relevant to the development of prototypes.
+While prototype questionnaires were created using Microsoft Forms, they were too long, difficult to understand, or not relevant to the development of prototypes.
 Therefore, it was decided to rely solely on qualitative research results for prototyping and feedback, along with some automatic tracking implementation (See \ref{sec:analytics}).
 \\
 \section{User research outcomes}
 
-After every observation and interview, wich were additionally recorded, a Word document noting facts about the subject and the session was filled out by me.
-The mandatory fields consisted of basic informations like the role of the user, frequency and typical tasks with the resources.
-Additionally important situations from the observation, a description of the workflows, input from the interview and the linked recordings were noted.
+After every observation and interview, which were additionally recorded, a Word document noting facts about the subject and the session was filled out by me.
+The mandatory fields consisted of basic information like the role of the user, frequency and typical tasks with the resources.
+Additionally, important situations from the observation, a description of the workflows, input from the interview and the linked recordings were noted.
 
 A shortened and anonymized version of the notes can be found in the Appendix \ref{app:interviews}.
 Derived from these notes, combined with the technical requirements, the following list shows a subset of mandatory features that emerged:
@@ -183,20 +175,19 @@ Derived from these notes, combined with the technical requirements, the followin
   \item[App Editing] \leavevmode
   \begin{itemize}
     \item Better support from the file editors, like syntax highlighting and feedback in case of errors.
-    \item Fast load times or the possibility to have multiple files open at once.
-    \item Faster load times or the possibility to have multiple files open at once.
+    \item Fast load times or the possibility to have multiple files open simultaneously.
   \end{itemize}
   \item[App Preview]\leavevmode
    \begin{itemize}
     \item See a frame on the side showing the latest changes instantly, load "real" data from the API.
     \item Ability to pop out into extra window.
-    \item Ability to load current state of config and assets inside a app connected for debugging.
+    \item Ability to load current state of config and assets inside an app connected for debugging.
   \end{itemize}
   \item[Dynamic Resource Change Management] \leavevmode
   \begin{itemize}
     \item See which files were changed since last upload.
     \item Reset single files.
-    \item Have version control features like "commit messages" and version diffs (this is dependent on external work as the Purple Manager only stores ZIP files, where having git-like version control features is technically not possible).
+    \item Have version control features like "commit messages" and version diffs (this is dependent on external work as the \Gls{manager} only stores ZIP files, where having git-like version control features is technically not possible).
     \item See who uploaded new changes and if some changes are being processed.
   \end{itemize}
 \end{description}
@@ -207,15 +198,15 @@ Derived from these notes, combined with the technical requirements, the followin
 To gain as much value from the raw research data it is crucial to find some methods to process and visualize the outcomes.
 A common approach at companies is to write "tickets" in their ticket system of choice, in case of Sprylab Jira (\url{https://www.atlassian.com/de/software/jira}).
 From my experience, Jira and co. proof valuable once the development process itself started and the state of the tasks must be tracked.
-But for discovery and prioritization of features, scrolling through lists of tickets with different priority levels, where then the tickets in the lists are sorted differently again, does not allow a good overview of effort and benefit of each feature.
+But for discovery and prioritization of features, lists of tickets with different priority levels and different sorting are not suitable for a good overview of effort and benefit each feature brings.
 Thus, based on the notes from observations and interviews two alternative ways were tried to figure out different features and how they can be prioritized.
 
 \subsection{2x2 Opportunity Matrix}
 
 Fig. \ref{fig:opportunitymatrix} shows a two-dimensional visualization of a subset of proposed features.
-It prooved helpful when prioritizing tasks with other stakeholders,
+It proved helpful when prioritizing tasks with other stakeholders,
 as it shows the approximated cost of implementation as well as the value the feature can have for users.
-Cost includes possible financial cost as well as required time and amount of resources needed to implement the feature.
+Costs include possible financial cost as well as required time and amount of resources needed to implement the feature.
 
 It is a slightly modified adaption from \cite[p. 181]{LearnHCI:2020ys}, replaced the term ''idea originality'' on the x-axis with ''Value''.
 The benefit of visualizing multiple possible features is to see at one glance the relation between value for users but also cost of implementation in a more clear way than lists of tickets with different priorities would provide.

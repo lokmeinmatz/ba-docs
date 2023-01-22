@@ -206,37 +206,6 @@
       \field{title}{End of Web Design}
       \field{year}{2000}
     \endentry
-    \entry{Ross:2016}{article}{}
-      \name{author}{1}{}{%
-        {{hash=490248e10554824b0a762d80ffab41ad}{%
-           family={Ross},
-           familyi={R\bibinitperiod},
-           given={Jim},
-           giveni={J\bibinitperiod}}}%
-      }
-      \strng{namehash}{490248e10554824b0a762d80ffab41ad}
-      \strng{fullhash}{490248e10554824b0a762d80ffab41ad}
-      \strng{bibnamehash}{490248e10554824b0a762d80ffab41ad}
-      \strng{authorbibnamehash}{490248e10554824b0a762d80ffab41ad}
-      \strng{authornamehash}{490248e10554824b0a762d80ffab41ad}
-      \strng{authorfullhash}{490248e10554824b0a762d80ffab41ad}
-      \field{sortinit}{R}
-      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Excuses, Excuses! Why Companies Don't Conduct User Research}
-      \field{urlday}{2}
-      \field{urlmonth}{1}
-      \field{urlyear}{2023}
-      \field{year}{2016}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.uxmatters.com/mt/archives/2016/03/excuses-excuses-why-companies-dont-conduct-user-research.php
-      \endverb
-      \verb{url}
-      \verb https://www.uxmatters.com/mt/archives/2016/03/excuses-excuses-why-companies-dont-conduct-user-research.php
-      \endverb
-    \endentry
     \entry{Sharon:2012mk}{book}{}
       \name{author}{1}{}{%
         {{hash=105b4af9653769e9cdca927b7cf047e4}{%

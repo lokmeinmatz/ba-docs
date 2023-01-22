@@ -11,7 +11,7 @@
 \chapter{Prototyping}
 \label{chap:prototyping} 
 
-After collecting the inital user feedback, I started drawing minimal digital ''paper'' prototypes using Figma to gather vizualizations of the proposed UI layouts.
+After collecting the initial user feedback, minimal digital ''paper'' prototypes were created using Figma\footnote{Figma (\url{https://www.figma.com/}) is a design tool accessible through the browser for collaborative work on design projects.} to gather visualizations of the proposed UI layouts.
 Two ideas emerged from the interviews: a (file-)editor-centric layout and a preview-centric layout.
 \section{Editor centric vs preview centric layout}
 The editor-centric layout is inspired by modern text editors / IDEs like VS Code (\url{https://code.visualstudio.com/}), which was mentioned as reference during the interviews multiple times.
@@ -27,9 +27,9 @@ compatible with the Experience's framework and data format.
   \includegraphics[width=\textwidth]{pics/editor_centric_vs_preview_centric.png}
   \caption{Mockups: Editor centric vs preview centric editor layout}
 \end{figure}
-Ultimately our choice fell to the editor centric layout, the following are some of the reasons for it over the preview-centric one:
+Here are some reasons why the editor centric layout was chosen and not the preview-centric one:
 \begin{itemize}
-  \item The configuration structure of the Experience framework was not built with preview-based editing in mind, causing many functionalities to be hidden and invisible to the user, making it difficult to reproduce specific conditions in the editor environment.
+  \item The configuration structure of the \Gls{experience} framework was not built with preview-based editing in mind, causing many functionalities to be hidden and invisible to the user, making it difficult to reproduce specific conditions in the editor environment.
   Thus, editing in a preview-centric mode could lead to more confusion for the editors than speeding up the process.
   As the configuration schemata are mostly fixed, it was deemed that preview-based editing would not be suitable in this case.
   \item After evaluating available libraries and examples, we concluded that building a reliable and usable preview-centric editor is more complicated and uncertain to result in a viable product within the limited time frame of this bachelor thesis.
