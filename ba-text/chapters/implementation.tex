@@ -159,8 +159,8 @@ On the one hand, the data can provide valuable insights into the behavior of man
 On the other hand, the most common tools like Google Analytics track users with cookies, which creates new challenges regarding GDPR compliance.
 \\\\
 The Purple product owner showed me a SaaS called \url{https://squeaky.ai/}, which is a cookieless solution to track users on this page.
-While it can't provide the same level of demographic information a cookie based solution can, it still provides the most important data like usage statistics,
-user interactions, occured JavaScript errors and can even show heatmaps per page to visualize which UI elements the user interacts with the most.
+While it can't provide the same level of demographic information a cookie based solution can, it still collects the most important data like usage statistics,
+user interactions, occurred JavaScript errors and can even show heatmaps per page to visualize which UI elements the user interacts with the most.
 
 \begin{figure}[h]
   \centering
@@ -170,10 +170,10 @@ user interactions, occured JavaScript errors and can even show heatmaps per page
 \end{figure}
 
 These heatmaps for example can show if a new UI feature is used by users and how they interact with the page in general.
-In case of fig. \ref{fig:squeaky}, it can be seen that the users mostly interacted with the file explorer and only did a few clicks in the editor panel.
+Fig. \ref{fig:squeaky} shows that the users mostly interacted with the file explorer and only did a few clicks in the editor panel.
 
-To analyze the usage growth, fig. \ref{fig:squeaky_users} indicates how the number of page views per week increased steadily since the internal beta was started (except for the dip during the Christmas holidays).
-With that graph it is save to state that the time-bound goal from the SMART goals (\ref{fig:smart}) was successfully achieved.
+To analyze the usage growth, fig. \ref{fig:squeaky_users} indicates how the number of page views per week increased steadily since the internal beta was launched (except for the dip during the Christmas holidays).
+The graph clearly shows that the time-bound goal from the SMART goals (\ref{fig:smart}) has been successfully achieved.
 
 \begin{figure}[h]
   \centering
@@ -184,29 +184,22 @@ With that graph it is save to state that the time-bound goal from the SMART goal
 
 \section{User Testing, Feedback, Beta and Monitoring}
 
-After a first stable release was done and I verified that all basic functional requirements are met and the editor doesn't destroy the dynamic resources,
-I spoke with four people from our company, three of which were also interview subjects, to try to use the editor and give verbal feedback.
+After a first stable deployment was available for stating and production dynamic resources and all basic requirements were met, the user tests for the Beta-phase started.
+Four people from our company agreed to try to use the editor and give verbal feedback. Three of them were already participants of the interviews.
 
-The reported bugs were written into Jira tickets so the status can be properly tracked and Release notes can be easier generated.
+The reported bugs were and still will be written into Jira tickets so the status can be properly tracked and release notes can be easier generated.
 Mostly the bugs were edge cases where a file wouldn't open or the changes were not saved properly.
 
-TODO überarbeiten
-
-- deployments to staging
-- small test group at start
-- internal beta
- - problem: people didn't want to adapt new platform??
-- beta flags
 
 \section{Communication and Documentation}
 Communicating with the test users and documenting the technical aspects of the software, the progress and how to use certain features is
 another building block towards a good user- and developer experience.
 \\
-For the communication, we utilized a Microsoft Teams Channel, a group chat where all invited persons (in case of the internal bet company wide) can write with each other and create posts.
+For the communication, a Microsoft Teams Channel was utilized, a group chat where all invited persons (in case of the internal Beta-phase company-wide) can write with each other and create posts.
 This was used for notifications about new deployments and if in the aftermath someone found a bug that could affect multiple people.
 
-Even though this adds a bit overhead, it prooved easier than having everyone write bug tickets directly, as user often don't know the actual reason for the problem which leads to unclear descriptions, wrong tags and more.
-Rather, a developer with knowledge about the system looked at the reports and created a new ticket if the problem was new, else referenced an existing ticket or forwarded the problem to the responsible team.
+Even though this adds a bit overhead, it proved easier than having everyone write bug tickets directly, as user often don't know how to describe the problem which leads to unclear descriptions, wrong tags and duplicate tickets.
+Instead, a developer with knowledge about the system looked at the reports and created a new ticket if the problem was new, otherwise referenced an existing ticket or forwarded the problem to the responsible team.
 Jira tickets were all assigned to the UI builder component as well as specific releases so everyone can see with one click which changes and fixes are contained in which release.
 \\\\
 For the feature documentation, Sprylab uses Confluence for internal documentation and Archbee for external documentation that customers can access too.
