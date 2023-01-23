@@ -109,9 +109,9 @@ For the moderated observation a list of six tasks was prepared. Two of them were
 The same first tasks could be given to every interviewee regardless of their level of knowledge, and the optional tasks if there was still enough time.
 Also, it was important that the tasks did not build on each other to prevent the observed person getting stuck because of an earlier mistake.
 Instead, seeing a variety of tasks getting performed gave more insights than one task being executed without errors. 
-\\
 Therefore an example app was created on Sprylab's staging system, so it was easy to prepare and also reset after each observation session.
-The six tasks were
+\\\\
+The six tasks were:
 \begin{itemize}[itemsep=0mm]
   \item Change app menu entry "Newsstand" to "Home" on all platforms (Web, Android and iOS).
   \item Change the advertisement banner target on top of the home page to https://google.com. 
@@ -119,7 +119,7 @@ The six tasks were
   \item Change color of "Read new Issues" and "Latest Articles" headers on the home page to the app's primary color..
   \item \textit{(Optional)} Add a dropdown on the home page between "Read new Issues" and "Latest Articles"
     \subitem It should show all publications connected to the app
-    \subitem It should set an URL parameter ''publication'' to the id when selected
+    \subitem It should set a URL parameter ''publication'' to the id when selected
     \subitem Define the reset message as ''All publications''
   \item \textit{(Optional)} Configure the filter of the ''Latest Articles'' list to only show articles from that publication
 \end{itemize}
@@ -143,7 +143,7 @@ The semi-structured interviews proved to be valuable in gaining insight into the
 \\\\
 Here are some examples of the outcomes:
 \begin{itemize}
-  \item The way users validate their changes differs widely; some use a preview window in the old editor, some merge changes into the resources and view it on the website or inspect the app's Javascript context, some prefer separate windows, some embedded frames to see code and preview at the same time.
+  \item The way users validate their changes differs widely; some use a preview window in the old editor, some merge changes into the resources and view it on the website or inspect the app's JavaScript context, some prefer separate windows, some embedded frames to see code and preview at the same time.
   \item Rearranging or adapting the layout of the tools / editor to match the current screen and browser window size is important, e.g. hide unecessary panes if not used, make the window the user currently works in larger to see more content at once.
   \item Editing multiple files at once (in the old editor one could only edit one file at a time, had to close the current and open the next one).
   \item Colaborative working: Seeing the current state of the resources, e.g. if a live or preview resource is processing, if other users are working in the same app parallel, and having git-like line-by-line diffs of the changes made.
@@ -174,7 +174,8 @@ Derived from these notes, combined with the technical requirements, the followin
   \end{itemize}
   \item[App Editing] \leavevmode
   \begin{itemize}
-    \item Better support from the file editors, like syntax highlighting and feedback in case of errors.
+    \item Automatic donwloading and packing of the dynamic resources so manual ZIP/un-ZIP operations are not required by the users.
+    \item Support for syntax highlighting and autocomplete for common files.
     \item Fast load times or the possibility to have multiple files open simultaneously.
   \end{itemize}
   \item[App Preview]\leavevmode
@@ -186,7 +187,7 @@ Derived from these notes, combined with the technical requirements, the followin
   \item[Dynamic Resource Change Management] \leavevmode
   \begin{itemize}
     \item See which files were changed since last upload.
-    \item Reset single files.
+    \item Reset single files to an earlier version.
     \item Have version control features like "commit messages" and version diffs (this is dependent on external work as the \Gls{manager} only stores ZIP files, where having git-like version control features is technically not possible).
     \item See who uploaded new changes and if some changes are being processed.
   \end{itemize}
@@ -206,9 +207,9 @@ Thus, based on the notes from observations and interviews two alternative ways w
 Fig. \ref{fig:opportunitymatrix} shows a two-dimensional visualization of a subset of proposed features.
 It proved helpful when prioritizing tasks with other stakeholders,
 as it shows the approximated cost of implementation as well as the value the feature can have for users.
-Costs include possible financial cost as well as required time and amount of resources needed to implement the feature.
+Costs include possible financial costs as well as required time and amount of resources needed to implement the feature.
 
-It is a slightly modified adaption from \cite[p. 181]{LearnHCI:2020ys}, replaced the term ''idea originality'' on the x-axis with ''Value''.
+It is a slightly modified adaption from \cite[p. 181]{LearnHCI:2020ys}, replaced the term ``idea originality'' on the x-axis with ``Value''.
 The benefit of visualizing multiple possible features is to see at one glance the relation between value for users but also cost of implementation in a more clear way than lists of tickets with different priorities would provide.
 
 \begin{figure}[h!]

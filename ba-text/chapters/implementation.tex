@@ -18,11 +18,11 @@ The phase of implementation and deployment followed an agile development process
 \section{Architecture}
 
 Let's start with an overview about the architecture and high level user flows.
-We have three software components relevant for a basic interaction with the system: the editor frontend, the editor backend and the ''Manager'' backend, which is responsible for
-authentication, app management and providing the dynamic resources in an ZIP format.
-At the beginning of a user journey, the user visits the root domain (e.g. \url{https://builder.purplemanager.com} for production apps) and logs himself in.
+There are three software components relevant for a basic interaction with the system: the editor frontend, the editor backend and the \Gls{manager} backend, which is responsible for
+authentication, app management and providing dynamic resources as ZIP files.
+At the beginning of a user journey, the user logs in at the root domain (e.g. \url{https://builder.purplemanager.com} for production apps).
 The authentication details will not be covered here as these would go beyond the scope of a bachelor thesis and are not relevant for the UX.
-The API the \Gls{manager} exposed and the way dynamic resources get downloaded and merged is one of the basic technical requirements introduced by the surrounding ecosystem.
+The \Gls{rest} of the \Gls{manager} and the way dynamic resources get downloaded and merged is one of the basic fixed technical requirements introduced by the surrounding ecosystem.
 \\
 The UML sequence diagram fig. \ref{fig:userflow} displays a typical interaction of a user with the editor frontend after he selected an app; pulling the latest dynamic resources, editing a file and merging the changes.
 \begin{figure}[h!]
@@ -34,23 +34,23 @@ The UML sequence diagram fig. \ref{fig:userflow} displays a typical interaction 
 \section{Software stack}
 From a company's perspective, it is advantageous to keep the technology stack as narrow as possible.
 For this case study, the most important point was the availability of additional personnel with knowledge about the frameworks and languages used.
-To conform with the company's \Gls{devops} practices the application only requirement is to be able to run inside a Docker container in a Kubernetes environment.
+To conform with the company's \Gls{devops} practices the only requirement is to run the project inside Docker containers in a \Gls{kubernetes} environment.
 \\\\
 For this project the Typescript language (\url{https://www.typescriptlang.org}) is used on back- and frontend.
 The advantage is the availability of many skilled personnel in the company as well as an established ecosystem and easy sharing of code and type definitions between frontend and backend.
 \\
-The rest of the software stack is fairly common in todays web development industry too:
+The rest of the software stack is fairly common in today's web development industry too:
 
 \begin{description}
   \item[Frontend] \leavevmode
   \begin{description}
     \item[Rendering framework] \textit{React JS v18} (\url{https://reactjs.org/})
-    \item[UI Component Library] \textit{Blueprint JS} (\url{https://blueprintjs.com/}) provides components so we can rely on a consistent design system with common functionality like buttons, dropdowns, filters etc. already implemented.
+    \item[UI Component Library] \textit{Blueprint JS} (\url{https://blueprintjs.com/}) provides components so a consistent design system with common functionality like buttons, dropdowns, filters etc. can be used.
     \item[Other libraries] \textit{ReactQuery / TanQuery} to manage, cache and invalidate HTTP API requests to the backend, \textit{Zustand JS} for shared reactive state management and \textit{Zod} for type validation at runtime.
   \end{description}
   \item[Backend] \leavevmode
   \begin{description}
-    \item[HTTP Server] Express on Node JS, which is the most common combination to run an Javascript based HTTP server (see \cite{Github:VanoDevium/node-framework-stars}).
+    \item[HTTP Server] Express on Node JS, which is the most common combination to run an JavaScript based HTTP server (see \cite{Github:VanoDevium/node-framework-stars}).
     \item[Routing abstraction] TSOA (\url{https://github.com/lukeautry/tsoa}) on top of Express, which is a Typescript library to provide Java-Spring like syntax with controllers, dependency injection and parameter validation at runtime.
   \end{description}
   \item[Testing] using Vitest (\url{https://vitest.dev/}) for Unit tests and Playwright (\url{https://playwright.dev/}) as E2E test runtime. 
@@ -61,25 +61,25 @@ The rest of the software stack is fairly common in todays web development indust
 \section{CI/CD}
 
 Continuous Integration and Continuous Delivery, short CI/CD, a core practice of agile software development, enables fast release and deployment cycles which is crucial for agile prototyping and development.
-A Gitlab CICD Pipeline was set up for the UI builder, consisting of Build, Package, and Deploy stages.
+A Gitlab CI/CD Pipeline was set up for the UI builder, consisting of Build, Package, and Deploy stages.
 The Build stage also executed unit and end-to-end tests due to technical reasons for efficiency.\\
 Having a fast and reliable CI/CD process during development and prototyping was valuable, as it allowed for quick reactions to user input and deployment to a staging domain for user feedback in under 10 minutes.
 Separating staging and production systems also allowed for more confident deployment of quick fixes for validation in a production-like environment without interrupting users.
 
 \section{Feature examples}
 
-In the following section, a selection of features is presented that were implemented during the UI Editor case study.
+A selection of features is presented that were implemented during the UI Editor case study is presented in the following section.
 These features are chosen as examples to how the HCI methods and outcomes from the user research phase influenced their design and how they can improve the user's experience with the tool. 
 
 \subsection{File management - open multiple files as tabs}
 
-A common workflow consists of editing multiple files at the same time, for example having the view configuration open while adding translations for newly added components.
-The old editor tool only allowed to open one file at a time and get closed when the user opened another one. This showed up as a big slowdown during the moderated observation.
-All interview subjects mentioned they have to work on multiple files and that they are annoyed by the workflow, especially when opening large view configs can take more than 30 seconds.
+A common workflow consists of editing multiple files simultaneously, for example having the view configuration open while adding translations for newly added components.
+The old editor tool allowed to only open one file at a time, which got closed when the user opened another file. This showed up as a big slowdown during the moderated observation.
+All participants mentioned they have to work on multiple files and that they are annoyed by the workflow, especially when opening large view configs can take more than 30 seconds.
 \\
-The solution was inspired by the file management that most IDEs provide, a bar on top where all the opened files are listed and the user can quickly switch between them or close the ones he doesn't need anymore (see fig. \ref{fig:file-tabs}). 
+The solution was inspired by the file management that most \Gls{ide}s provide; a bar on top where all the opened files are listed and the user can quickly switch between them or close the ones not needed (see fig. \ref{fig:file-tabs}). 
 
-\begin{figure}[h]
+\begin{figure}[h!]
   \includegraphics[width=\textwidth]{pics/file_tabs.png}
   \caption{Screenshot of the latest iteration of file tabs}
   \label{fig:file-tabs}
@@ -87,17 +87,16 @@ The solution was inspired by the file management that most IDEs provide, a bar o
 
 \subsection{File management - quick links}
 
-A second feature regarding the file management are so called ''quick links''. While all target groups benefit from this, especially for the personas \textit{Steffi, \ref{subsec:persona:productdev}} and \textit{Karsten, \ref{subsec:persona:itpublishing}}
+A second feature regarding the file management is ``quick links''. While all target groups benefit from this, especially for the personas \textit{Steffi, \ref{subsec:persona:productdev}} and \textit{Karsten, \ref{subsec:persona:itpublishing}}
 this can speed up common tasks considerably.
 
 The basic idea is to bookmark commonly used files, e.g. the translation or ad config, and have them prominently available when opening a new app.
 For the implementation, three factors needed to be considered:
 \begin{description}
   \item[Where to save?] The quick links are stored in the \Gls{localstorage} of the user's browser, so the list is available across apps.
-  \item[How to manage?] Currently, the user has a list on the settings view, where he can add or delete new entries, but has to enter the file path manually.
-  A proposal already exists to either add a file picker in the settings or add a bookmark button to the file manager on the primary editing view.
-  \item[How to present the links?] The links must be easily accessible to provide the intended benefit. The solution was to show them when entering the \textit{edit} view and no file was opened yet.
-  In addition, the UI shows if the link points to a file, which gets opened as a new file tab, to a folder which will navigate the file explorer to there, or if the path doesn't exist in the current app.
+  \item[How to manage?] The user has a list on the settings view, where entries can be added, deleted and changed, but the file path needs to be inserted manually. To enhance the user experience, a proposal exists to either add a file picker in the settings or add a bookmark button to the file manager.
+  \item[How to present the links?] The links must be easily accessible to provide the intended benefit. The solution was to show them prominently when entering the \textit{edit} view and no file was opened yet.
+  In addition, the UI shows if the link points to a file, which gets opened as a new file tab, to a folder which will navigate the file explorer there, or if the path doesn't exist in the current app.
   \begin{figure}[h!]
     \centering
     \includegraphics[width=0.4\textwidth]{pics/quick_links.png}
@@ -110,58 +109,49 @@ For the implementation, three factors needed to be considered:
 Purple Experience relies on a variety of configuration files, all with different schemata and functional intents.
 To provide an efficient and error reduced workflow to users, it is important to have specialized file editors.
 
-For view configurations for example, we utilize the JSON Editor Library (\url{https://github.com/json-editor/json-editor}) combined with the generated JSON Schema files,
-for the translations we have a custom editor that has a fuzzy search function and makes it easy to manage translation entries.
+For view configurations for example, the JSON Editor Library (\url{https://github.com/json-editor/json-editor}) is used, combined with the generated JSON Schema files. For the translations there exists a custom editor that has a fuzzy search function and makes it easy to manage translation entries.
 
-The abstraction is done solely in the frontend and follows React's "\Gls{comp-over-inh}" pattern.
+The abstraction is done solely in the frontend and follows React's ``\Gls{comp-over-inh}'' pattern and can be seen in fig. \ref{fig:abstract-editor}.
 To add a new specialized editor the only two steps are creating a new functional component that implements the \textit{EditorImpl} interface
 and add that editor in the \textit{EditorRegistry} to get returned for the file paths in question.
-
-\begin{figure}[h]
+\\\\
+\begin{figure}[h!]
   \includegraphics[width=\textwidth]{pics/abstract_editor_uml.drawio.png}
-  \caption{Class diagram showing the editor abstraction in React JS}
+  \caption{Class diagram showing the editor abstraction in React JS. Due to modern React JS architecture, component classes are replaced with functional components (marked with $\ll functional\gg$).}
   \label{fig:abstract-editor}
 \end{figure}
-\begin{figure}[h]
-  \includegraphics[width=\textwidth]{pics/ads_json_editor.jpg}
-  \caption{Screenshot: JSON Editor when configuring ads}
-  \label{fig:ads-editor}
-\end{figure}
+Examples of custom editor implementations can be seen in Appendix \ref{fig:messages_editor} and \ref{fig:ads-editor}.
 
 
 \section{Automated Testing}
 \label{sec:automated-testing}
 
-As already elaborated, as fast CI/CD piepline plays a crucial role for agile prototyping and development. Automated tests in turn contribute to the confidence of
-developers to deploy more frequently and can reduce load from the QA team to test standard workflows every time a new release is planned.
-For the Experience Builder I stuck to two of the most common testing levels: unit tests and End-to-End tests (also known as E2E or System tests).
+As already elaborated, fast CI/CD pipelines plays a crucial role for agile prototyping and development.
+Automated tests in turn contribute to the confidence of developers to deploy more frequently and can reduce load from the QA team to test standard workflows every time a new release is planned.
+For the Experience Builder two of the most common testing levels are used: unit tests and End-to-End tests (also known as E2E or System tests).
 \\\\
-Unit tests are mostly used to test one ''component'' in an sandboxed environment. For the server, this meant testing Services and classes or even finer grained; single functions.
-On the client, we distinguished between UI testing of single react components, and business logic code that is encapsulated in classes or Javascript modules.
+Unit tests are mostly used to test one ``component'' in a sandboxed environment, in practice often done per-function or per-class.
+On the client, the distinction is between testing of UI components and business logic code that is encapsulated in classes or JavaScript modules.
 
-They also are helpful during development to test software patterns before dogin large refactorings and to do test-driven development (TDD), where the specifications and constraints can be laid out as code
-with invariants, pre- and postconditions, and then the implementation is done while continously running the tests again until they don't fail anymore.
+Unit tests also are helpful during development to test software patterns before doing large refactorings and to do test-driven development (TDD), where the specifications and constraints can be laid out as code with invariants, pre- and postconditions.
+Then the implementation is done while continuously running the tests again until they don't fail anymore.
 \\
-Espeically for TDD, but also for the CI/CD Pipelines, the speed of the tests is important. If a single test run takes multiple minutes, the developer is blocked during that time and can't progress on the task,
-but the duration is also not long enough to start working on another task in the meantime.
-That's why I tried to integrate a fast test runtime comatible with UI- / browser testing as well as node runtimes for the server code.
-After evaluating diffrent commonly used frameworks, I settled for Vitest (\url{https://vitest.dev/}), which fullfills all the requirements, runs tests in parallel, thus reducing the
-time between saving the change and seeing the test result to often less than a second, and has easy integration mechanisms into our build tools.
+For TDD as well as CI/CD Pipelines, the speed of the test execution is important. If a single test run takes multiple minutes, the developer is blocked during that time and can't progress on the task.
+Therefore, the aim was to achieve the shortest possible runtime, compatible with UI- / browser testing as well as Node JS for the server code.
+After evaluating commonly used frameworks, Vitest (\url{https://vitest.dev/}) was chosen, which fullfills all the requirements, is compatible with our build tools and runs tests in parallel if possible. The Unit test suites can be hot-reloaded and reexecuted on change in less than a second, which is a nice developer experience.
 \\\\
-While unit tests are a good way to verify encapsulated behaviours, when many components interact with each other, new errors can emerge often as it is
-quite unrealistic to have all intenral and extenral APIs behaving exactly as expected for every input, and Web based UI applications have unmanagable number of factors that
-influence the behaviour of UI, network and timings.
+Due to the complexity of interoperation between components, APIs and the Web standards, unit tests alone are not enough to guarantee the different modules work together as expected. 
 \\
-E2E tests are supposed to cover a typical user interaction with the service to vaildate the interaction between business logic components, UI and the user itself.
-I started with using a custom setup of a headless browser\footnote{Headless browsers are browser instances that don't render the actual content to a user's screen, but run as a CLI application and still execute all Javascript, CSS and HTML.} (\url{https://pptr.dev/}) in combination with vitest,
-but writing and especially debugging the tests prooved slow and error prone.
+E2E tests are supposed to cover a typical user interaction with the service to validate the interaction between business logic components, UI and the user itself.
+First a headless browser\footnote{Headless browsers are browser instances that don't render the actual content to a user's screen, but run as a CLI application and still execute all JavaScript, CSS and HTML.} (\url{https://pptr.dev/}) was used in combination with Vitest,
+but writing and debugging tests proved to be slow and error-prone.
+\\\\
+Later in the process, the E2E tests were rewritten for an alternative test framework called Playwright (\url{https://playwright.dev/}), which allows recording a test case in a normal browser window and then generates the test code automatically, allowing to be adapted and generalized if needed.
+After the tests were ported to the new framework developers can enjoy better debugging tools and the ability to add new tests easier.
 \\
-At an internal training day some colleagues introduced a new E2E test framework called Playwright (\url{https://playwright.dev/}), which allows recording a test case in a ''normal'' browser window, it then generates the base code for the test automatically and only needs to be adapted in a few places.
-After looking through some examples and seeing how it can get integrated into our pipelines, I started porting the exisitng tests to playwright, and after a few hours the tests run on the new framework, now with much better debugging tools and the ability to add new tests much faster.
-\\
-This can be an example for others, that investing time to investigate new tools and port code to them if they bring value, can improve developer expeirence and thus also speed and confidence.
+This can be an example for others, that investing time to investigate new tools and port code to them if they bring value can improve developer experience and thus also speed and confidence.
 
-\section{Privacy friendly analytics \& monitoring}
+\section{Privacy-friendly analytics \& monitoring}
 \label{sec:analytics}
 
 Sooner or later, you find yourself in a pickle when it comes to tracking.
@@ -170,7 +160,7 @@ On the other hand, the most common tools like Google Analytics track users with 
 \\\\
 The Purple product owner showed me a SaaS called \url{https://squeaky.ai/}, which is a cookieless solution to track users on this page.
 While it can't provide the same level of demographic information a cookie based solution can, it still provides the most important data like usage statistics,
-user interactions, occured Javascript errors and can even show heatmaps per page to visualize which UI elements the user interacts with the most.
+user interactions, occured JavaScript errors and can even show heatmaps per page to visualize which UI elements the user interacts with the most.
 
 \begin{figure}[h]
   \centering

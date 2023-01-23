@@ -20,3 +20,5 @@
 	- [x] Warum Appendix keine nummer 9?
 	- [ ] Glossar in inhalt ohne nummer
 	- [x] Nummern nur Kapitel mit inhalt!!!!!!!
+- [ ] QA an MaPa
+	- [ ] 5.1 architecture intro "Let's start with ..." reformulate?
