@@ -42,46 +42,44 @@ These three factors were seldom mentioned in publications but are helpful guidel
   It includes access for people with and without disabilities as well as low entry hurdles for new users.
   At first glance this factor doesn't look as important as the other two, especially for specialized applications, but it should not be left out when designing and implementing software.
   \item[Time-On-Task Factor] refers to ''[...] solutions that use up the appropriate of time to solve a problem.'' \Cite[p. 40]{LearnHCI:2020ys}. Obviously, to save users time, a fast system is required.
-But it is inevitable that the system, network delay and complexity of computation all have some minimal required time, and users understand that fact. More important is to reduce the perceived lag of interactions and give users feedback if a task takes longer to complete.
+But it is inevitable that network delay computation tasks all require some time, and users understand that fact. More important is reducing the perceived lag of interactions and give users feedback if a task takes longer to complete.
 \end{description}
 
 \section{Identifying and categorizing users and user groups}
 \label{sec:user-groups}
 In order to effectively design and implement the UI Editor, it is crucial to understand the needs and preferences of the various users and user groups who will be using the tool.
-
-The first step in the user research process was to identify and categorize them.
+The first step in the process was to identify and categorize them.
 Then, detailed information is gained through the observations and interviews and finally in section (\ref{subsec:personas}) concrete Personas for the different user groups are built.
 \\
-It was easy to collect a list of internal and external users for research because Sprylab already had existing users familiar with previous editors and tools from the ecosystem.
-A larger group of different users or external customers requires more effort to identify and contact suitable users.
+It was easy to collect a list of users of the new UI Editor because Sprylab already had users working with the ecosystem and the predecessor of the editor.
+A larger group of different users or external customers would require more effort to perform this step though.
 \\
 With an overview over current and potential users, the next step was grouping them to understand the characteristics and needs of each user group.
-Having a rough set of groups makes it easier to ensure that the UI Editor is tailored to their specific requirements and can be used effectively by all users\footnote{When I refer to ''all users'', I mean the group of users that are expected to work with the tool. There is an expected technical and domain specific base knowledge that the Editor won't cover in it's initial form}.
+Having this overview makes it easier to tailor the UI Editor to their specific requirements so it can be used effectively by all users\footnote{''All users'' refers to users that are expected to work with the tool. There is an expected technical and domain specific base knowledge that the Editor won't cover in it's initial form}.
 Also, when choosing who to use as research subjects this list can help to get broad coverage of users with different needs and abilities.
 \\
 The information about the users leads to the following common factors:
 \begin{description}
-  \item[Quantitative usage -] There were users who relied on the tools for most of their work, while others like the external customers accessed the tool a few times a year.
+  \item[Quantitative usage -] Some users rely on the tools for most of their work, others worked with dynamic resources a few times a year.
   \item[Common tasks -] I roughly categorized the common tasks into three groups:
-  \begin{description}
-    \item[Heavy configuration -] Mostly internal developers used the tools to build new apps and websites from scratch, making a wide range of modifications and structural changes.
-    \item[Moderate configuration -] Project developers and customer support people copy resources from existing apps and adapt them for new brands, which often includes changing colors and logos, adapting texts or switching authentication flows.
-    \item[Small changes -] External customers often only use the tools to exchange some ads, translations or logos, which affects a small set of files.
+  \begin{description}[nosep]
+    \item[Heavy configuration -] Internal developers used the tools to build new apps and websites from scratch, making a wide range of modifications and structural changes.
+    \item[Moderate configuration -] Copying resources from templates and adapt them for new brands, which includes changing colors and logos, adapting texts or switching authentication flows.
+    \item[Small changes -] External customers often only use the tools to exchange ads, translations or logos, which affects a small set of files.
   \end{description}
   \item[Expertise] -
-  \begin{description}
-    \item[Technical -] Depending on the area of education and work experience in the web development industry, the expertise about web technologies, languages like CSS and JSON and often also intuition differs between users.
-    \item[Domain- and Platform Specific -] There is a lot of vocabulary, functionality of Purple Experience and other systems as well as permutations of configurations that users learn with time.
+  \begin{description}[nosep]
+    \item[Technical -] Depending on the area of education and work experience in web development, knowledge about web standards and often also intuition differs between users.
+    \item[Domain- and Platform Specific -] Special vocabulary, functionality of Purple Experience and other systems as well as configuration tricks that users learn with time.
   \end{description}
-  %<kann man bei schlechter software gut erkennen, leute mit viel erfahrung checken sachen, aber ist für neue nicht intutitiv>
 \end{description}
 
 % ... more
 \section{Qualitative user research}
 
-The existing user base simplified access to subjects for qualitative user research methods, in combination with the advantage of having most users accessible via company-internal communication channels.
+The existing user base, most of them at Sprylab, simplified access to participants for qualitative user research methods.
 Using one or multiple ways of triangulation \cite[p. 264]{Interactiondesign:2019ys} can strengthen the significance of the research outcome. Limitations of method or source can be removed by variation of those, resulting in a less distorted picture.
-Therefore, methodical triangulation (using multiple data gathering techniques) as well as triangulation of data (collecting data from different people and different sources) seemed well suited.
+Therefore, methodical triangulation\footnote{using multiple data gathering techniques} as well as triangulation of data\footnote{collecting data from different people and different sources} seemed well suited.
 Moderated observations combined with interviews proofed to be a good fit for this case study, as they are interaction driven and the observer can react directly on behaviors / emerging topics and steer the process.
 This stands in contrast to more passive methods like passive observations or user recording and tracking analysis, where the outcome only depends on the
 prepared question / task and the user's behavior and which can't adapt to changed circumstances etc. during the application.

@@ -19,6 +19,7 @@
 	- [ ] 5.1 architecture intro "Let's start with ..." reformulate?
 	- [ ] Ende von 3.2 Duplikat von 3.4, lieber nach 3.4 mergen?
 	- [ ] Abstract okay? sowohl englisch als auch deutsch
+	- [ ] 1.1 letzer Satz "In addition, user research..." steht etwas alleine da; entweder weg oder was folgt daraus?
 - [ ] TODO
 	- [ ] Mehr Refs zu Personas
 	- [ ] Conclusion muss Frage beantworten mit "...different levels of expertise..." 
