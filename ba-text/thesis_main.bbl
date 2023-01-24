@@ -142,6 +142,45 @@
       \verb https://github.com/vanodevium/node-framework-stars
       \endverb
     \endentry
+    \entry{AutoWeb:2000ys}{article}{}
+      \name{author}{2}{}{%
+        {{hash=859b47e6707939b9dec175169ecb66c4}{%
+           family={Fraternali},
+           familyi={F\bibinitperiod},
+           given={Piero},
+           giveni={P\bibinitperiod}}}%
+        {{hash=dff8ef14aaeff25e1f6e94e25cf8b0cd}{%
+           family={Paolini},
+           familyi={P\bibinitperiod},
+           given={Paolo},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \strng{namehash}{8b7578ac53bc7d968faba0ce23e65702}
+      \strng{fullhash}{8b7578ac53bc7d968faba0ce23e65702}
+      \strng{bibnamehash}{8b7578ac53bc7d968faba0ce23e65702}
+      \strng{authorbibnamehash}{8b7578ac53bc7d968faba0ce23e65702}
+      \strng{authornamehash}{8b7578ac53bc7d968faba0ce23e65702}
+      \strng{authorfullhash}{8b7578ac53bc7d968faba0ce23e65702}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Model-Driven Development of Web Applications: The Autoweb System}
+      \field{urlday}{17}
+      \field{urlmonth}{1}
+      \field{urlyear}{2023}
+      \field{year}{2000}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/abs/10.1145/358108.358110
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/abs/10.1145/358108.358110
+      \endverb
+    \endentry
     \entry{JohnAdamsIt:Greenfield}{online}{}
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
@@ -184,6 +223,40 @@
       \field{isbn}{978-1-119-54725-9}
       \field{title}{Interaction design - beyond human-computer interaction, 5th Edition}
       \field{year}{2019}
+    \endentry
+    \entry{JsonSchema:2022ys}{article}{}
+      \name{author}{1}{}{%
+        {{hash=33124e55e05c1f390ca10b421ccaaa62}{%
+           family={Michael\bibnamedelima Droettboom},
+           familyi={M\bibinitperiod\bibinitdelim D\bibinitperiod},
+           given={et\bibnamedelima a},
+           giveni={e\bibinitperiod\bibinitdelim a\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \strng{namehash}{33124e55e05c1f390ca10b421ccaaa62}
+      \strng{fullhash}{33124e55e05c1f390ca10b421ccaaa62}
+      \strng{bibnamehash}{33124e55e05c1f390ca10b421ccaaa62}
+      \strng{authorbibnamehash}{33124e55e05c1f390ca10b421ccaaa62}
+      \strng{authornamehash}{33124e55e05c1f390ca10b421ccaaa62}
+      \strng{authorfullhash}{33124e55e05c1f390ca10b421ccaaa62}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Understanding JSON Schema - Release 2020-12}
+      \field{urlday}{17}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://json-schema.org/understanding-json-schema/UnderstandingJSONSchema.pdf
+      \endverb
+      \verb{url}
+      \verb https://json-schema.org/understanding-json-schema/UnderstandingJSONSchema.pdf
+      \endverb
     \endentry
     \entry{Nielsen:2000}{article}{}
       \name{author}{1}{}{%
@@ -230,6 +303,40 @@
       \field{isbn}{978-0-12-385130-7}
       \field{title}{It's our reserach: Getting Stakeholder Buy-in for User Experience Research Projects}
       \field{year}{2012}
+    \endentry
+    \entry{ServFaceBuilder:2009ys}{article}{}
+      \name{author}{1}{}{%
+        {{hash=fcc2534aad839ba6fc483867e6244605}{%
+           family={Tobias\bibnamedelima Nestler1},
+           familyi={T\bibinitperiod\bibinitdelim N\bibinitperiod},
+           given={Marius\bibnamedelimb Feldmann2\bibnamedelimb et\bibnamedelima al.},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim e\bibinitperiod\bibinitdelim a\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \strng{namehash}{fcc2534aad839ba6fc483867e6244605}
+      \strng{fullhash}{fcc2534aad839ba6fc483867e6244605}
+      \strng{bibnamehash}{fcc2534aad839ba6fc483867e6244605}
+      \strng{authorbibnamehash}{fcc2534aad839ba6fc483867e6244605}
+      \strng{authornamehash}{fcc2534aad839ba6fc483867e6244605}
+      \strng{authorfullhash}{fcc2534aad839ba6fc483867e6244605}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The ServFace Builder - A WYSIWYG Approach for Building Service-Based Applications}
+      \field{urlday}{17}
+      \field{urlmonth}{1}
+      \field{urlyear}{2023}
+      \field{year}{2009}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://link.springer.com/chapter/10.1007/978-3-642-13911-6_37
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/chapter/10.1007/978-3-642-13911-6_37
+      \endverb
     \endentry
     \entry{LawsOfUX:2020ys}{book}{}
       \name{author}{1}{}{%

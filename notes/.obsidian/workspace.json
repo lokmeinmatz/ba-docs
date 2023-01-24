@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "TODOs.md",
+                "file": "sources/List.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "semi",
+                "query": "hci.4",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,12 +65,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 221.5,
-    "collapsed": true
+    "width": 221.5
   },
   "right": {
     "id": "48dba4401301f3e9",
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "TODOs.md",
+                "file": "sources/List.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "TODOs.md",
+                "file": "sources/List.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "TODOs.md"
+                "file": "sources/List.md"
               }
             }
           },
@@ -157,17 +157,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b90ef811e30af4d6",
+  "active": "80ec71c6911b6bec",
   "lastOpenFiles": [
-    "Open Questions.md",
-    "HCI/Plan - Qualtitative User Research starting point.md",
-    "HCI/Brownfield vs Greenfield.md",
     "HCI/HCD principles.md",
-    "HCI/User Research.md",
-    "Writing Tipps.md",
-    "sources/implementation/Clean Architecture - Robert C. Martin.md",
-    "sources/gen.1 From Brownfield to Greenfield Development.md",
     "sources/List.md",
-    "kanban.md"
+    "HCI/Brownfield vs Greenfield.md",
+    "sources/hci/5 Interaction Design.md",
+    "sources/hci/1 Learn Human-Computer Interaction Becker.md",
+    "sources/implementation/Clean Architecture - Robert C. Martin.md",
+    "Untitled.canvas",
+    "TODOs.md",
+    "Writing Tipps.md",
+    "Open Questions.md"
   ]
 }

@@ -121,7 +121,8 @@ and add that editor in the \textit{EditorRegistry} to get returned for the file 
   \label{fig:abstract-editor}
 \end{figure}
 Examples of custom editor implementations can be seen in Appendix \ref{fig:messages_editor} and \ref{fig:ads-editor}.
-
+This pattern and the concrete implemented Editors also enable users like persona ``Karsten'' (\ref{subsec:persona:itpublishing}) to make small adaptions like changing a translation without worrying about
+the underlying file format and without the possibility to break the app due to syntax errors.
 
 \section{Automated Testing}
 \label{sec:automated-testing}
@@ -185,7 +186,8 @@ The graph clearly shows that the time-bound goal from the SMART goals (\ref{fig:
 \section{User Testing, Feedback, Beta and Monitoring}
 
 After a first stable deployment was available for stating and production dynamic resources and all basic requirements were met, the user tests for the Beta-phase started.
-Four people from our company agreed to try to use the editor and give verbal feedback. Three of them were already participants of the interviews.
+Four people from our company agreed to try to use the editor and give verbal feedback. Three of them were already participants of the interviews and they covered all mayor groups of users,
+so the feedback represented all different expertise levels.
 
 The reported bugs were and still will be written into Jira tickets so the status can be properly tracked and release notes can be easier generated.
 Mostly the bugs were edge cases where a file wouldn't open or the changes were not saved properly.
@@ -194,14 +196,20 @@ Mostly the bugs were edge cases where a file wouldn't open or the changes were n
 \section{Communication and Documentation}
 Communicating with the test users and documenting the technical aspects of the software, the progress and how to use certain features is
 another building block towards a good user- and developer experience.
-\\
-For the communication, a Microsoft Teams Channel was utilized, a group chat where all invited persons (in case of the internal Beta-phase company-wide) can write with each other and create posts.
+\subsection{Asynchronous communication}
+For the asynchronous communication, a Microsoft Teams Channel was utilized, a group chat where all invited persons (in case of the internal Beta-phase company-wide) can write with each other and create posts.
 This was used for notifications about new deployments and if in the aftermath someone found a bug that could affect multiple people.
 
 Even though this adds a bit overhead, it proved easier than having everyone write bug tickets directly, as user often don't know how to describe the problem which leads to unclear descriptions, wrong tags and duplicate tickets.
 Instead, a developer with knowledge about the system looked at the reports and created a new ticket if the problem was new, otherwise referenced an existing ticket or forwarded the problem to the responsible team.
 Jira tickets were all assigned to the UI builder component as well as specific releases so everyone can see with one click which changes and fixes are contained in which release.
-\\\\
+
+\subsection{Presentation and Beta kickoff}
+At the point where the company-wide beta phase started, a presentation meeting was scheduled where I first explained the project,
+demonstrated a common work flow and some of the most important features and could directly respond to questions or feedback.
+Around 30 employees attended, including quality assurance and customer success managers, covering a wide range of people who possibly will come in touch with the tool.
+
+\subsection{Documentation}
 For the feature documentation, Sprylab uses Confluence for internal documentation and Archbee for external documentation that customers can access too.
 As we have the common problem of documentation getting postponed indefinitely, I tried to integrate writing documentation directly int o the development flow and only close a ticket if the documentation
 was written and reviewed by one additional person. Due to time and personnel shortages, this was unfortunately not always possible and will require more future attention.

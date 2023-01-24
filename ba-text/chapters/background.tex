@@ -75,7 +75,7 @@ In chapter \ref{chap:research}, the state of the JSON Editor for that use case i
 Furthermore, features are described which are missing, or the interview candidates noted as confusing, not working or slowing down their work.
 
 \begin{figure}[h]
-  \lstset{language=json,basicstyle=\footnotesize,numbers=left,showstringspaces=false,frame=single}
+  \lstset{language=json,basicstyle=\footnotesize\ttfamily,numbers=left,showstringspaces=false,frame=single}
   \begin{lstlisting}
 {
   "type": "view",
@@ -111,4 +111,14 @@ In public apps, the configs are more advanced with conditionals declaring when c
 
 \section{Related Work}
 
-TODO
+Primary sources for the HCI approach and methods were \cite{LearnHCI:2020ys} and \cite{Interactiondesign:2019ys}, which provided a broad view about user research methods and prototyping.
+For the implementation, most sources were the official documentations of the tools and libraries used. To get an understanding of JSON schema, its structure and its possibilities, \cite{JsonSchema:2022ys} provides a good introduction.
+\\\\
+The two concrete topics however, building a UI Editor / Page builder and covering HCI methods in Brownfield development, seem to be only sparsely covered.
+Despite widely distributed Interface-based UI editors like Wordpress or Wix.com, the scientific coverage of this combination ``Model-driven developemnt'' and ``Page building'' is low.
+Mostly papers about concrete implementations exist like \cite{ServFaceBuilder:2009ys} or TODO, and some documents from the early era of the World-Wide web like \cite{AutoWeb:2000ys}, which describes the abstract approach of storing the website
+structure not as HTML, but an intermediate more domain-specific format and only generate the HTML when requested.
+\\\\
+The same rarity exists for the combination of Brownfield software projects with HCI user research methods.
+Papers and articles that were used as sources for this thesis were e.g. \cite{JohnAdamsIt:Greenfield} about Greenfield vs. Brownfield development in general and \cite{BrownfieldToGreenfield:2021ys}, which makes interesting points about the necessity
+of different approaches for the two development cases.

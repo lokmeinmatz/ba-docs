@@ -1,17 +1,12 @@
 - [x] UI editor -> UI Editor
-- [ ] pronoun not I -> passive form
+- [x] pronoun not I -> passive form
 - [x] Fig 1.1: blassere Hintergrundfarben
 - [x] Fig. 2.2 unterste Reihe gestrichelte dervices?
-- [ ] Fig. 2.3. listing monospace
+- [x] Fig. 2.3. listing monospace
 - [x] Personas subsection rewrite to "see appendix"
-- [ ] 5.6 / unter fig. 5.5 
+- [x] 5.6 / unter fig. 5.5 
 - [ ] 3.6: Ergebnis der Umfragen / zusammenfassende Darstellun was aus Interview etc. rausgekommen ist (bzw. vor Personas und Matrix, 3.4)
 	- [ ] Personas as subsection
-- [ ] Conclusion
-	- [x] Darauf geachtet dass Codebasis erweiterbar ist und gut wartbar
-	- [x] Combination technical possibilities & users needs
-	- [x] Wird in production genutzt und postives feedback -> zeigt dass gewählter Weg (interviews etc) dass zum erfolg beigetragen hat / richtiger Weg war: richtige Nutzer, tech&func Anforderungen gut zusammen
-	- [x] Link Sprylab & positive Akzeptance of the HCI methods
 - [ ] Checklist 
 	- [x] fig. vs figure
 	- [ ] Seitenzahlen außen
@@ -22,3 +17,9 @@
 	- [x] Nummern nur Kapitel mit inhalt!!!!!!!
 - [ ] QA an MaPa
 	- [ ] 5.1 architecture intro "Let's start with ..." reformulate?
+	- [ ] Ende von 3.2 Duplikat von 3.4, lieber nach 3.4 mergen?
+	- [ ] Abstract okay? sowohl englisch als auch deutsch
+- [ ] TODO
+	- [ ] Mehr Refs zu Personas
+	- [ ] Conclusion muss Frage beantworten mit "...different levels of expertise..." 
+	- [x] Communication: start of Beta phase through company wide presentation of features
