@@ -5,22 +5,21 @@
 - [x] Fig. 2.3. listing monospace
 - [x] Personas subsection rewrite to "see appendix"
 - [x] 5.6 / unter fig. 5.5 
-- [ ] 3.6: Ergebnis der Umfragen / zusammenfassende Darstellun was aus Interview etc. rausgekommen ist (bzw. vor Personas und Matrix, 3.4)
-	- [ ] Personas as subsection
+- [x] 3.6: Ergebnis der Umfragen / zusammenfassende Darstellun was aus Interview etc. rausgekommen ist (bzw. vor Personas und Matrix, 3.4)
+	- [x] Personas as subsection
 - [ ] Checklist 
 	- [x] fig. vs figure
-	- [ ] Seitenzahlen außen
+	- [x] Seitenzahlen außen
 	- [x] Seite 1 zu "Introduction"
 	- [x] Abstract & Zusammenfassung ohne Chapter
 	- [x] Warum Appendix keine nummer 9?
-	- [ ] Glossar in inhalt ohne nummer
+	- [x] Glossar in inhalt ohne nummer
 	- [x] Nummern nur Kapitel mit inhalt!!!!!!!
 - [ ] QA an MaPa
 	- [ ] 5.1 architecture intro "Let's start with ..." reformulate?
 	- [ ] Ende von 3.2 Duplikat von 3.4, lieber nach 3.4 mergen?
 	- [ ] Abstract okay? sowohl englisch als auch deutsch
 	- [ ] 1.1 letzer Satz "In addition, user research..." steht etwas alleine da; entweder weg oder was folgt daraus?
-- [ ] TODO
-	- [ ] Mehr Refs zu Personas
+	- [ ] Implementation paar Zeilen kürzer, dann spaaren wir 2 leere Seiten ^^
 	- [ ] Conclusion muss Frage beantworten mit "...different levels of expertise..." 
-	- [x] Communication: start of Beta phase through company wide presentation of features
+	- [ ]  Mehr Refs zu Personas?
