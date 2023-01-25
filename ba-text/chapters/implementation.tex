@@ -91,7 +91,7 @@ For the implementation, three factors needed to be considered:
   \item[Where to save?] The quick links are stored in the \Gls{localstorage} of the user's browser, so the list is available across apps.
   \item[How to manage?] The user has a list on the settings view, where entries can be added, deleted and changed, but the file path needs to be inserted manually. To enhance the user experience, a proposal exists to either add a file picker in the settings or add a bookmark button to the file manager.
   \item[How to present the links?] The links must be easily accessible to provide the intended benefit. The solution was to show them prominently when entering the \textit{edit} view and no file was opened yet.
-  In addition, the UI shows if the link points to a file, which gets opened as a new file tab, to a folder which will navigate the file explorer there, or if the path doesn't exist in the current app.
+  In addition, the UI shows if the link points to a file, which gets opened as a new file tab, to a folder which will navigate the file explorer there, or if the path does not exist in the current app.
   \begin{figure}[h!]
     \centering
     \includegraphics[width=0.4\textwidth]{pics/quick_links.png}
@@ -128,14 +128,14 @@ On the client, both UI components and business logic code that is encapsulated i
 
 They also enable Test-driven development, where the tests are written upfront based on specifications and constraints with invariants, pre- and postconditions and the code is continously tested against them.
 \\
-For agile development, the speed of the test execution and CI/CD Pipelines is important. The developer is usually blocked during that time and can't progress on the task.
+For agile development, the speed of the test execution and CI/CD Pipelines is important. The developer is usually blocked during that time and can not progress on the task.
 Therefore, the aim was to find a fast runtime, compatible with UI- / browser testing as well as Node JS for the server code.
 After evaluating commonly used frameworks, Vitest \footnote{\url{https://vitest.dev/}} was chosen as a test framework which fullfills all the requirements. Tests can be hot-reloaded and re-executed on change in less than a second, providing a good developer experience.
 \\\\
 Due to the complexity of interoperation between components, APIs and the Web standards, unit tests alone are not enough to guarantee the different modules work together as expected. 
 \\
 E2E tests are supposed to cover a typical user interaction with the service to validate the interaction between business logic components, UI and the user itself.
-First a headless browser\footnote{Headless browsers are browser instances that don't render the actual content to a user's screen, but run as a CLI application and still execute all JavaScript, CSS and HTML.} (\url{https://pptr.dev/}) was used in combination with Vitest,
+First a headless browser\footnote{Headless browsers are browser instances that do not render the actual content to a user's screen, but run as a CLI application and still execute all JavaScript, CSS and HTML.} (\url{https://pptr.dev/}) was used in combination with Vitest,
 but writing and debugging tests proved to be slow and error-prone.
 \\\\
 Later in the process, the E2E tests were rewritten for an alternative test framework called Playwright (\url{https://playwright.dev/}), which allows recording a test case in a normal browser window and then generates the test code automatically, allowing to be adapted and generalized if needed.
@@ -151,7 +151,7 @@ On the one hand, the data can provide valuable insights into the behavior of man
 On the other hand, the most common tools like Google Analytics track users with cookies, which creates new challenges regarding GDPR compliance.
 \\\\
 The Purple product owner showed me a SaaS called \url{https://squeaky.ai/}, which is a cookieless solution to track users on this page.
-While it can't provide the same level of demographic information a cookie based solution can, it still collects the most important data like usage statistics,
+While it can not provide the same level of demographic information a cookie based solution can, it still collects the most important data like usage statistics,
 user interactions, occurred JavaScript errors and can even show heatmaps per page to visualize which UI elements the user interacts with the most.
 
 \begin{figure}[h]
@@ -165,7 +165,7 @@ These heatmaps for example can show if a new UI feature is used by users and how
 Fig. \ref{fig:squeaky} shows that the users mostly interacted with the file explorer and only did a few clicks in the editor panel.
 
 To analyze the usage growth, fig. \ref{fig:squeaky_users} indicates how the number of page views per week increased steadily since the internal beta was launched (except for the dip during the Christmas holidays).
-The graph clearly shows that the time-bound goal from the SMART goals (\ref{fig:smart}) has been successfully achieved.
+The graph clearly shows that the time-bound goal from the SMART criteria (\ref{fig:smart}) has been successfully achieved.
 
 \begin{figure}[h]
   \centering
@@ -191,7 +191,7 @@ another building block towards a good user- and developer experience.
 For the asynchronous communication, a Microsoft Teams Channel was utilized, a group chat where all invited persons (in case of the internal Beta-phase company-wide) can write with each other and create posts.
 This was used for notifications about new deployments and if in the aftermath someone found a bug that could affect multiple people.
 
-Even though this adds a bit overhead, it proved easier than having everyone write bug tickets directly, as user often don't know how to describe the problem which leads to unclear descriptions, wrong tags and duplicate tickets.
+Even though this adds a bit overhead, it proved easier than having everyone write bug tickets directly, as user often do not know how to describe the problem which leads to unclear descriptions, wrong tags and duplicate tickets.
 Instead, a developer with knowledge about the system looked at the reports and created a new ticket if the problem was new, otherwise referenced an existing ticket or forwarded the problem to the responsible team.
 Jira tickets were all assigned to the UI builder component as well as specific releases so everyone can see with one click which changes and fixes are contained in which release.
 

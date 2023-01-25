@@ -1,0 +1,9 @@
+{
+	"nodes":[
+		{"id":"fa6149f8c853c822","x":-305,"y":24,"width":250,"height":60,"type":"text","text":""},
+		{"id":"2fe0bb51e08619cc","x":100,"y":-116,"width":400,"height":400,"type":"file","file":"Writing Tipps.md"}
+	],
+	"edges":[
+		{"id":"9fd459ec3080a91a","fromNode":"fa6149f8c853c822","fromSide":"right","toNode":"2fe0bb51e08619cc","toSide":"left"}
+	]
+}

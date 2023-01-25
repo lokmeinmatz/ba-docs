@@ -12,20 +12,27 @@
 
 After collecting the initial user feedback, minimal digital ``paper'' prototypes were created using Figma\footnote{Figma (\url{https://www.figma.com/}) is a design tool accessible through the browser for collaborative work on design projects.} to gather visualizations of the proposed UI layouts.
 Two ideas emerged from the interviews: a (file-)editor-centric layout and a preview-centric layout.
-\section{Editor centric vs preview centric layout}
-The editor-centric layout is inspired by modern text editors / \Gls{ide}s like VS Code (\url{https://code.visualstudio.com/}), which was mentioned as reference during the interviews multiple times.
-There, the central pane is the editor for the currently open file, while on the sides additional panes for file management, preview and more can be shown.
-The familiarity, especially to developers who are used to IDE layouts, could help new users adopt patterns to work with the UI they use in other tools as well.
-\\\\
-The idea for a preview-centric layout was inspired by popular generic website builders like \url{https://wix.com} or \url{https://wordpress.com}, where the user
+\section{Editor centric vs. preview centric layout}
+
+The \textbf{preview-centric layout} is inspired by popular generic website builders like \url{https://wix.com} or \url{https://wordpress.com}, where the user
 can see the page in an interactive mode, move, configure or place elements, and then has on the side additional panels like one with information \& options about the
 currently selected element.
 There are also framework-agnostic tools like \url{https://vwo.com/why-us/technology/visual-editor/}, but they either focused more on only editing the style and not the structure of the page or were not
 compatible with the Experience's framework and data format. 
-\begin{figure}[h]
+\begin{figure}[h!]
   \includegraphics[width=\textwidth]{pics/editor_centric_vs_preview_centric.png}
   \caption{Mockups: Editor centric vs preview centric editor layout}
 \end{figure}
+\newpage
+The \textbf{editor-centric layout} is inspired by modern text editors / \Gls{ide}s like VS Code (\url{https://code.visualstudio.com/}), which was mentioned as reference during the interviews multiple times.
+There, the central pane is the editor for the currently open file, while on the sides additional panes for file management, preview and more can be shown.
+The familiarity, especially to developers who are used to IDE layouts, could help new users adopt patterns to work with the UI they use in other tools as well.
+\begin{figure}[h!]
+  \includegraphics[width=\textwidth]{pics/editor-centric-screenshot.png}
+  \caption{Editor centric todo}
+  \label{fig:editor-centric}
+\end{figure}
+\bigskip
 Here are some reasons why the editor centric layout was chosen and not the preview-centric one:
 \begin{itemize}
   \item The configuration structure of the \Gls{experience} framework was not built with preview-based editing in mind, causing many functionalities to be hidden and invisible to the user, making it difficult to reproduce specific conditions in the editor environment.
