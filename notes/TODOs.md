@@ -19,7 +19,8 @@
 	- [ ] 5.1 architecture intro "Let's start with ..." reformulate?
 	- [ ] Ende von 3.2 Duplikat von 3.4, lieber nach 3.4 mergen?
 	- [ ] Abstract okay? sowohl englisch als auch deutsch
+	- [ ] fig 3.1 in appendix um 2 Seiten zu spaaren?
 	- [ ] 1.1 letzer Satz "In addition, user research..." steht etwas alleine da; entweder weg oder was folgt daraus?
-	- [ ] Implementation paar Zeilen kürzer, dann spaaren wir 2 leere Seiten ^^
 	- [ ] Conclusion muss Frage beantworten mit "...different levels of expertise..." 
+		- [ ] evtl. "the editor enables users to safely edit JSON configurations and change assets and styles while directly seeing these changes in a preview frame"
 	- [ ]  Mehr Refs zu Personas?

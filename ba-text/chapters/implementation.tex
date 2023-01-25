@@ -82,7 +82,7 @@ The solution was inspired by the file management that most \Gls{ide}s provide; a
 
 \subsection{File management - quick links}
 
-A second feature regarding the file management is ``quick links''. While all target groups benefit from this, especially for the personas \textit{Steffi, \ref{subsec:persona:productdev}} and \textit{Karsten, \ref{subsec:persona:itpublishing}}
+A second feature regarding the file management is ``quick links''. While all target groups benefit from this, especially for the personas \textit{Steffi, \ref{persona:productdev}} and \textit{Karsten, \ref{persona:itpublishing}}
 this can speed up common tasks considerably.
 
 The basic idea is to bookmark commonly used files, e.g. the translation or ad config, and have them prominently available when opening a new app.
@@ -109,15 +109,13 @@ For view configurations for example, the JSON Editor Library (\url{https://githu
 The abstraction is done solely in the frontend and follows React's ``\Gls{comp-over-inh}'' pattern and can be seen in fig. \ref{fig:abstract-editor}.
 To add a new specialized editor the only two steps are creating a new functional component that implements the \textit{EditorImpl} interface
 and add that editor in the \textit{EditorRegistry} to get returned for the file paths in question.
-\\\\
 \begin{figure}[h!]
   \includegraphics[width=\textwidth]{pics/abstract_editor_uml.drawio.png}
   \caption{Class diagram showing the editor abstraction in React JS. Due to modern React JS architecture, component classes are replaced with functional components (marked with $\ll functional\gg$).}
   \label{fig:abstract-editor}
 \end{figure}
 Examples of custom editor implementations can be seen in Appendix \ref{fig:messages_editor} and \ref{fig:ads-editor}.
-This pattern and the concrete implemented Editors also enable users like persona ``Karsten'' (\ref{subsec:persona:itpublishing}) to make small adaptions like changing a translation without worrying about
-the underlying file format and without the possibility to break the app due to syntax errors.
+By implementing Editors for multiple levels of expertise, users like persona ``Karsten'' (\ref{persona:itpublishing}) can make small adaptions like changing a translation without worrying about the underlying file format and without the possibility to break the app due to syntax errors.
 
 \section{Automated Testing}
 \label{sec:automated-testing}
@@ -128,7 +126,7 @@ two of the most common testing levels were used for the project: unit tests and 
 Unit tests test one ``component'' in a sandboxed environment, in practice often done per-function or per-class.
 On the client, both UI components and business logic code that is encapsulated in classes or JavaScript modules get tested.
 
-Test-driven development (TDD), where the tests are written upfront based on specifications and constraints with invariants, pre- and postconditions, are also made possible with unit tests.
+They also enable Test-driven development, where the tests are written upfront based on specifications and constraints with invariants, pre- and postconditions and the code is continously tested against them.
 \\
 For agile development, the speed of the test execution and CI/CD Pipelines is important. The developer is usually blocked during that time and can't progress on the task.
 Therefore, the aim was to find a fast runtime, compatible with UI- / browser testing as well as Node JS for the server code.
