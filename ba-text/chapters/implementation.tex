@@ -7,26 +7,21 @@
 %  Created by C. Müller-Birn on 2012-08-17, CC-BY-SA 3.0.
 %  Freie Universität Berlin, Institute of Computer Science, Human Centered Computing. 
 %
-% TODO remove 2 - to use auto numbering
 \chapter{Implementation and deployment}
 \label{chap:impl} 
 
 % The phase of implementation and deployment followed an agile development process where changes could be deployed easily to get fast feedback from users.
+This chapter describes the agile development process used for implementation of the UI Editor and gives examples on implemented features. The code can be seen at \url{https://git.imp.fu-berlin.de/matthiak00/thesis-ui-builder-snapshot}\footnote{snapshot from Sprylab's Gitlab on 2023-01-25, accessible for members of the \url{https://git.imp.fu-berlin.de} instance}.
 
 % \localtableofcontents
 
 \section{Architecture}
 
-Let's start with an overview about the architecture and high level user flows.
-There are three software components relevant for a basic interaction with the system: the editor frontend, the editor backend and the \Gls{manager} backend, which is responsible for
-authentication, app management and providing dynamic resources as ZIP files.
-At the beginning of a user journey, the user logs in at the root domain (e.g. \url{https://builder.purplemanager.com} for production apps).
-The authentication details will not be covered here as these would go beyond the scope of a bachelor thesis and are not relevant for the UX.
-The \Gls{rest} of the \Gls{manager} and the way dynamic resources get downloaded and merged is one of the basic fixed technical requirements introduced by the surrounding ecosystem.
-\\
-The UML sequence diagram fig. \ref{fig:userflow} displays a typical interaction of a user with the editor frontend after he selected an app; pulling the latest dynamic resources, editing a file and merging the changes.
+The architecture and high-level user flows of the three software components relevant for the UI editor include the frontend, backend, and \Gls{manager} backend. The Purple Manager backend handles authentication, app management, and providing dynamic resources as ZIP files. The user journey begins with logging in at the root domain (e.g. \url{https://builder.purplemanager.com}, but the details of authentication will not be covered as it is not relevant for the user experience. The \Gls{rest} of the Purple Manager and the dynamic resource management are basic technical requirements set by the surrounding ecosystem.
+Fig. \ref{fig:userflow} displays a typical interaction of a user with the editor frontend after he selected an app; pulling the latest dynamic resources, editing a file and merging the changes.
 \begin{figure}[h!]
-  \includegraphics[width=\textwidth]{pics/user-flow.uml.drawio.png}
+  \centering
+  \includegraphics[width=0.9\textwidth]{pics/user-flow.uml.drawio.png}
   \caption{A typical interaction of a user with the UI Editor frontend and it's dependencies}
   \label{fig:userflow}
 \end{figure}
@@ -127,19 +122,17 @@ the underlying file format and without the possibility to break the app due to s
 \section{Automated Testing}
 \label{sec:automated-testing}
 
-As already elaborated, fast CI/CD pipelines plays a crucial role for agile prototyping and development.
-Automated tests in turn contribute to the confidence of developers to deploy more frequently and can reduce load from the QA team to test standard workflows every time a new release is planned.
-For the Experience Builder two of the most common testing levels are used: unit tests and End-to-End tests (also known as E2E or System tests).
+Automated tests contribute to the confidence of developers to deploy more frequently and can reduce load from the QA team to test common workflows over and over.
+two of the most common testing levels were used for the project: unit tests and End-to-End tests (also known as E2E or System tests).
 \\\\
-Unit tests are mostly used to test one ``component'' in a sandboxed environment, in practice often done per-function or per-class.
-On the client, the distinction is between testing of UI components and business logic code that is encapsulated in classes or JavaScript modules.
+Unit tests test one ``component'' in a sandboxed environment, in practice often done per-function or per-class.
+On the client, both UI components and business logic code that is encapsulated in classes or JavaScript modules get tested.
 
-Unit tests also are helpful during development to test software patterns before doing large refactorings and to do test-driven development (TDD), where the specifications and constraints can be laid out as code with invariants, pre- and postconditions.
-Then the implementation is done while continuously running the tests again until they don't fail anymore.
+Test-driven development (TDD), where the tests are written upfront based on specifications and constraints with invariants, pre- and postconditions, are also made possible with unit tests.
 \\
-For TDD as well as CI/CD Pipelines, the speed of the test execution is important. If a single test run takes multiple minutes, the developer is blocked during that time and can't progress on the task.
-Therefore, the aim was to achieve the shortest possible runtime, compatible with UI- / browser testing as well as Node JS for the server code.
-After evaluating commonly used frameworks, Vitest (\url{https://vitest.dev/}) was chosen, which fullfills all the requirements, is compatible with our build tools and runs tests in parallel if possible. The Unit test suites can be hot-reloaded and reexecuted on change in less than a second, which is a nice developer experience.
+For agile development, the speed of the test execution and CI/CD Pipelines is important. The developer is usually blocked during that time and can't progress on the task.
+Therefore, the aim was to find a fast runtime, compatible with UI- / browser testing as well as Node JS for the server code.
+After evaluating commonly used frameworks, Vitest \footnote{\url{https://vitest.dev/}} was chosen as a test framework which fullfills all the requirements. Tests can be hot-reloaded and re-executed on change in less than a second, providing a good developer experience.
 \\\\
 Due to the complexity of interoperation between components, APIs and the Web standards, unit tests alone are not enough to guarantee the different modules work together as expected. 
 \\

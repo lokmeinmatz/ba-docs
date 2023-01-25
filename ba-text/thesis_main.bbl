@@ -197,6 +197,37 @@
       \verb https://www.johnadamsit.com/software-development-greenfield-vs-brownfield/
       \endverb
     \endentry
+    \entry{Harageones:2022}{article}{}
+      \name{author}{1}{}{%
+        {{hash=6f90a304a6cfaab1a4239c83db87e7f4}{%
+           family={Harageones},
+           familyi={H\bibinitperiod},
+           given={Sandi},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{6f90a304a6cfaab1a4239c83db87e7f4}
+      \strng{fullhash}{6f90a304a6cfaab1a4239c83db87e7f4}
+      \strng{bibnamehash}{6f90a304a6cfaab1a4239c83db87e7f4}
+      \strng{authorbibnamehash}{6f90a304a6cfaab1a4239c83db87e7f4}
+      \strng{authornamehash}{6f90a304a6cfaab1a4239c83db87e7f4}
+      \strng{authorfullhash}{6f90a304a6cfaab1a4239c83db87e7f4}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{UX/UI Research-Applied Strategies for Building a Custom WordPress Theme Using Underscores and Elementor}
+      \field{urlday}{23}
+      \field{urlmonth}{1}
+      \field{urlyear}{2023}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://digitalcommons.lindenwood.edu/theses/304/
+      \endverb
+      \verb{url}
+      \verb https://digitalcommons.lindenwood.edu/theses/304/
+      \endverb
+    \endentry
     \entry{Interactiondesign:2019ys}{book}{}
       \name{author}{1}{}{%
         {{hash=06fa2c3b9d5cbaa9094b8ad4f4c8a994}{%
