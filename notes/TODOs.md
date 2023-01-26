@@ -1,28 +1,12 @@
-- [x] UI editor -> UI Editor
-- [x] pronoun not I -> passive form
-- [x] Fig 1.1: blassere Hintergrundfarben
-- [x] Fig. 2.2 unterste Reihe gestrichelte dervices?
-- [x] Fig. 2.3. listing monospace
-- [x] Personas subsection rewrite to "see appendix"
-- [x] 5.6 / unter fig. 5.5 
-- [x] 3.6: Ergebnis der Umfragen / zusammenfassende Darstellun was aus Interview etc. rausgekommen ist (bzw. vor Personas und Matrix, 3.4)
-	- [x] Personas as subsection
-- [ ] Checklist 
-	- [x] fig. vs figure
-	- [x] Seitenzahlen außen
-	- [x] Seite 1 zu "Introduction"
-	- [x] Abstract & Zusammenfassung ohne Chapter
-	- [x] Warum Appendix keine nummer 9?
-	- [x] Glossar in inhalt ohne nummer
-	- [x] Nummern nur Kapitel mit inhalt!!!!!!!
+
 - [ ] QA an MaPa
 	- [ ] 5.1 architecture intro "Let's start with ..." reformulate?
 	- [x] Quellenangaben
 	- [ ] Ende von 3.2 Duplikat von 3.4, lieber nach 3.4 mergen?
 	- [ ] Abstract okay? sowohl englisch als auch deutsch
-	- [ ] fig 3.1 in appendix um 2 Seiten zu spaaren?
-	- [ ] Abstand unter 2.3 kleiner
-	- [ ] 1.1 letzer Satz "In addition, user research..." steht etwas alleine da; entweder weg oder was folgt daraus?
+	- [x] fig 3.1 in appendix um 2 Seiten zu spaaren?
+	- [x] 1.1 letzer Satz "In addition, user research..." steht etwas alleine da; entweder weg oder was folgt daraus?
 	- [ ] Conclusion muss Frage beantworten mit "...different levels of expertise..." 
 		- [ ] evtl. "the editor enables users to safely edit JSON configurations and change assets and styles while directly seeing these changes in a preview frame"
-	- [ ]  Mehr Refs zu Personas?
+	- [x]  Mehr Refs zu Personas?
+	- [ ] Header & Footer wie bei Melanie (linie, chapter ref statt section ref)
