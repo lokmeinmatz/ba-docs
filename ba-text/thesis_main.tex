@@ -129,11 +129,11 @@
 
 \fancyhf{}  % delete all existing header formating
 
-\fancyhead[LE]{\leftmark}  % represent the current chapter heading in uppercase
+\fancyhead[LE]{\nouppercase{\leftmark}}  % represent the current chapter heading in uppercase
 %\renewcommand{\chaptermark}[1]{ % adapt the shown chapter name: show it in lower case and with chapter number 
 %\markboth{\thechapter.\ #1}{}}   
 
-\fancyhead[RO]{\rightmark}   % % represent the current section heading in uppercase 
+\fancyhead[RO]{\nouppercase{\rightmark}}   % % represent the current section heading in uppercase 
 %\renewcommand{\sectionmark}[1]{% adapt the shown section name: show it in lower case and with section number 
 %\markboth{\thesection.\ #1}{}}
 
@@ -142,6 +142,17 @@
 
 \fancyfoot{} % delete all existing footer formating
 \fancyfoot[LE,RO]{\thepage} % put page number on the left on even page and right on odd page
+
+% Redefine the plain page style
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyhead[LE]{\nouppercase{\leftmark}}  % represent the current chapter heading in uppercase
+  \fancyhead[RO]{\nouppercase{\rightmark}}   % % represent the current section heading in uppercase 
+
+  \fancyfoot[LE,RO]{\thepage}
+  \renewcommand{\headrulewidth}{0.4pt}% Line at the header invisible
+  \renewcommand{\footrulewidth}{0.4pt}% Line at the footer visible
+}
 %
 %---------------------------------------------------      
 %----- Settings for word separation  
