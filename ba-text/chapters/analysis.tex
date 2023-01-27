@@ -135,16 +135,7 @@ The prepared questions consisted of closed ones, like how often they interact wi
 If notable points occurred during the observation, these were addressed now either directly or in form of an open question like ``If you imagine a UI builder with no technical limits, how would it look like, which features would you expect and what workflows are most important to you?''.
 \\
 The semi-structured interviews proved to be valuable in gaining insight into the experiences and needs of the users. They made it possible to gather lots of new information and show how different features were massively valued differently by the users. Two interviewees even provided written lists of their ideas and suggestions afterwards.
-\\\\
-Here are some examples of the outcomes:
-\begin{itemize}[itemsep=0mm]
-  \item The way users validate their changes differs widely; some use a preview window in the old editor, some merge changes into the resources and view it on the website or inspect the app's JavaScript context, some prefer separate windows, some embedded frames to see code and preview at the same time.
-  \item Rearranging or adapting the layout of the tools / editor to match the current screen and browser window size is important, e.g. hide unnecessary panes if not used, make the window the user currently works in larger to see more content at once.
-  \item Editing multiple files at once (in the old editor one could only edit one file at a time, had to close the current and open the next one).
-  \item Collaborative working: Seeing the current state of the resources, e.g. if a live or preview resource is processing, if other users are working in the same app parallel, and having git-like line-by-line diffs of the changes made.
-\end{itemize}
-\bigskip
-Some outcomes from the user interviews will be further discussed in chapter \ref*{chap:impl}.
+Some outcomes can be found in \ref{sec:research-outcomes} and Appendix \ref{app:interviews}.
 
 \section{Quantitative user research}
 
@@ -154,7 +145,7 @@ Prototype questionnaires were created using Microsoft Forms, but they were too l
 Therefore, it was decided to rely solely on qualitative research results for prototyping and feedback, along with some automatic tracking implementation (see \ref{sec:analytics}).
 \\
 \section{User research outcomes}
-
+\label{sec:research-outcomes}
 After each observation and interview, which were additionally recorded, the interviewer noted facts about the subject and the session in a prepared template.
 The mandatory fields consisted of basic information like the role of the user, frequency and typical tasks with the resources.
 Additionally, important situations from the observation, a description of the workflows, input from the interview and the linked recordings were noted.
@@ -171,11 +162,13 @@ Derived from these notes, combined with the technical requirements, the followin
   \begin{itemize}[itemsep=0mm]
     \item Automatic downloading and packing of the dynamic resource ZIPs so manual pack/unpack operations are not required by the users.
     \item Support for syntax highlighting and autocomplete for common files.
+    \item Adapt the workspace to the users needs, hide or resize components.
     \item Fast load times or the possibility to have multiple files open simultaneously.
   \end{itemize}
   \item[App Preview]\leavevmode
    \begin{itemize}[itemsep=0mm]
-    \item See a frame on the side / in extra window showing the latest changes instantly, load "real" data from the API.
+    \item See a preview showing the latest changes instantly, load "real" data from the API.
+    \item Multiple ways to validate changes: preview on the side, in new window or quick merge into preview for ``real world'' tests.
     \item Ability to load current state of config and assets inside an app connected for debugging.
   \end{itemize}
   \item[Dynamic Resource Change Management] \leavevmode

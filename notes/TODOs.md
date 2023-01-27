@@ -1,8 +1,8 @@
 
 - [ ] QA an MaPa
-	- [ ] 5.1 architecture intro "Let's start with ..." reformulate?
+	- [x] 5.1 architecture intro "Let's start with ..." reformulate?
 	- [x] Quellenangaben
-	- [ ] Ende von 3.2 Duplikat von 3.4, lieber nach 3.4 mergen?
+	- [x] Ende von 3.2 Duplikat von 3.4, lieber nach 3.4 mergen?
 	- [ ] Abstract okay? sowohl englisch als auch deutsch
 	- [x] fig 3.1 in appendix um 2 Seiten zu spaaren?
 	- [x] 1.1 letzer Satz "In addition, user research..." steht etwas alleine da; entweder weg oder was folgt daraus?

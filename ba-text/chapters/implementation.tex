@@ -94,7 +94,9 @@ For the implementation, three factors needed to be considered:
   In addition, the UI shows if the link points to a file, which gets opened as a new file tab, to a folder which will navigate the file explorer there, or if the path does not exist in the current app.
   \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.4\textwidth]{pics/quick_links.png}
+    \fbox{
+      \includegraphics[width=0.4\textwidth]{pics/quick_links.png}
+    }
     \caption{The three types of quick links: Folder, file and not available}
   \end{figure}
 \end{description}
@@ -106,12 +108,12 @@ To provide an efficient and error reduced workflow to users, it is important to 
 
 For view configurations for example, the JSON Editor Library (\url{https://github.com/json-editor/json-editor}) is used, combined with the generated JSON Schema files. For the translations there exists a custom editor that has a fuzzy search function and makes it easy to manage translation entries.
 
-The abstraction is done solely in the frontend and follows React's ``\Gls{comp-over-inh}'' pattern and can be seen in fig. \ref{fig:abstract-editor}.
+The abstraction is done solely in the frontend and follows React's ``\Gls{comp-over-inh}'' pattern and can be seen in fig. \ref{fig:abstract-editor}. Due to modern React JS architecture, component classes are replaced with functional components (marked with $\ll functional\gg$).
 To add a new specialized editor the only two steps are creating a new functional component that implements the \textit{EditorImpl} interface
 and add that editor in the \textit{EditorRegistry} to get returned for the file paths in question.
 \begin{figure}[h!]
   \includegraphics[width=\textwidth]{pics/abstract_editor_uml.drawio.png}
-  \caption{Class diagram showing the editor abstraction in React JS. Due to modern React JS architecture, component classes are replaced with functional components (marked with $\ll functional\gg$).}
+  \caption{Class diagram showing the editor abstraction in React JS.}
   \label{fig:abstract-editor}
 \end{figure}
 Examples of custom editor implementations can be seen in Appendix \ref{fig:messages_editor} and \ref{fig:ads-editor}.
