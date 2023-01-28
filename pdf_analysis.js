@@ -46,7 +46,7 @@ async function main() {
     console.log(`Chapter ${c.title} (p. ${c.startPage} - ${nextC?.startPage ?? 'end'}): ${c.wordCount} words`);
   }
   console.log(`Undefined chapter`, undefinedChapter);
-  console.log('total words:', undefinedChapter.wordCount + chapters.reduce((acc, c) => acc + c.wordCount, 0))
+  console.log('total words:', undefinedChapter.wordCount + chapters.filter(c => !['Abstract', 'Zusammenfassung', 'Table of Contents'].includes(c.title)).reduce((acc, c) => acc + c.wordCount, 0))
 }
 
 main()
