@@ -2366,13 +2366,12 @@
     <bcf:citekey order="15" intorder="1">AboutFace:2014ys</bcf:citekey>
     <bcf:citekey order="16" intorder="1">LearnHCI:2020ys</bcf:citekey>
     <bcf:citekey order="17" intorder="1">LearnHCI:2020ys</bcf:citekey>
-    <bcf:citekey order="18" intorder="1">LearnHCI:2020ys</bcf:citekey>
-    <bcf:citekey order="19" intorder="1">Interactiondesign:2019ys</bcf:citekey>
-    <bcf:citekey order="20" intorder="1">Nielsen:2000</bcf:citekey>
-    <bcf:citekey order="21" intorder="1">LawsOfUX:2020ys</bcf:citekey>
-    <bcf:citekey order="22" intorder="1">Github:VanoDevium/node-framework-stars</bcf:citekey>
-    <bcf:citekey order="24" intorder="1">BrownfieldToGreenfield:2021ys</bcf:citekey>
-    <bcf:citekey order="25" intorder="1">JohnAdamsIt:Greenfield</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">Interactiondesign:2019ys</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">Nielsen:2000</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">LawsOfUX:2020ys</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">Github:VanoDevium/node-framework-stars</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">BrownfieldToGreenfield:2021ys</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">JohnAdamsIt:Greenfield</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
