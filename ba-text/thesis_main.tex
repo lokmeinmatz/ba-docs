@@ -157,6 +157,16 @@
   \renewcommand{\headrulewidth}{0.4pt}% Line at the header invisible
   \renewcommand{\footrulewidth}{0.4pt}% Line at the footer visible
 }
+
+\fancypagestyle{styletoc}{%
+  \fancyhf{}%
+  \fancyhead[LE]{\nouppercase{\leftmark}}  % represent the current chapter heading in uppercase
+  \fancyhead[RO]{\nouppercase{\rightmark}}   % % represent the current section heading in uppercase 
+
+  \fancyfoot[LE,RO]{\thepage}
+  \renewcommand{\headrulewidth}{0.4pt}% Line at the header invisible
+  \renewcommand{\footrulewidth}{0.4pt}% Line at the footer visible
+}
 %
 %---------------------------------------------------      
 %----- Settings for word separation  
@@ -265,11 +275,14 @@ develop-ment
 %---------------------------------------------------
 
 \include{abstract_en}
-\include{abstract_de}  
+\foreignlanguage{german}{
+  \include{abstract_de}  
+}
 
 %---------------------------------------------------
 %----- Directories   
 %---------------------------------------------------
+\pagestyle{fancy} 
 \makeatletter
 \renewcommand\@dotsep{0}
 \makeatother
@@ -284,7 +297,6 @@ develop-ment
 %---------------------------------------------------
 %----- Main part
 %---------------------------------------------------
-\pagestyle{fancy} 
 
 \mainmatter
 \pagenumbering{arabic} 

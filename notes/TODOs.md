@@ -9,7 +9,7 @@
 	- [ ] Conclusion muss Frage beantworten mit "...different levels of expertise..." 
 		- [ ] evtl. "the editor enables users to safely edit JSON configurations and change assets and styles while directly seeing these changes in a preview frame"
 	- [x]  Mehr Refs zu Personas?
-	- [ ] Header & Footer wie bei Melanie (linie, chapter ref statt section ref)
+	- [x] Header & Footer wie bei Melanie (linie, chapter ref statt section ref)
 - [ ] Kosmetik
 	- [ ] Inhaltsverzeichnis leerzeichen zw Titel und ...
 	- [ ] Linie inahltsverzeichnis oben unten
